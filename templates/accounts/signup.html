@@ -1,0 +1,37 @@
+{% extends 'adminlte/base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+{% load i18n static %}
+
+{% block body_class %}login-page{% endblock %}
+
+{% block content %}
+    <div class="register-box">
+        <!-- /.login-logo -->
+        <div class="register-box-body">
+              <form method="post">
+                {% csrf_token %}
+                    {% if message %}
+                        <p class="login-box-msg" style="color: red;">{{ message }}</p>
+                    {% endif %}
+                {% for field in form %}
+                  <div class="form-group has-feedback">
+                    {{ field.label_tag }}<br>
+                    {{ field }}
+                     {% if field.help_text %}
+                          <small style="color: grey">{{ field.help_text | safe }}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                      <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                  </div>
+                {% endfor %}
+                <div class="row">
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign up</button>
+                    </div>
+                </div>
+              </form>
+        </div>
+    </div>
+{% endblock %}

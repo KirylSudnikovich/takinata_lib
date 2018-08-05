@@ -1,0 +1,617 @@
+2018-06-29 02:43:29,987, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 02:43:29,987, parser, [ERROR]: A user with this name is already registered
+2018-06-29 02:44:31,430, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 02:44:31,430, parser, [ERROR]: A user with this name is already registered
+2018-06-29 02:45:06,248, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 02:45:06,249, parser, [ERROR]: A user with this name is already registered
+2018-06-29 02:49:38,811, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 02:49:38,811, parser, [ERROR]: A user with this name is already registered
+2018-06-29 02:50:17,782, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 02:50:17,782, parser, [ERROR]: A user with this name is already registered
+2018-06-29 06:54:15,066, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 06:54:15,066, parser, [ERROR]: A user with this name is already registered
+2018-06-29 06:57:23,253, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 06:57:37,782, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:01:13,716, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:01:13,716, parser, [ERROR]: A user with this name is already registered
+2018-06-29 07:09:25,619, parser, [ERROR]: Не существует пользователя с таким именем
+2018-06-29 07:09:38,673, parser, [ERROR]: Не существует пользователя с таким именем
+2018-06-29 07:18:35,928, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:18:35,928, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:18:35,948, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:18:35,948, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:18:51,650, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:18:51,650, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:18:51,664, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:18:51,664, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:19:13,561, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:19:13,561, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:19:13,578, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:19:13,578, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:20:09,217, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:20:09,217, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:20:09,230, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:20:09,230, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:21:19,127, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:21:19,127, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:21:19,141, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:21:19,141, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:21:19,141, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:22:06,012, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:22:06,015, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:22:06,015, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:22:06,021, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:22:06,021, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:22:06,021, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:22:25,482, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:22:25,482, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:22:25,500, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:22:25,500, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:22:25,500, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:22:50,603, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:22:50,603, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:22:50,618, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:22:50,618, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:22:50,618, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:24:29,067, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:24:29,067, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:24:29,084, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:24:29,084, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:24:29,084, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:24:53,421, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:24:53,421, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:24:53,441, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:24:53,441, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:24:53,441, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:25:11,589, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:25:11,592, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:25:11,592, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:25:11,599, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:25:11,599, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:25:11,599, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:25:50,387, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:25:50,389, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:25:50,389, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:25:50,394, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:25:50,394, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:25:50,394, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:27:03,071, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:27:03,071, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:27:03,087, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:27:03,087, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:27:03,087, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:27:17,560, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:27:17,560, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:27:17,574, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:27:17,574, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:27:17,574, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:27:19,115, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:27:19,115, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:27:19,128, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:27:19,128, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:27:19,128, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:30:23,872, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:30:23,872, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:30:23,878, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:30:23,878, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:30:23,878, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:30:23,885, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:30:23,885, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:30:23,885, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:30:23,885, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:31:38,108, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:31:38,108, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 07:31:38,291, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:31:38,291, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:31:38,291, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:31:38,291, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:38:14,640, project_delete, [ERROR]: User test does not have access to the project
+2018-06-29 07:39:54,906, su_delete_person_from_project, [ERROR]: You are not the Creator of the project
+2018-06-29 07:42:40,333, parser, [ERROR]: Нет такой команды
+2018-06-29 07:42:45,768, parser, [ERROR]: Incorrect password
+2018-06-29 07:45:10,813, parser, [ERROR]: Нет такой команды
+2018-06-29 07:45:14,791, parser, [ERROR]: Incorrect password
+2018-06-29 07:46:47,686, parser, [ERROR]: Не существует пользователя с таким именем
+2018-06-29 07:47:35,972, parser, [ERROR]: Не существует пользователя с таким именем
+2018-06-29 07:48:22,936, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:48:22,937, parser, [ERROR]: A user with this name is already registered
+2018-06-29 07:48:58,437, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 07:48:58,438, parser, [ERROR]: A user with this name is already registered
+2018-06-29 07:49:01,126, parser, [ERROR]: Не существует пользователя с таким именем
+2018-06-29 07:49:58,879, parser, [ERROR]: Не существует пользователя с таким именем
+2018-06-29 07:56:53,202, project_create, [ERROR]: Incorrect password for test
+2018-06-29 07:56:53,202, project_create, [ERROR]: Incorrect password for test
+2018-06-29 08:01:54,962, edit_description, [ERROR]: You are not the Creator of the project
+2018-06-29 08:01:55,272, project_create, [ERROR]: Incorrect password for test
+2018-06-29 08:01:55,272, project_create, [ERROR]: Incorrect password for test
+2018-06-29 08:02:50,860, edit_description, [ERROR]: You are not the Creator of the project
+2018-06-29 08:02:51,215, project_create, [ERROR]: Incorrect password for test
+2018-06-29 08:02:51,215, project_create, [ERROR]: Incorrect password for test
+2018-06-29 08:04:08,666, edit_description, [ERROR]: You are not the Creator of the project
+2018-06-29 08:04:09,000, project_create, [ERROR]: Incorrect password for test
+2018-06-29 08:04:09,000, project_create, [ERROR]: Incorrect password for test
+2018-06-29 08:05:06,344, project_create, [ERROR]: Incorrect password for test
+2018-06-29 08:05:06,344, project_create, [ERROR]: Incorrect password for test
+2018-06-29 08:05:55,640, project_create, [ERROR]: Incorrect password for test
+2018-06-29 08:05:55,640, project_create, [ERROR]: Incorrect password for test
+2018-06-29 08:06:15,165, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 08:06:15,165, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 08:06:15,334, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 08:06:15,334, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 08:06:15,334, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 08:06:15,334, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 08:25:14,038, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 08:25:35,518, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 08:27:53,228, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 09:09:26,945, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 09:09:26,945, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 09:09:26,945, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 09:13:08,105, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 09:13:08,105, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 09:13:08,105, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 09:32:20,404, parse_task, [ERROR]: Incorrect number of arguments. Expected 10 , but 0 was recieved
+2018-06-29 09:57:24,330, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 09:57:24,330, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 09:57:48,503, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 09:57:48,503, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 09:58:16,387, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 09:58:16,387, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:03:41,873, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:03:41,873, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:04:10,086, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:04:10,086, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:04:10,347, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:04:10,347, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:04:10,347, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:04:10,347, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:04:10,347, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:04:10,347, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:11:48,685, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:11:48,685, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:11:48,928, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:11:48,928, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:11:48,928, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:11:48,928, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:11:48,928, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:11:48,928, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:40,109, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:40,354, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:14:40,354, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:14:40,354, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:14:40,526, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:40,526, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:40,526, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:40,526, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:40,526, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:40,526, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:40,526, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:55,382, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:55,602, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:14:55,602, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:14:55,602, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:14:55,785, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:55,785, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:55,785, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:55,785, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:55,785, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:55,785, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:14:55,785, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:15:34,563, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:15:34,772, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:15:34,772, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:15:34,772, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:15:34,966, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:15:34,966, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:15:34,966, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:15:34,966, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:15:34,966, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:15:34,966, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:15:34,966, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:10,002, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:18:10,002, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:18:10,175, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:10,175, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:10,175, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:10,175, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:10,175, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:10,175, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:10,185, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:10,185, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:10,185, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:10,185, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:10,185, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:10,185, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:10,185, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:47,637, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:18:47,637, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:18:47,810, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:47,810, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:47,810, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:47,810, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:47,810, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:47,810, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:47,820, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:47,820, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:47,820, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:47,820, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:47,820, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:47,820, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:18:47,820, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:06,694, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:19:06,694, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:19:06,879, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:06,879, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:06,879, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:06,879, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:06,879, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:06,879, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:06,892, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:06,892, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:06,892, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:06,892, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:06,892, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:06,892, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:06,892, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:21,829, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:19:21,829, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:19:22,257, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:22,257, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:22,257, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:22,257, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:22,257, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:22,257, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:19:22,257, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:20:35,431, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,431, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,700, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,700, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,700, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,700, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,700, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,700, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,700, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,717, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,717, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,717, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,717, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,717, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,717, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,717, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,717, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:20:35,730, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:20:35,730, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:20:35,730, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:20:35,730, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:20:35,730, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:20:35,730, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:20:35,730, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:20:35,730, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:20:35,730, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:21:13,870, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,884, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,884, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,905, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,905, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,905, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,905, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,905, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,918, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,918, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,918, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,918, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,918, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,918, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,932, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,932, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,932, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,932, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,932, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,932, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,932, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,946, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,946, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,946, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,946, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,946, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,946, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,946, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,946, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:21:13,960, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:21:13,960, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:21:13,960, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:21:13,960, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:21:13,960, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:21:13,960, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:21:13,960, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:21:13,960, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:21:13,960, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:22:13,675, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,687, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,687, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,709, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,709, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,709, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,709, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,709, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,723, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,723, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,723, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,723, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,723, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,723, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,738, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,738, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,738, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,738, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,738, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,738, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,738, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,752, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,752, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,752, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,752, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,752, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,752, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,752, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,752, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:22:13,762, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:22:13,762, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:22:13,762, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:22:13,762, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:22:13,762, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:22:13,762, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:22:13,762, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:22:13,762, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:22:13,762, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:23:51,691, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:23:51,703, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:23:51,703, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:23:51,723, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:23:51,723, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:23:51,723, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:23:51,723, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:23:51,723, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:23:51,735, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:23:51,735, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:23:51,735, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:23:51,735, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:23:51,735, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:23:51,735, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:23:51,742, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:23:51,742, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:23:51,742, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:23:51,742, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:23:51,742, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:23:51,742, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:23:51,742, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:03,756, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:24:03,756, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:24:04,148, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:04,148, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:04,148, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:04,148, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:04,148, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:04,148, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:04,148, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:20,623, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:24:20,623, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:24:20,983, task_delete, [ERROR]: There is no task with this name
+2018-06-29 10:24:20,983, task_delete, [ERROR]: There is no task with this name
+2018-06-29 10:24:20,983, task_delete, [ERROR]: There is no task with this name
+2018-06-29 10:24:20,992, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:20,992, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:20,992, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:20,992, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:20,992, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:20,992, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:20,992, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:53,433, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:24:53,433, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:24:53,838, task_delete, [ERROR]: There is no task with this name
+2018-06-29 10:24:53,838, task_delete, [ERROR]: There is no task with this name
+2018-06-29 10:24:53,838, task_delete, [ERROR]: There is no task with this name
+2018-06-29 10:24:53,850, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:53,850, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:53,850, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:53,850, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:53,850, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:53,850, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:24:53,850, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:25:30,983, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:25:30,983, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:25:41,044, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:25:41,044, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:25:41,044, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:25:41,044, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:25:41,044, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:25:41,044, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:25:41,044, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:25:54,142, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:25:54,142, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:25:54,602, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:25:54,602, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:25:54,602, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:25:54,602, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:25:54,602, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:25:54,602, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:25:54,602, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:26:42,797, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:26:42,797, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:26:43,336, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:26:43,336, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:26:43,336, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:26:43,336, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:26:43,336, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:26:43,336, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:26:43,336, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:15,833, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:27:15,833, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:27:16,201, task_delete, [ERROR]: There is no task with this name
+2018-06-29 10:27:16,201, task_delete, [ERROR]: There is no task with this name
+2018-06-29 10:27:16,201, task_delete, [ERROR]: There is no task with this name
+2018-06-29 10:27:16,212, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:27:16,212, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:27:16,212, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:27:16,212, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:27:16,212, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:27:16,212, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:27:16,212, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:27:16,221, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:16,221, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:16,221, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:16,221, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:16,221, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:16,221, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:16,221, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:16,221, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:34,774, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:27:34,774, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:27:35,512, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:35,512, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:35,512, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:35,512, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:35,512, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:35,512, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:35,512, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:27:35,512, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:17,641, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:29:17,641, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:29:18,360, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:18,360, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:18,360, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:18,360, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:18,360, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:18,360, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:18,360, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:18,360, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:18,360, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:48,061, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:29:48,061, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:29:48,792, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:48,792, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:48,792, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:48,792, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:48,792, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:48,792, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:48,792, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:48,792, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:29:48,792, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:42,836, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:31:42,836, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:31:43,535, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:43,535, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:43,535, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:43,535, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:43,535, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:43,535, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:43,535, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:43,535, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:43,535, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:55,501, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:31:55,501, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:31:56,201, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:56,201, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:56,201, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:56,201, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:56,201, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:56,201, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:56,201, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:56,201, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:31:56,201, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:34:14,911, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:34:14,911, task_create, [ERROR]: Task with this name is already exist
+2018-06-29 10:34:15,595, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:34:15,595, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:34:15,595, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:34:15,595, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:34:15,595, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:34:15,595, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:34:15,595, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:34:15,595, task_create, [ERROR]: Incorrect password for test
+2018-06-29 10:34:15,595, task_create, [ERROR]: Incorrect password for test
+2018-06-29 12:13:18,197, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 0 was recieved
+2018-06-29 12:13:38,385, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 0 was recieved
+2018-06-29 12:16:21,659, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 0 was recieved
+2018-06-29 12:16:55,988, parser, [ERROR]: Задача с названием newreg уже существует в выбранной колонке
+2018-06-29 12:18:43,079, parser, [ERROR]: Задача с названием newreg уже существует в выбранной колонке
+2018-06-29 12:58:22,118, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 12:58:22,118, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 12:58:22,398, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 12:58:22,398, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 12:58:22,398, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 12:58:22,398, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 12:58:38,464, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 12:58:38,464, UserDelete, [ERROR]: Incorrect password for test_user
+2018-06-29 12:58:38,621, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 12:58:38,621, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 12:58:38,621, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 12:58:38,621, UserReg, [ERROR]: User with this name is already exist
+2018-06-29 12:59:09,855, parse_task, [ERROR]: Incorrect number of arguments. Expected 10 , but 0 was recieved
+2018-06-29 12:59:18,460, parse_project, [ERROR]: Incorrect number of arguments. Expected 4 , but 0 was recieved
+2018-06-29 13:00:25,059, parse_column, [ERROR]: Incorrect number of arguments. Expected 5 , but 0 was recieved
+2018-06-29 13:00:45,715, parse_task, [ERROR]: Incorrect number of arguments. Expected 10 , but 0 was recieved
+2018-06-29 13:01:54,500, parser, [ERROR]: Нет такой команды
+2018-06-29 13:02:06,384, parser, [ERROR]: Не существует пользователя с таким именем
+2018-06-29 13:02:50,964, parser, [ERROR]: Не существует пользователя с таким именем
+2018-07-05 20:07:36,477, parser, [ERROR]: No subcommand
+2018-07-05 20:09:16,690, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 0 was recieved
+2018-07-05 20:11:22,969, RegularTaskController, [ERROR]: It's not a date
+2018-07-05 20:11:22,970, parser, [ERROR]: The entered date does not match the required format
+2018-07-05 20:16:44,308, RegularTaskController, [ERROR]: EndDate is before StartDate
+2018-07-05 20:16:44,308, RegularTaskController, [ERROR]: It's not a date
+2018-07-05 20:16:44,308, parser, [ERROR]: The entered date does not match the required format
+2018-07-05 20:16:48,581, RegularTaskController, [ERROR]: EndDate is before StartDate
+2018-07-05 20:16:48,581, RegularTaskController, [ERROR]: It's not a date
+2018-07-05 20:16:48,581, parser, [ERROR]: The entered date does not match the required format
+2018-07-05 20:16:52,963, RegularTaskController, [ERROR]: EndDate is before StartDate
+2018-07-05 20:16:52,963, RegularTaskController, [ERROR]: It's not a date
+2018-07-05 20:16:52,963, parser, [ERROR]: The entered date does not match the required format
+2018-07-07 09:43:47,747, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 0 was recieved
+2018-07-07 09:44:37,446, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'wek'
+2018-07-07 09:44:37,446, parser, [ERROR]: Priority - it's not a number
+2018-07-07 09:50:22,515, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 6 was recieved
+2018-07-07 09:50:41,301, RegularTaskController, [ERROR]: It's not a date
+2018-07-07 09:50:41,301, parser, [ERROR]: The entered date does not match the required format
+2018-07-07 09:52:05,250, parser, [ERROR]: can't compare datetime.datetime to datetime.date
+2018-07-07 09:52:18,446, parser, [ERROR]: Incorrect date
+2018-07-07 09:55:43,949, parser, [ERROR]: time data '052.07.2018' does not match format '%d.%m.%Y'
+2018-07-07 09:55:47,537, parser, [ERROR]: time data '52.07.2018' does not match format '%d.%m.%Y'
+2018-07-07 09:55:51,874, parser, [ERROR]: Incorrect date
+2018-07-07 09:55:55,409, parser, [ERROR]: Incorrect date
+2018-07-07 09:55:59,438, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'g'
+2018-07-07 09:55:59,438, parser, [ERROR]: Priority - it's not a number
+2018-07-07 10:35:00,821, RegularTaskController, [ERROR]: Incorrect type of step
+2018-07-07 10:35:00,821, parser, [ERROR]: Incorrect type of step. Choose one from [day,month,year]
+2018-07-07 10:35:05,218, RegularTaskController, [ERROR]: Task with this name is already exist
+2018-07-07 10:35:05,218, parser, [ERROR]: A task with the name RegTask1 already exists in the selected column
+2018-07-07 14:39:49,661, parser, [ERROR]: There is no user with this name
+2018-07-07 14:41:47,246, parser, [ERROR]: list index out of range
+2018-07-07 14:50:06,866, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 3 was recieved
+2018-07-07 14:50:10,063, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 5 was recieved
+2018-07-07 14:50:13,298, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 5 was recieved
+2018-07-07 14:50:23,438, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 3 was recieved
+2018-07-07 14:50:24,743, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 3 was recieved
+2018-07-07 14:50:28,398, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 3 was recieved
+2018-07-07 14:50:38,583, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 3 was recieved
+2018-07-07 15:04:01,788, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 5 was recieved
+2018-07-07 15:04:18,904, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 3 was recieved
+2018-07-07 15:05:25,319, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'wek'
+2018-07-29 23:28:10,878, parser, [ERROR]: Incorrect number of arguments
+2018-07-30 00:23:38,142, parser, [ERROR]: Incorrect number of arguments
+2018-07-30 00:23:43,602, parser, [ERROR]: No subcommand
+2018-07-30 00:32:14,672, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 0 was recieved
+2018-07-30 00:41:39,390, parser, [ERROR]: Incorrect number of arguments
+2018-07-30 10:48:33,872, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 11 was recieved
+2018-07-30 10:48:55,788, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 11 was recieved
+2018-07-30 10:58:11,383, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'g'
+2018-07-30 10:58:11,383, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'g'
+2018-07-30 10:58:21,355, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'g'
+2018-07-30 10:58:21,355, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'g'
+2018-07-30 11:03:05,314, RegularTaskController, [ERROR]: Start date is before today
+2018-07-30 11:03:05,314, RegularTaskController, [ERROR]: Start date is before today
+2018-07-30 11:03:18,897, RegularTaskController, [ERROR]: EndDate is before Start date
+2018-07-30 11:03:18,897, RegularTaskController, [ERROR]: EndDate is before Start date
+2018-07-30 11:03:32,830, RegularTaskController, [ERROR]: EndDate is before Start date
+2018-07-30 11:03:32,830, RegularTaskController, [ERROR]: EndDate is before Start date
+2018-07-30 11:03:36,094, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'g'
+2018-07-30 11:03:36,094, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'g'

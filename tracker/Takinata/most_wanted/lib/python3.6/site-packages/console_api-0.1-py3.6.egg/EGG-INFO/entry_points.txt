@@ -1,0 +1,3 @@
+[console_scripts]
+task_tracker = console.start:main
+

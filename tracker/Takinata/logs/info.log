@@ -1,0 +1,358 @@
+2018-06-29 02:43:29,986, parser, [INFO]: List of arguments : ['user', 'register', 'LilSkies', 'bestrapper', 'gma@gma.com']
+2018-06-29 02:43:29,986, parse_user, [INFO]: Attempt to register a user with a name - LilSkies, password -  bestrapper and e-mail - gma@gma.com
+2018-06-29 02:44:31,428, parser, [INFO]: List of arguments : ['user', 'register', 'LilSkies', 'bestrapper', 'gma@gma.com']
+2018-06-29 02:44:31,429, parse_user, [INFO]: Attempt to register a user with a name - LilSkies, password -  bestrapper and e-mail - gma@gma.com
+2018-06-29 02:45:06,247, parser, [INFO]: List of arguments : ['user', 'register', 'LilSkies', 'bestrapper', 'gma@gma.com']
+2018-06-29 02:45:06,247, parse_user, [INFO]: Attempt to register a user with a name - LilSkies, password -  bestrapper and e-mail - gma@gma.com
+2018-06-29 02:49:38,809, parser, [INFO]: List of arguments : ['user', 'register', 'LilSkies', 'bestrapper', 'gma@gma.com']
+2018-06-29 02:49:38,809, parse_user, [INFO]: Attempt to register a user with a name - LilSkies, password -  bestrapper and e-mail - gma@gma.com
+2018-06-29 02:50:17,779, parser, [INFO]: List of arguments : ['user', 'register', 'LilSkies', 'bestrapper', 'gma@gma.com']
+2018-06-29 02:50:17,781, parse_user, [INFO]: Attempt to register a user with a name - LilSkies, password -  bestrapper and e-mail - gma@gma.com
+2018-06-29 06:54:15,063, parser, [INFO]: List of arguments : ['user', 'register', 'LilSkies', 'bestrapper', 'gma@gma.com']
+2018-06-29 06:54:15,064, parse_user, [INFO]: Attempt to register a user with a name - LilSkies, password -  bestrapper and e-mail - gma@gma.com
+2018-06-29 07:01:13,714, parser, [INFO]: List of arguments : ['user', 'register', 'LilSkies', 'bestrapper', 'gma@gma.com']
+2018-06-29 07:01:13,715, parse_user, [INFO]: Attempt to register a user with a name - LilSkies, password -  bestrapper and e-mail - gma@gma.com
+2018-06-29 07:09:25,618, parser, [INFO]: List of arguments : ['project', 'add', 'test_user', 'test_password', 'Kek', 'LoL']
+2018-06-29 07:09:38,671, parser, [INFO]: List of arguments : ['project', 'add', 'Antoha', '12345', 'Kek', 'LoL']
+2018-06-29 07:36:34,450, parser, [INFO]: List of arguments : ['user', 'register', 'test', 'test', 'test@gmail.com']
+2018-06-29 07:36:34,451, parse_user, [INFO]: Attempt to register a user with a name - test, password -  test and e-mail - test@gmail.com
+2018-06-29 07:36:34,558, parse_user, [INFO]: User test successfully registered
+2018-06-29 07:42:45,766, parser, [INFO]: List of arguments : ['project', 'add', 'test', 'test', 'TestProject', 'TestDescription']
+2018-06-29 07:45:14,790, parser, [INFO]: List of arguments : ['project', 'add', 'test', 'test', 'TestProject', 'TestDescription']
+2018-06-29 07:46:47,685, parser, [INFO]: List of arguments : ['project', 'add', 'Antoha', '12345', 'MyFavouriteProject', 'Desc']
+2018-06-29 07:47:35,971, parser, [INFO]: List of arguments : ['project', 'add', 'Antoha', '12345', 'MyFavouriteProject', 'Desc']
+2018-06-29 07:48:22,933, parser, [INFO]: List of arguments : ['user', 'register', 'test', 'test', 'test']
+2018-06-29 07:48:22,934, parse_user, [INFO]: Attempt to register a user with a name - test, password -  test and e-mail - test
+2018-06-29 07:48:28,077, parser, [INFO]: List of arguments : ['user', 'register', 'kekester', '1', '2']
+2018-06-29 07:48:28,078, parse_user, [INFO]: Attempt to register a user with a name - kekester, password -  1 and e-mail - 2
+2018-06-29 07:48:28,162, parse_user, [INFO]: User kekester successfully registered
+2018-06-29 07:48:58,433, parser, [INFO]: List of arguments : ['user', 'register', 'kekester', '1', '2']
+2018-06-29 07:48:58,436, parse_user, [INFO]: Attempt to register a user with a name - kekester, password -  1 and e-mail - 2
+2018-06-29 07:49:01,125, parser, [INFO]: List of arguments : ['project', 'add', 'Antoha', '12345', 'MyFavouriteProject', 'Desc']
+2018-06-29 07:49:58,878, parser, [INFO]: List of arguments : ['project', 'add', 'Antoha', '12345', 'MyFavouriteProject', 'Desc']
+2018-06-29 07:50:41,317, parser, [INFO]: List of arguments : ['project', 'add', 'Antoha', '12345', 'MyFavouriteProject', 'Desc']
+2018-06-29 07:51:16,300, parser, [INFO]: List of arguments : ['project', 'add', 'Antoha', '12345', 'MyFavouriteProject', 'Desc']
+2018-06-29 07:51:16,305, parse_project, [INFO]: Trying to create a project with the name - MyFavouriteProject and description - Desc
+2018-06-29 07:51:16,461, parse_project, [INFO]: Project MyFavouriteProject was successfully created
+2018-06-29 07:53:49,184, parser, [INFO]: List of arguments : ['project', 'add', 'test', 'test', 'TestProject', 'TestDesc']
+2018-06-29 07:53:49,186, parse_project, [INFO]: Trying to create a project with the name - TestProject and description - TestDesc
+2018-06-29 07:53:49,355, parse_project, [INFO]: Project TestProject was successfully created
+2018-06-29 08:09:57,039, parser, [INFO]: List of arguments : ['column', 'add', 'test', 'test', 'TestProject', 'TestColumn', 'TestDesc']
+2018-06-29 08:09:57,041, parse_column, [INFO]: Trying to create a column with the name - TestColumn and description - TestDesc
+2018-06-29 08:09:57,131, parse_column, [INFO]: Column TestColumn was successfully created
+2018-06-29 09:32:20,403, parser, [INFO]: List of arguments : ['task', 'add']
+2018-06-29 09:33:16,354, parser, [INFO]: List of arguments : ['task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'TestDate', 'desc1', '02.07.2018', '07.07.2018', 'tag', '5']
+2018-06-29 09:33:16,361, parse_task, [INFO]: Trying to add task with the name - TestDate
+2018-06-29 09:33:16,474, parse_task, [INFO]: Task is successfully added
+2018-06-29 09:34:47,141, parser, [INFO]: List of arguments : ['task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'TestDate1', 'desc1', '02.07.2018', '07.07.2018', 'tag', '5']
+2018-06-29 09:34:47,150, parse_task, [INFO]: Trying to add task with the name - TestDate1
+2018-06-29 09:34:47,254, parse_task, [INFO]: Task is successfully added
+2018-06-29 12:13:18,196, parser, [INFO]: List of arguments : ['regular_task', 'add']
+2018-06-29 12:13:38,384, parser, [INFO]: List of arguments : ['regular_task', 'add']
+2018-06-29 12:14:06,824, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'newreg', 'test', '05.07.2018', '12.07.2018', '1', 'week', 'tag1', '5']
+2018-06-29 12:14:06,831, parse_regular_task, [INFO]: Trying to create regular task
+2018-06-29 12:15:03,435, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'newreg', 'test', '05.07.2018', '12.07.2018', '1', 'week', 'tag1', '5']
+2018-06-29 12:15:03,446, parse_regular_task, [INFO]: Trying to create regular task
+2018-06-29 12:16:21,657, parser, [INFO]: List of arguments : ['regular_task', 'add']
+2018-06-29 12:16:23,347, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'newreg', 'test', '05.07.2018', '12.07.2018', '1', 'week', 'tag1', '5']
+2018-06-29 12:16:23,355, parse_regular_task, [INFO]: Trying to create regular task
+2018-06-29 12:16:23,457, parse_regular_task, [INFO]: Tasi is successfully created
+2018-06-29 12:16:55,970, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'newreg', 'test', '05.07.2018', '12.07.2018', '1', 'week', 'tag1', '5']
+2018-06-29 12:16:55,977, parse_regular_task, [INFO]: Trying to create regular task
+2018-06-29 12:17:52,693, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'newreg', 'test', '05.07.2018', '12.07.2018', '1', 'week', 'tag1', '5']
+2018-06-29 12:17:52,703, parse_regular_task, [INFO]: Trying to create regular task
+2018-06-29 12:17:52,804, parse_regular_task, [INFO]: Tasi is successfully created
+2018-06-29 12:18:43,061, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'newreg', 'test', '05.07.2018', '12.07.2018', '1', 'week', 'tag1', '5']
+2018-06-29 12:18:43,069, parse_regular_task, [INFO]: Trying to create regular task
+2018-06-29 12:18:49,155, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'newreg1', 'test', '05.07.2018', '12.07.2018', '1', 'week', 'tag1', '5']
+2018-06-29 12:18:49,163, parse_regular_task, [INFO]: Trying to create regular task
+2018-06-29 12:19:29,958, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'newreg1', 'test', '05.07.2018', '12.07.2018', '1', 'week', 'tag1', '5']
+2018-06-29 12:19:29,968, parse_regular_task, [INFO]: Trying to create regular task
+2018-06-29 12:20:43,263, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'newreg1', 'test', '05.07.2018', '12.07.2018', '1', 'week', 'tag1', '5']
+2018-06-29 12:20:43,270, parse_regular_task, [INFO]: Trying to create regular task
+2018-06-29 12:20:43,389, parse_regular_task, [INFO]: Tasi is successfully created
+2018-06-29 12:59:09,854, parser, [INFO]: List of arguments : ['task', 'add']
+2018-06-29 12:59:18,459, parser, [INFO]: List of arguments : ['project', 'add']
+2018-06-29 12:59:40,331, parser, [INFO]: List of arguments : ['project', 'add', 'Antoha', '12345', 'July29', 'description']
+2018-06-29 12:59:40,344, parse_project, [INFO]: Trying to create a project with the name - July29 and description - description
+2018-06-29 12:59:40,508, parse_project, [INFO]: Project July29 was successfully created
+2018-06-29 13:00:25,057, parser, [INFO]: List of arguments : ['column', 'add']
+2018-06-29 13:00:37,220, parser, [INFO]: List of arguments : ['column', 'add', 'Antoha', '12345', 'July29', 'Column3', 'desc']
+2018-06-29 13:00:37,231, parse_column, [INFO]: Trying to create a column with the name - Column3 and description - desc
+2018-06-29 13:00:37,309, parse_column, [INFO]: Column Column3 was successfully created
+2018-06-29 13:00:45,714, parser, [INFO]: List of arguments : ['task', 'add']
+2018-06-29 13:01:26,839, parser, [INFO]: List of arguments : ['task', 'add', 'Antoha', '12345', 'July29', 'Column3', 'TaskForTest', 'long description', '02.07.2018', '08.07.208', 'first, second', '5']
+2018-06-29 13:01:26,853, parse_task, [INFO]: Trying to add task with the name - TaskForTest
+2018-06-29 13:01:33,589, parser, [INFO]: List of arguments : ['task', 'add', 'Antoha', '12345', 'July29', 'Column3', 'TaskForTest', 'long description', '02.07.2018', '08.07.2018', 'first, second', '5']
+2018-06-29 13:01:33,603, parse_task, [INFO]: Trying to add task with the name - TaskForTest
+2018-06-29 13:01:33,744, parse_task, [INFO]: Task is successfully added
+2018-06-29 13:02:06,381, parser, [INFO]: List of arguments : ['project', 'show', 'all', 'Antoha', '12345']
+2018-06-29 13:02:50,962, parser, [INFO]: List of arguments : ['task', 'show', 'all', 'Antoha', '12345']
+2018-06-29 13:03:31,483, parser, [INFO]: List of arguments : ['task', 'show', 'all', 'Antoha', '12345']
+2018-06-29 13:03:31,485, parse_task, [INFO]: Trying to show all tasks in this column of project
+2018-06-29 13:03:35,164, parser, [INFO]: List of arguments : ['project', 'show', 'all', 'Antoha', '12345']
+2018-06-29 13:03:35,165, parse_project, [INFO]: Trying to show all projects of this user
+2018-06-29 13:03:35,177, parse_project, [INFO]: All project was shown
+2018-07-05 20:07:36,477, parser, [ERROR]: No subcommand
+2018-07-05 20:09:16,690, parser, [INFO]: List of arguments : ['regular_task', 'add']
+2018-07-05 20:09:16,690, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 0 was recieved
+2018-07-05 20:09:50,557, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Regular Task', 'Super Description', '04.07.2018', '02.07.2018', '5', 'week', 'tag', '10']
+2018-07-05 20:09:50,639, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-05 20:09:50,801, parse_regular_task, [INFO]: Tasi is successfully created
+2018-07-05 20:11:22,950, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Regular Task1', 'Super Description', '04:07:2018', '02:07:2018', '5', 'week', 'tag', '10']
+2018-07-05 20:11:22,962, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-05 20:11:22,969, RegularTaskController, [ERROR]: It's not a date
+2018-07-05 20:11:22,970, parser, [ERROR]: The entered date does not match the required format
+2018-07-05 20:16:44,289, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Regular Task1', 'Super Description', '04.07.2018', '02.07.2018', '5', 'week', 'tag', '10']
+2018-07-05 20:16:44,301, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-05 20:16:44,308, RegularTaskController, [ERROR]: EndDate is before StartDate
+2018-07-05 20:16:44,308, RegularTaskController, [ERROR]: It's not a date
+2018-07-05 20:16:44,308, parser, [ERROR]: The entered date does not match the required format
+2018-07-05 20:16:48,564, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Regular Task1', 'Super Description', '04.07.2018', '02.07.2018', '5', 'week', 'tag', '10']
+2018-07-05 20:16:48,575, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-05 20:16:48,581, RegularTaskController, [ERROR]: EndDate is before StartDate
+2018-07-05 20:16:48,581, RegularTaskController, [ERROR]: It's not a date
+2018-07-05 20:16:48,581, parser, [ERROR]: The entered date does not match the required format
+2018-07-05 20:16:52,947, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Regular Task2', 'Super Description', '04.07.2018', '02.07.2018', '5', 'week', 'tag', '10']
+2018-07-05 20:16:52,958, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-05 20:16:52,963, RegularTaskController, [ERROR]: EndDate is before StartDate
+2018-07-05 20:16:52,963, RegularTaskController, [ERROR]: It's not a date
+2018-07-05 20:16:52,963, parser, [ERROR]: The entered date does not match the required format
+2018-07-07 09:43:47,746, parser, [INFO]: List of arguments : ['regular_task', 'add']
+2018-07-07 09:43:47,747, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 0 was recieved
+2018-07-07 09:44:37,396, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Regular_Task', 'Top_Desc', '02.07.2018', '05.07.2018', '5', 'week', 'tag', 'wek']
+2018-07-07 09:44:37,419, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 09:44:37,446, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'wek'
+2018-07-07 09:44:37,446, parser, [ERROR]: Priority - it's not a number
+2018-07-07 09:50:22,506, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'RegTask', 'kek']
+2018-07-07 09:50:22,515, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 6 was recieved
+2018-07-07 09:50:41,281, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'RegTask', 'kek', '02.07.2018', '05.07.2018', '5', 'week', 't', 'g']
+2018-07-07 09:50:41,296, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 09:50:41,301, RegularTaskController, [ERROR]: It's not a date
+2018-07-07 09:50:41,301, parser, [ERROR]: The entered date does not match the required format
+2018-07-07 09:52:05,233, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'RegTask', 'kek', '02.07.2018', '05.07.2018', '5', 'week', 't', 'g']
+2018-07-07 09:52:05,244, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 09:52:05,250, parser, [ERROR]: can't compare datetime.datetime to datetime.date
+2018-07-07 09:52:18,432, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'RegTask', 'kek', '02.07.2018', '05.07.2018', '5', 'week', 't', 'g']
+2018-07-07 09:52:18,441, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 09:52:18,446, parser, [ERROR]: Incorrect date
+2018-07-07 09:55:43,934, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'RegTask', 'kek', '052.07.2018', '05.07.2018', '5', 'week', 't', 'g']
+2018-07-07 09:55:43,943, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 09:55:43,949, parser, [ERROR]: time data '052.07.2018' does not match format '%d.%m.%Y'
+2018-07-07 09:55:47,523, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'RegTask', 'kek', '52.07.2018', '05.07.2018', '5', 'week', 't', 'g']
+2018-07-07 09:55:47,531, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 09:55:47,537, parser, [ERROR]: time data '52.07.2018' does not match format '%d.%m.%Y'
+2018-07-07 09:55:51,861, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'RegTask', 'kek', '05.07.2018', '05.07.2018', '5', 'week', 't', 'g']
+2018-07-07 09:55:51,869, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 09:55:51,874, parser, [ERROR]: Incorrect date
+2018-07-07 09:55:55,395, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'RegTask', 'kek', '05.07.2018', '9.07.2018', '5', 'week', 't', 'g']
+2018-07-07 09:55:55,404, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 09:55:55,409, parser, [ERROR]: Incorrect date
+2018-07-07 09:55:59,424, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'RegTask', 'kek', '08.07.2018', '9.07.2018', '5', 'week', 't', 'g']
+2018-07-07 09:55:59,434, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 09:55:59,438, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'g'
+2018-07-07 09:55:59,438, parser, [ERROR]: Priority - it's not a number
+2018-07-07 09:56:01,820, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'RegTask', 'kek', '08.07.2018', '9.07.2018', '5', 'week', 't', '5']
+2018-07-07 09:56:01,829, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 09:56:01,912, parse_regular_task, [INFO]: Tasi is successfully created
+2018-07-07 10:31:20,238, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'RegTask1', 'kek', '08.07.2018', '9.07.2018', '5', 'week', 't', '5']
+2018-07-07 10:31:20,246, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 10:31:20,326, parse_regular_task, [INFO]: Tasi is successfully created
+2018-07-07 10:35:00,807, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'RegTask1', 'kek', '08.07.2018', '9.07.2018', '5', 'we2ek', 't', '5']
+2018-07-07 10:35:00,815, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 10:35:00,821, RegularTaskController, [ERROR]: Incorrect type of step
+2018-07-07 10:35:00,821, parser, [ERROR]: Incorrect type of step. Choose one from [day,month,year]
+2018-07-07 10:35:05,199, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'RegTask1', 'kek', '08.07.2018', '9.07.2018', '5', 'day', 't', '5']
+2018-07-07 10:35:05,210, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 10:35:05,218, RegularTaskController, [ERROR]: Task with this name is already exist
+2018-07-07 10:35:05,218, parser, [ERROR]: A task with the name RegTask1 already exists in the selected column
+2018-07-07 10:35:10,997, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'RegTask12', 'kek', '08.07.2018', '9.07.2018', '5', 'day', 't', '5']
+2018-07-07 10:35:11,009, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 10:35:11,098, parse_regular_task, [INFO]: Tasi is successfully created
+2018-07-07 14:39:49,607, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345']
+2018-07-07 14:39:49,661, parser, [ERROR]: There is no user with this name
+2018-07-07 14:41:47,232, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345']
+2018-07-07 14:41:47,246, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 14:41:47,246, parser, [ERROR]: list index out of range
+2018-07-07 14:42:10,510, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345']
+2018-07-07 14:42:10,520, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 14:43:00,996, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn']
+2018-07-07 14:43:01,006, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 14:43:01,011, parse_regular_task, [INFO]: All task was shown
+2018-07-07 14:43:18,014, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn']
+2018-07-07 14:43:18,026, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 14:43:18,033, parse_regular_task, [INFO]: All task was shown
+2018-07-07 14:43:48,189, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn']
+2018-07-07 14:43:48,198, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 14:43:48,203, parse_regular_task, [INFO]: All task was shown
+2018-07-07 14:50:06,857, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345']
+2018-07-07 14:50:06,866, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 3 was recieved
+2018-07-07 14:50:10,054, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn']
+2018-07-07 14:50:10,063, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 5 was recieved
+2018-07-07 14:50:13,287, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn']
+2018-07-07 14:50:13,298, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 5 was recieved
+2018-07-07 14:50:23,424, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345']
+2018-07-07 14:50:23,438, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 3 was recieved
+2018-07-07 14:50:24,733, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345']
+2018-07-07 14:50:24,743, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 3 was recieved
+2018-07-07 14:50:28,384, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345']
+2018-07-07 14:50:28,398, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 3 was recieved
+2018-07-07 14:50:38,575, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345']
+2018-07-07 14:50:38,583, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 3 was recieved
+2018-07-07 14:50:40,289, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn']
+2018-07-07 14:50:40,297, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 14:50:40,302, parse_regular_task, [INFO]: All task was shown
+2018-07-07 15:04:01,780, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn']
+2018-07-07 15:04:01,788, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 5 was recieved
+2018-07-07 15:04:18,896, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345']
+2018-07-07 15:04:18,904, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 3 was recieved
+2018-07-07 15:04:39,292, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn']
+2018-07-07 15:04:53,631, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn']
+2018-07-07 15:04:53,646, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 15:04:53,655, parse_regular_task, [INFO]: All task was shown
+2018-07-07 15:04:58,585, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 15:04:58,594, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 15:04:58,602, parse_regular_task, [INFO]: All task was shown
+2018-07-07 15:05:15,417, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'AntohaTask', 'Top_Desc', '02.07.2018', '05.07.2018', '5', 'week', 'tag', 'wek']
+2018-07-07 15:05:15,427, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 15:05:25,302, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'AntohaTask', 'Top_Desc', '10.07.2018', '15.07.2018', '5', 'week', 'tag', 'wek']
+2018-07-07 15:05:25,314, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 15:05:25,319, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'wek'
+2018-07-07 15:05:30,478, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'AntohaTask', 'Top_Desc', '10.07.2018', '15.07.2018', '5', 'week', 'tag', '10']
+2018-07-07 15:05:30,487, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-07 15:05:30,578, parse_regular_task, [INFO]: Tasi is successfully created
+2018-07-07 15:05:34,289, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn']
+2018-07-07 15:05:34,298, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 15:05:34,302, parse_regular_task, [INFO]: All task was shown
+2018-07-07 15:05:37,618, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 15:05:37,628, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 15:05:37,633, parse_regular_task, [INFO]: All task was shown
+2018-07-07 15:05:39,553, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 15:05:39,561, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 15:05:39,567, parse_regular_task, [INFO]: All task was shown
+2018-07-07 15:05:46,516, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 15:05:46,528, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 15:05:46,535, parse_regular_task, [INFO]: All task was shown
+2018-07-07 15:06:21,759, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 15:06:21,772, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 15:06:21,776, parse_regular_task, [INFO]: All task was shown
+2018-07-07 15:06:45,577, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 15:06:45,589, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 15:08:13,155, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 15:08:13,165, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 15:08:13,170, parse_regular_task, [INFO]: All task was shown
+2018-07-07 15:10:34,945, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'age']
+2018-07-07 15:10:34,953, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 15:10:34,958, parse_regular_task, [INFO]: All task was shown
+2018-07-07 15:56:22,164, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'age']
+2018-07-07 15:56:22,174, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 17:57:45,577, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'age']
+2018-07-07 17:57:45,620, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 17:57:49,840, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 17:57:49,849, parse_regular_task, [INFO]: Trying to show all tasks in this column of project
+2018-07-07 17:57:49,854, parse_regular_task, [INFO]: All task was shown
+2018-07-07 17:59:10,075, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 18:00:27,704, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 19:47:47,395, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 19:48:18,612, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 19:48:48,899, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 19:49:23,691, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 19:50:47,508, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 19:50:57,389, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 20:04:46,714, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 20:08:32,014, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 20:10:36,215, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 20:10:52,219, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 20:11:00,508, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 20:11:29,491, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 20:11:38,420, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 20:12:02,446, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 20:12:51,727, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 20:12:58,214, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 20:13:31,713, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-07 20:14:12,463, parser, [INFO]: List of arguments : ['regular_task', 'show', 'all', 'Antoha', '12345', 'Project337', 'NewColumn', 'name']
+2018-07-29 23:28:10,878, parser, [ERROR]: Incorrect number of arguments
+2018-07-30 00:23:38,142, parser, [ERROR]: Incorrect number of arguments
+2018-07-30 00:23:43,602, parser, [ERROR]: No subcommand
+2018-07-30 00:32:14,671, parser, [INFO]: List of arguments : ['regular_task', 'create']
+2018-07-30 00:32:14,672, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 0 was recieved
+2018-07-30 00:33:25,059, parser, [INFO]: List of arguments : ['regular_task', 'create', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 00:33:41,811, parser, [INFO]: List of arguments : ['regular_task', 'create', 'Antoha', '12345', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 00:34:31,649, parser, [INFO]: List of arguments : ['regular_task', 'create', 'Antoha', '12345', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 00:35:58,288, parser, [INFO]: List of arguments : ['regular_task', 'create', 'Antoha', '12345', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 00:37:20,404, parser, [INFO]: List of arguments : ['regular_task', 'create', 'Antoha', '12345', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 00:37:53,303, parser, [INFO]: List of arguments : ['regular_task', 'create', 'Antoha', '12345', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 00:37:54,481, parser, [INFO]: List of arguments : ['regular_task', 'create', 'Antoha', '12345', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 00:39:01,372, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 00:39:08,687, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 00:39:33,278, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 00:41:10,287, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 00:41:39,390, parser, [ERROR]: Incorrect number of arguments
+2018-07-30 00:42:31,000, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 00:45:30,379, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 00:46:25,090, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 00:47:05,126, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:28:47,270, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:29:17,799, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:29:48,133, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:31:52,678, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:33:37,428, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:33:52,986, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:39:19,775, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:40:53,321, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:41:10,976, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:42:36,676, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:43:34,701, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:43:43,944, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:44:18,278, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:44:42,437, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:47:21,472, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:48:33,840, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:48:33,872, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 11 was recieved
+2018-07-30 10:48:55,771, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'NewTask', 'NewDesc', '29.07.2018', '25.07.2018', '5', 'week', 'lol']
+2018-07-30 10:48:55,788, parse_regular_task, [ERROR]: Incorrect number of arguments. Expected 12 , but 11 was recieved
+2018-07-30 10:49:07,985, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 10:49:08,058, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 10:49:14,020, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 10:49:14,035, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 10:49:59,800, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 10:49:59,813, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 10:50:25,923, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 10:50:25,938, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 10:57:43,680, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'Pudge', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 10:57:43,698, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 10:57:51,372, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Posrat', 'shodit postat', '29.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 10:57:51,389, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 10:57:59,576, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Posrat', 'shodit postat', '32.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 10:57:59,601, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 10:58:03,278, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Posrat', 'shodit postat', '31.07.2018', '25.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 10:58:03,318, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 10:58:07,387, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Posrat', 'shodit postat', '31.07.2018', '30.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 10:58:07,445, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 10:58:11,328, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Posrat', 'shodit postat', '31.07.2018', '31.07.2018', '5', 'week', 'kek', 'g']
+2018-07-30 10:58:11,379, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 10:58:11,383, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'g'
+2018-07-30 10:58:11,383, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'g'
+2018-07-30 10:58:21,334, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Posrat', 'shodit postat', '31.07.2018', '05.08.2018', '5', 'week', 'kek', 'g']
+2018-07-30 10:58:21,351, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 10:58:21,355, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'g'
+2018-07-30 10:58:21,355, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'g'
+2018-07-30 11:03:05,294, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Posrat', 'shodit postat', '04.07.2018', '05.08.2018', '5', 'week', 'kek', 'g']
+2018-07-30 11:03:05,311, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 11:03:05,314, RegularTaskController, [ERROR]: Start date is before today
+2018-07-30 11:03:05,314, RegularTaskController, [ERROR]: Start date is before today
+2018-07-30 11:03:18,866, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Posrat', 'shodit postat', '10.08.2018', '05.08.2018', '5', 'week', 'kek', 'g']
+2018-07-30 11:03:18,892, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 11:03:18,897, RegularTaskController, [ERROR]: EndDate is before Start date
+2018-07-30 11:03:18,897, RegularTaskController, [ERROR]: EndDate is before Start date
+2018-07-30 11:03:32,797, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Posrat', 'shodit postat', '14.08.2018', '05.08.2018', '5', 'week', 'kek', 'g']
+2018-07-30 11:03:32,825, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 11:03:32,830, RegularTaskController, [ERROR]: EndDate is before Start date
+2018-07-30 11:03:32,830, RegularTaskController, [ERROR]: EndDate is before Start date
+2018-07-30 11:03:36,068, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Posrat', 'shodit postat', '4.08.2018', '05.08.2018', '5', 'week', 'kek', 'g']
+2018-07-30 11:03:36,090, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 11:03:36,094, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'g'
+2018-07-30 11:03:36,094, RegularTaskController, [ERROR]: invalid literal for int() with base 10: 'g'
+2018-07-30 11:03:39,076, parser, [INFO]: List of arguments : ['regular_task', 'add', 'Antoha', '12345', 'Project337', 'NewColumn', 'Posrat', 'shodit postat', '4.08.2018', '05.08.2018', '5', 'week', 'kek', '10']
+2018-07-30 11:03:39,092, parse_regular_task, [INFO]: Trying to create regular task
+2018-07-30 11:03:39,214, parse_regular_task, [INFO]: Tasi is successfully created

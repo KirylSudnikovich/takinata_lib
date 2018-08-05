@@ -1,0 +1,28 @@
+{% extends 'adminlte/base.html' %}
+
+{% block title %}Project Create{% endblock %}
+{% load i18n static %}
+
+{% block body_class %}login-page{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <section class="content">
+            <div class="error-page">
+                <h2 class="headline text-yellow">403</h2>
+                <div class="error-content">
+                    <h3>
+                        <i class="fa fa-warning text-yellow"></i>
+                        "You have no permission!"
+                    </h3>
+                    <p>
+                        "You have no permission to watch this page. For looking this page you need to authorize.
+                        Meanwhile, you may
+                        <a href="{% url 'accounts:registration' %}">sign up</a> or
+                        <a href="{% url 'accounts:login' %}">sign in</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

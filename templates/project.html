@@ -1,0 +1,68 @@
+{% extends 'adminlte/base.html' %}
+
+{% block title %}{{ project.name }}{% endblock %}
+{% load i18n static %}
+
+{% block body_class %}login-page{% endblock %}
+
+{% block content %}
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Main Information</h3>
+                    </div>
+                    <div class="box-body">
+                        <p><b>Title: </b>{{ project.name }}</p>
+                        <p><b>Description: </b>{{ project.description }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Columns</h3>
+                    </div>
+                    <div class="box-body">
+                        <p>'list'</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Tasks</h3>
+                    </div>
+                    <div class="box-body">
+                        <p>'list'</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Executors</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    {% for user in guys %}
+                                        <td>{{ user.username }}
+                                            <small class="pull-right">
+                                                <a href="#">
+                                                    <i class="fa fa-close"></i>
+                                                </a>
+                                            </small>
+                                        </td>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

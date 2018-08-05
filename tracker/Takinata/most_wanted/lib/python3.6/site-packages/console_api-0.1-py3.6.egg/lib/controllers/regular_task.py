@@ -1,0 +1,95 @@
+import lib.logger as logger
+
+from datetime import *
+from lib.storage.project import *
+from lib.storage.column import *
+from lib.storage.regular_task import *
+from lib.storage.user import *
+from lib.models.regular_task import *
+
+
+class RegularTaskController:
+    log_tag = "RegularTaskController"
+
+    @classmethod
+    def add_task(cls, username, password, project_name, column_name, name, desc, first_date, second_date, step,
+                 type_of_step, tags, priority):
+        """
+        Creates a regular task in the selected column of the selected project with the specified transition step and
+        the specified times- by borders
+        :param username: The name of the user who creates the task
+        :param password: User password
+        :param project_name: Project name where the task will be created
+        :param column_name: Name of the column where the task will be created
+        :param name: Task name
+        :param desc: Task description
+        :param first_date: The start date of task execution
+        :param second_date: Task end date
+        :param step: Step length
+        :param type_of_step: Kind of step (minute/hour/day/month)
+        :param edit_date: Date of last task editing
+        :param tags: Tags
+        :param priority: Task priority
+        :return:
+        """
+        log = logger.get_logger(RegularTaskController.log_tag)
+        project = ProjectStorage.get_project(project_name)
+        column = ColumnStorage.get_column(project_name, column_name)
+        user = UserStorage.get_user_by_name(username)
+        if user.password == password:
+            try:
+                start = datetime.strptime(first_date, "%d.%m.%Y")
+                end = datetime.strptime(second_date, "%d.%m.%Y")
+                if end < start:
+                    log.error("EndDate is before StartDate")
+                    raise EndBeforeStart
+            except Exception:
+                log.error("It's not a date")
+                raise NotDate
+            ProjectStorage.check_permission(user, project)
+            task_names = RegularTaskStorage.get_all_tasks(project_name, column_name)
+            have = False
+            for i in task_names:
+                if i.name == name:
+                    have = True
+            if not have:
+                regular_task = RegularTask(name, desc, project.id, column.id, user.user_id, first_date, second_date,
+                                           step, type_of_step, str(date.today()), tags, priority, 0)
+                RegularTaskStorage.add_task_to_db(regular_task)
+                return regular_task
+            else:
+                log.error("Task with this name is already exist")
+                raise TaskWithThisNameAlreadyExist(name)
+        else:
+            log.error("Incorrect password for {}".format(username))
+            raise WrongPassword
+
+    @classmethod
+    def delete_task(cls, username, password, project_name, column_name, task_name):
+        """
+        Delete the specified task
+        :param username:
+        :param password:
+        :param project_name:
+        :param column_name:
+        :param task_name:
+        :return:
+        """
+        log = logger.get_logger(RegularTaskController.log_tag)
+        user = UserStorage.get_user_by_name(username)
+        project = ProjectStorage.get_project(project_name)
+        if user.password == password:
+            ProjectStorage.is_admin(user, project)
+            try:
+                task = RegularTaskStorage.get_task(project_name, column_name, task_name)
+            except Exception:
+                log.error("There is no task with this name")
+                raise NoTask
+            RegularTaskStorage.delete_task_from_db(task)
+        else:
+            log.error("Incorrect password for {}".format(username))
+            raise WrongPassword
+
+    @classmethod
+    def create_table(cls):
+        RegularTaskStorage.create_table()
