@@ -59,15 +59,20 @@ class ProjectInfo(View):
 
     def post(self, request, project_id):
         if request.method == 'POST':
-            print(request.POST)
+            print("ALARM - ", request.user.username)
             if 'add_to_project' in request.POST:
                 username = request.POST['add_select']
                 project = ProjectStorage.get_project_by_id(project_id)
                 user = UserStorage.get_user_by_name(username)
-                ProjectStorage.add_person_to_project(user, project)
+                ProjectController.add_person_to_project(request.user.username, request.user.password, project, user)
                 return redirect('tracker:project_info', project_id)
             elif 'remove_from_project' in request.POST:
-                raise handler404()
+                username = request.POST['remove_select']
+                project = ProjectStorage.get_project_by_id(project_id)
+                user = UserStorage.get_user_by_name(username)
+                ProjectController.delete_person_from_project(request.user.username, request.user.password, project,
+                                                             user)
+                return redirect('tracker:project_info', project_id)
 
 
 class ProjectDelete(View):
