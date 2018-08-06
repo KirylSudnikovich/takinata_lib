@@ -8,7 +8,7 @@
 {% block content %}
     <section class="content">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8">
                 <div class="box box-primary">
                     <div class="box-header with-border">
                         <h3 class="box-title">Main Information</h3>
@@ -19,6 +19,19 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Manage Project</h3>
+                    </div>
+                    <div class="box-body">
+                        <a href="{% url 'tracker:project_edit' project.id %}" class="btn btn-block btn-warning">Edit</a>
+                        <a href="{% url 'tracker:project_delete' project.id %}" class="btn btn-block btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-4">
                 <div class="box box-primary">
                     <div class="box-header with-border">
@@ -60,6 +73,52 @@
                                 </tbody>
                             </table>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Executors dashboard</h3>
+                    </div>
+                    <div class="box-body">
+                        <form role="form" method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-xs-8">
+                                    <label>Remove from project: </label>
+                                    <label>
+                                        <select class="form-control" name="remove_select">
+                                        {% for user in guys %}
+                                            <option>{{ user.username }}</option>
+                                        {% endfor %}
+                                        </select>
+                                    </label>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <button type="submit" name='remove_from_project' class="btn btn-primary btn-block btn-flat">OK</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-xs-8">
+                                    <label>Add to project: </label>
+                                    <label>
+                                        <select class="form-control js-example-basic-single" name="state">
+                                          <option value="AL">Alabama</option>
+                                          <option value="WY">Wyoming</option>
+                                        </select>
+                                    </label>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <button type="submit" name="add_to_project" class="btn btn-primary btn-block btn-flat">OK</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

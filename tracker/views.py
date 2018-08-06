@@ -9,6 +9,7 @@ from .forms import SignupForm
 from django.views import View
 from lib.controllers.project import ProjectController
 from lib.storage.project import ProjectStorage
+from lib.storage.user import UserStorage
 
 
 def index(request):
@@ -41,10 +42,70 @@ class ProjectNew(TemplateView):
 
 class ProjectInfo(View):
     def get(self, request, project_id):
-        project = ProjectStorage.get_project_by_id(project_id)
-        guys = ProjectStorage.right_get_personts(project)
-        print("gays - ", guys)
-        return render(request, 'project.html', {'project': project, 'guys': guys})
+        if request.user.is_authenticated:
+            project = ProjectStorage.get_project_by_id(project_id)
+            guys = ProjectStorage.right_get_personts(project)
+            all_users = UserStorage.right_get_all_users()
+            all_guys = []
+            guys_names = []
+            for i in guys:
+                guys_names.append(i.username)
+            for i in all_users:
+                if i.username not in guys_names:
+                    all_guys.append(i)
+            return render(request, 'project.html', {'project': project, 'guys': guys, 'all_guys': all_guys})
+        else:
+            return render(request, 'no_permission.html')
+
+    def post(self, request, project_id):
+        if request.method == 'POST':
+            print(request.POST)
+            if 'add_to_project' in request.POST:
+                username = request.POST['add_select']
+                project = ProjectStorage.get_project_by_id(project_id)
+                user = UserStorage.get_user_by_name(username)
+                ProjectStorage.add_person_to_project(user, project)
+                return redirect('tracker:project_info', project_id)
+            elif 'remove_from_project' in request.POST:
+                raise handler404()
+
+
+class ProjectDelete(View):
+    def get(self, request, project_id):
+        if request.user.is_authenticated:
+            project = ProjectStorage.get_project_by_id(project_id)
+            return render(request, 'project_delete.html', {'project': project})
+        else:
+            return render(request, 'no_permission.html')
+
+    def post(self, request, project_id):
+        if request.method == 'POST':
+            if request.user.is_authenticated:
+                project = ProjectStorage.get_project_by_id(project_id)
+                ProjectStorage.delete_with_object(project)
+                return redirect('tracker:projects')
+            else:
+                return render(request, 'no_permission.html')
+
+
+class ProjectEdit(View):
+    def get(self, request, project_id):
+        if request.user.is_authenticated:
+            project = ProjectStorage.get_project_by_id(project_id)
+            return render(request, 'project_edit.html', {'project': project})
+        else:
+            return render(request, 'no_permission.html')
+
+    def post(self, request, project_id):
+        if request.method == 'POST':
+            if request.user.is_authenticated:
+                project = ProjectStorage.get_project_by_id(project_id)
+                project.name = request.POST['name']
+                project.description = request.POST['description']
+                ProjectStorage.save(project)
+                return redirect('tracker:project_info', {'project': project})
+            else:
+                return render(request, 'no_permission.html')
 
 
 def register(request):
