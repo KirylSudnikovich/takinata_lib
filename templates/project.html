@@ -38,7 +38,9 @@
                         <h3 class="box-title">Columns</h3>
                     </div>
                     <div class="box-body">
-                        <p>'list'</p>
+                        {% for column in columns %}
+                            <a style="color: #000000" class="text" href="{% url 'tracker:column_info' project.id column.id %}"><p>{{ column.name }}</p></a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -70,6 +72,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
             <div class="col-md-8"></div>
             <div class="col-md-4">
                 <div class="box box-primary">
@@ -116,6 +120,7 @@
                         </form>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </section>

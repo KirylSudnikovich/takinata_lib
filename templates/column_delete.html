@@ -1,0 +1,27 @@
+{% extends 'adminlte/base.html' %}
+
+{% block title %}{{ column.name }}{% endblock %}
+{% load i18n static %}
+
+{% block body_class %}login-page{% endblock %}
+
+{% block content %}
+    <section class="content">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-5 text-center">
+                <h2>Are you sure you want to delete the column? <br>After confirmation, you can not restore it in any way</h2>
+                <div class="col-md-6">
+                    <a href="{% url 'tracker:column_info' project.id column.id %}" class="btn btn-block btn-primary btn-lg">Undo</a>
+                </div>
+                <form action="" method="post">
+                    <div class="col-md-6">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-block btn-danger btn-lg">Delete</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </section>
+{% endblock %}

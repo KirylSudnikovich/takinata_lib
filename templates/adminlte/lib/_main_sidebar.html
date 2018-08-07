@@ -46,6 +46,28 @@
                         </ul>
                     </li>
                 {% endif %}
+                {% if request.user.is_authenticated %}
+                    <li class="treeview">
+                        <a href="/tracker/columns">
+                            <i class="fa fa-dashboard"></i> <span>Columns</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-archive"></i> List of Columns
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'tracker:column_new' %}">
+                                    <i class="fa fa-plus"></i> Create Column
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                {% endif %}
 
                 <li class="treeview">
                     <a href="#">

@@ -1,0 +1,45 @@
+{% extends 'adminlte/base.html' %}
+
+{% block title %}{{ column.name }}{% endblock %}
+{% load i18n static %}
+
+{% block body_class %}login-page{% endblock %}
+
+{% block content %}
+    <section class="content">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Main Information</h3>
+                    </div>
+                    <div class="box-body">
+                        <p><b>Title: </b>{{ column.name }}</p>
+                        <p><b>Description: </b>{{ column.desc }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Tasks</h3>
+                    </div>
+                    <div class="box-body">
+                        <p>'list'</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Manage Column</h3>
+                    </div>
+                    <div class="box-body">
+                        <a href="{% url 'tracker:column_edit' project.id column.id %}" class="btn btn-block btn-warning">Edit</a>
+                        <a href="{% url 'tracker:column_delete' project.id column.id%}" class="btn btn-block btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
