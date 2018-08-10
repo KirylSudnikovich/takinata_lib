@@ -218,7 +218,3 @@ class ProjectController:
         else:
             log.error("Incorrect password for {}".format(username))
             raise WrongPassword
-
-    @classmethod
-    def create_table(cls):
-        ProjectStorage.create_table()

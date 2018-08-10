@@ -45,11 +45,29 @@
                             </li>
                         </ul>
                     </li>
-                {% endif %}
-                {% if request.user.is_authenticated %}
                     <li class="treeview">
                         <a href="/tracker/columns">
-                            <i class="fa fa-dashboard"></i> <span>Columns</span>
+                            <i class="fa fa-dashboard"></i> <span>Categories</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="{% url 'tracker:column_list' %}">
+                                    <i class="fa fa-archive"></i> List of Categories
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'tracker:column_new' %}">
+                                    <i class="fa fa-plus"></i> Create Category
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="/tracker/tasks">
+                            <i class="fa fa-dashboard"></i> <span>Tasks</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -57,33 +75,22 @@
                         <ul class="treeview-menu">
                             <li>
                                 <a href="#">
-                                    <i class="fa fa-archive"></i> List of Columns
+                                    <i class="fa fa-archive"></i> List of Tasks
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'tracker:column_new' %}">
-                                    <i class="fa fa-plus"></i> Create Column
+                                <a href="{% url 'tracker:task_create' %}">
+                                    <i class="fa fa-plus"></i> Create Task
                                 </a>
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="/tracker/bug_report">
+                            <i class="fa fa-dashboard"></i> <span>Bug Report</span>
+                        </a>
+                    </li>
                 {% endif %}
-
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-group"></i> <span>Sub menu</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-user"></i> Another link
-                            </a>
-                        </li>
-                    </ul>
-                </li>
             {% endblock nav_links %}
             {% endblock nav_links_outer %}
         </ul>

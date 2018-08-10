@@ -1,17 +1,18 @@
-from django.contrib.auth import authenticate, logout
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+from django.contrib.auth import authenticate, logout
+from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect, render_to_response
 from django.template import RequestContext
-from django.views.generic import TemplateView
-from .forms import SignupForm
 from django.views import View
-from lib.controllers.project import ProjectController
+from django.views.generic import TemplateView
 from lib.controllers.column import ColumnController
+from lib.controllers.project import ProjectController
 from lib.storage.column import ColumnStorage
 from lib.storage.project import ProjectStorage
 from lib.storage.user import UserStorage
+
+from .controllers.bug_report import BugController
+from .forms import SignupForm
 
 
 def index(request):
@@ -50,8 +51,8 @@ class ProjectInfo(View):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
             columns = ColumnController.show_all(request.user.username, request.user.password, project.name)
-            guys = ProjectStorage.right_get_personts(project)
-            all_users = UserStorage.right_get_all_users()
+            all_users = UserStorage.get_all_users()
+            guys = ProjectStorage.get_all_persons_in_project(project)
             all_guys = []
             guys_names = []
             for i in guys:
@@ -66,7 +67,6 @@ class ProjectInfo(View):
 
     def post(self, request, project_id):
         if request.method == 'POST':
-            print("ALARM - ", request.user.username)
             if 'add_to_project' in request.POST:
                 username = request.POST['add_select']
                 project = ProjectStorage.get_project_by_id(project_id)
@@ -125,7 +125,11 @@ class ColumnList(View):
         if request.user.is_authenticated:
             username = request.user.username
             password = request.user.password
-            column_list = ColumnController.show_all(username, password)
+            projects = ProjectController.show_all(username, password)
+            column_list = []
+            for project in projects:
+                columns = ColumnController.show_all(username, password, project.name)
+                column_list = column_list + columns
             return render(request, 'columns.html', {'column_list': column_list})
         else:
             return render(request, 'no_permission.html')
@@ -142,8 +146,11 @@ class ColumnNew(View):
                 name = request.POST['name']
                 description = request.POST['description']
                 project = ProjectStorage.get_project(request.POST['select_project'])
-                ColumnController.create_columm(request.user.username, request.user.password, project.name, name,
-                                               description)
+                ColumnController.create_columm(username=request.user.username, password=request.user.password,
+                                               project_name=project.name, name=name, description=description)
+                # column = Column(name=name, desc=description, project_id=project.id)
+                # log.info("")
+                # ColumnStorage.add_column_to_db(column)
                 return redirect('tracker:projects')
         else:
             return render(request, 'no_permission.html')
@@ -154,7 +161,7 @@ class ColumnInfo(View):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
             column = ColumnStorage.get_column_by_id(project.name, column_id)
-            return render(request, 'column.html', {'project': project,'column': column})
+            return render(request, 'column.html', {'project': project, 'column': column})
         else:
             return render(request, 'no_permission.html')
 
@@ -199,6 +206,33 @@ class ColumnEdit(View):
                 return redirect('tracker:projects')
             else:
                 return render(request, 'no_permission.html')
+
+
+class TaskList(View):
+    def get(self, request):
+        return render(request, 'tasks/list.html')
+
+
+class TaskCreate(View):
+    def get(self, request):
+        return render(request, 'tasks/create.html')
+
+class BugReport(View):
+    def get(self, request):
+        return render(request, 'bug_fixing.html')
+
+    def post(self, request):
+        username = request.user.username
+        name = request.POST['name']
+        description = request.POST['description']
+        BugController.add_bug(username, name, description)
+        return redirect('tracker:home')
+
+
+class BugReportList(View):
+    def get(self, request):
+        report_list = BugController.get_all_bugs()
+        return render(request, 'bug_report_list.html', {'report_list': report_list})
 
 
 def register(request):

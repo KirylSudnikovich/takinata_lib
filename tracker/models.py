@@ -1,9 +1,21 @@
-from django.db import models
-from django.contrib.auth.models import User as DUser
-from lib.models.user import User as MyUser
+from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
+
+engine = create_engine(
+    'sqlite:////home/snitch/PycharmProjects/VersionTwo/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/database.sqlite3',
+    echo=True)
 
 
-class User(DUser, MyUser):
-    pass
+class BugReport(Base):
+    __tablename__ = 'bug_reports'
 
-# Create your models here.
+    id = Column(Integer, primary_key=True)
+    username = Column(String)
+    name = Column(String)
+    description = Column(String)
+    status = Column(Integer, default=1)
+
+
+Base.metadata.create_all(engine)
