@@ -1,5 +1,5 @@
 from tracker.views import ProjectNew, ProjectsList, ProjectInfo, ProjectDelete, ProjectEdit, ColumnNew, ColumnInfo, \
-    ColumnDelete, ColumnEdit, BugReport, BugReportList, ColumnList, TaskList, TaskCreate
+    ColumnDelete, ColumnEdit, BugReport, BugReportList, ColumnList, TaskList, SampleView
 from . import views
 from django.urls import path, include
 import django.contrib.auth.views as auth_views
@@ -21,7 +21,8 @@ urlpatterns = [
     path('bug_report/', BugReport.as_view(), name='bug_report'),
     path('bug_list/', BugReportList.as_view(), name='bug_report_list'),
     path('tasks/', TaskList.as_view(), name='task_list'),
-    path('tasks/create', TaskCreate.as_view(), name='task_create'),
+    path('tasks/create', SampleView.as_view(), name='task_create'),
+    path('datetimepicker/', include('datetimepicker.urls')),
     # path('signup/', vi,ews.signup, name='signup'),
 ]
 

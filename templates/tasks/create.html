@@ -1,59 +1,75 @@
-{% extends 'adminlte/base.html' %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
 
+{% extends 'adminlte/base.html' %}
 {% block title %}Task Create{% endblock %}
 {% load i18n static %}
 
 {% block body_class %}login-page{% endblock %}
 
 {% block content %}
-    <div class="row">
-        <div class="col-md-6">
-            <div class="box box-primary">
-                <!-- /.login-logo -->
-                <div class="box-header with-border">
-                    <h3 class="box-title">Task Create</h3>
-                </div>
-                    <form action="" method="post">
-                        {% csrf_token %}
+    <section class="content-header">
+        <h1>Task list</h1>
+    </section>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box box-primary">
+                        <!-- /.login-logo -->
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Task Create</h3>
+                        </div>
                         <div class="box-body">
-                            <h2>New Column</h2>
-                                    <div class="form-group has-feedback">
-                                        <input name="name" class="form-control" placeholder="Column Name">
-                                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                                    </div>
-                                    <div class="form-group has-feedback">
-                                        <textarea name="description" rows="5" class="form-control" placeholder="Column Description" style="resize: none"></textarea>
-                                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                                    </div>
-                            <label>
-                                <select class="form-control js-example-basic-single" name="select_project">
-                                    {% for project in projects %}
-                                        <option>{{ project.name }}</option>
+                            <form method="post">
+                                {% csrf_token %}
+                                    {% if message %}
+                                        <p class="login-box-msg" style="color: red;">{{ message }}</p>
+                                    {% endif %}
+                                {% for field in form %}
+                                  <div class="form-group has-feedback">
+                                    {{ field }}
+                                     {% if field.help_text %}
+                                          <small style="color: grey">{{ field.help_text | safe }}</small>
+                                    {% endif %}
+                                    {% for error in field.errors %}
+                                      <p style="color: red">{{ error }}</p>
                                     {% endfor %}
-                                </select>
-                            </label>
-                            <div class="box-footer">
-                                <div class="row">
-                                    <div class="col-xs-8">
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <button type="submit" class="btn btn-primary btn-block btn-flat">Create</button>
+                                  </div>
+                                {% endfor %}
+                                <label>
+                                    <select class="form-control js-example-basic-single" name="select_project">
+                                        {% for project in projects %}
+                                            <option>{{ project.name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </label>
+                                 <div class="box-footer">
+                                    <div class="row">
+                                        <div class="col-xs-8"></div>
+                                        <div class="col-xs-4">
+                                            <button type="submit" class="btn btn-primary btn-block btn-flat">Create</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                              </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
-        <div class="col-md-6">
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Column Info</h3>
-                </div>
-                <div class="box-body">
-                    <h2>Kek</h2>
+                <div class="col-md-6">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Task info</h3>
+                        </div>
+                        <div class="box-body">
+                            <h2>Kek</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 {% endblock %}

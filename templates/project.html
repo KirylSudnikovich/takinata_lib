@@ -39,7 +39,7 @@
                     </div>
                     <div class="box-body">
                         {% for column in columns %}
-                            <a style="color: #000000" class="text" href="{% url 'tracker:column_info' project.id column.id %}"><p>{{ column.name }}</p></a>
+                            <a style="color: #000000" class="text" href="{% url 'tracker:column_info' project.id column.id %}"><h4>{{ column.name }}</h4></a>
                         {% endfor %}
                     </div>
                 </div>

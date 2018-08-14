@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_adminlte',
     # Optional: Django admin theme (must be before django.contrib.admin)
     'django_adminlte_theme',
+    'bootstrap_datepicker_plus',
 ]
 
 MIDDLEWARE = [
@@ -103,10 +104,18 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+BOOTSTRAP4 = {
+    'include_jquery': True,
+}
+
+BOOTSTRAP3 = {
+    'include_jquery': True,
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-en'
 
 TIME_ZONE = 'UTC'
 

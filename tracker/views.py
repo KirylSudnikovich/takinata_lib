@@ -4,15 +4,16 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect, render_to_response
 from django.template import RequestContext
 from django.views import View
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, FormView
 from lib.controllers.column import ColumnController
 from lib.controllers.project import ProjectController
 from lib.storage.column import ColumnStorage
 from lib.storage.project import ProjectStorage
 from lib.storage.user import UserStorage
+from lib.controllers.task import TaskController
 
 from .controllers.bug_report import BugController
-from .forms import SignupForm
+from .forms import SignupForm, ToDoForm
 
 
 def index(request):
@@ -213,9 +214,39 @@ class TaskList(View):
         return render(request, 'tasks/list.html')
 
 
-class TaskCreate(View):
-    def get(self, request):
-        return render(request, 'tasks/create.html')
+class SampleView(FormView):
+    def get(self, request, **kwargs):
+        f = ToDoForm
+        projects = ProjectController.show_all(request.user.username, request.user.password)
+        return render(request, 'tasks/create.html', {'form': f, 'projects': projects})
+
+    def post(self, request, **kwargs):
+        f = ToDoForm(request.POST)
+        if f.is_valid():
+                name = f['name']
+                desc = f['desc']
+                start_date = f['start_date']
+                start_time = f['start_time']
+                end_date = f['end_date']
+                end_time = f['end_time']
+                tags = f['tags']
+                priority = f['priority']
+                TaskController.add_task(request.user.username, request.user.password, )
+                return redirect('tracker:home')
+        return render(request, '404.html')
+
+    #
+    # if request.method == 'POST':
+    #     f = SignupForm(request.POST)
+    #     if f.is_valid():
+    #         f.save()
+    #         messages.success(request, 'Account created successfully')
+    #         return redirect('tracker:home')
+    # else:
+    #     f = SignupForm
+    #
+    # return render(request, 'registration/signup.html', {'form': f})
+
 
 class BugReport(View):
     def get(self, request):
