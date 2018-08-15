@@ -1,341 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5737bc37-cee3-4085-bcde-fc9e59a384da" name="Default Changelist" comment="create base template and dashbroad for project">
-      <change afterPath="$PROJECT_DIR$/datetimepicker/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datetimepicker/helpers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datetimepicker/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datetimepicker/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datetimepicker/widgets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/datetimepicker/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/datetimepicker/helpers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/datetimepicker/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/datetimepicker/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/datetimepicker/widgets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/VersionTwo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/VersionTwo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="5737bc37-cee3-4085-bcde-fc9e59a384da" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f1249c2e-a869-4558-8a21-d9077612fff3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f1249c2e-a869-4558-8a21-d9077612fff3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VersionTwo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/VersionTwo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/adminlte/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/adminlte/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/project.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tasks/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/pip" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/pip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/pip3" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/pip3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/pip3.5" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/pip3.5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/easy-install.pth" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/easy-install.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/EGG-INFO/PKG-INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/EGG-INFO/SOURCES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/EGG-INFO/dependency_links.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/EGG-INFO/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/EGG-INFO/not-zip-safe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/EGG-INFO/requires.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/EGG-INFO/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/__main__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/basecommand.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/baseparser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/build_env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/cache.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/cmdoptions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/check.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/completion.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/configuration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/download.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/freeze.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/hash.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/help.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/install.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/list.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/search.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/show.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/uninstall.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/wheel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/compat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/configuration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/download.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/exceptions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/index.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/locations.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/models/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/models/index.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/operations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/operations/check.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/operations/freeze.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/operations/prepare.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/pep425tags.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/req/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/req/req_file.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/req/req_install.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/req/req_set.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/req/req_uninstall.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/resolve.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/status_codes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/appdirs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/deprecation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/encoding.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/filesystem.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/glibc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/hashes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/logging.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/misc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/outdated.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/packaging.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/setuptools_build.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/temp_dir.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/typing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/ui.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/vcs/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/vcs/bazaar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/vcs/git.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/vcs/mercurial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/vcs/subversion.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/wheel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/appdirs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/cachecontrol/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/cachecontrol/_cmd.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/cachecontrol/adapter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/cachecontrol/cache.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/cachecontrol/caches/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/cachecontrol/caches/file_cache.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/cachecontrol/caches/redis_cache.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/cachecontrol/compat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/cachecontrol/controller.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/cachecontrol/filewrapper.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/cachecontrol/heuristics.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/cachecontrol/serialize.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/cachecontrol/wrapper.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/certifi/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/certifi/__main__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/certifi/cacert.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/certifi/core.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/big5freq.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/big5prober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/chardistribution.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/charsetgroupprober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/charsetprober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/cli/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/cli/chardetect.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/codingstatemachine.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/compat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/cp949prober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/enums.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/escprober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/escsm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/eucjpprober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/euckrfreq.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/euckrprober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/euctwfreq.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/euctwprober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/gb2312freq.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/gb2312prober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/hebrewprober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/jisfreq.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/jpcntx.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/langbulgarianmodel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/langcyrillicmodel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/langgreekmodel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/langhebrewmodel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/langhungarianmodel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/langthaimodel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/langturkishmodel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/latin1prober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/mbcharsetprober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/mbcsgroupprober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/mbcssm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/sbcharsetprober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/sbcsgroupprober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/sjisprober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/universaldetector.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/utf8prober.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/chardet/version.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/colorama/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/colorama/ansi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/colorama/ansitowin32.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/colorama/initialise.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/colorama/win32.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/colorama/winterm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/_backport/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/_backport/misc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/_backport/shutil.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/_backport/sysconfig.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/_backport/sysconfig.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/_backport/tarfile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/compat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/database.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/index.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/locators.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/manifest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/markers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/metadata.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/resources.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/scripts.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/t32.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/t64.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/util.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/version.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/w32.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/w64.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/wheel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distro.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/_ihatexml.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/_inputstream.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/_tokenizer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/_trie/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/_trie/_base.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/_trie/datrie.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/_trie/py.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/constants.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/filters/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/filters/alphabeticalattributes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/filters/base.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/filters/inject_meta_charset.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/filters/lint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/filters/optionaltags.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/filters/sanitizer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/filters/whitespace.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/html5parser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/serializer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treeadapters/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treeadapters/genshi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treeadapters/sax.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/base.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/dom.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/etree.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/etree_lxml.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/base.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/dom.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/etree.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/etree_lxml.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/genshi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/idna/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/idna/codec.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/idna/compat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/idna/core.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/idna/idnadata.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/idna/intranges.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/idna/package_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/idna/uts46data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/ipaddress.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/lockfile/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/lockfile/linklockfile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/lockfile/mkdirlockfile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/lockfile/pidlockfile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/lockfile/sqlitelockfile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/lockfile/symlinklockfile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/msgpack/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/msgpack/_version.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/msgpack/exceptions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/msgpack/fallback.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/packaging/__about__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/packaging/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/packaging/_compat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/packaging/_structures.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/packaging/markers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/packaging/requirements.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/packaging/specifiers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/packaging/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/packaging/version.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/pkg_resources/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/pkg_resources/py31compat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/progress/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/progress/bar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/progress/counter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/progress/helpers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/progress/spinner.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/pyparsing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/pytoml/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/pytoml/core.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/pytoml/parser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/pytoml/writer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/__version__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/_internal_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/adapters.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/api.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/auth.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/certs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/compat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/cookies.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/exceptions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/help.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/hooks.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/packages.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/sessions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/status_codes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/structures.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/retrying.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/six.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/_collections.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/connection.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/connectionpool.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/contrib/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/contrib/_securetransport/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/contrib/_securetransport/bindings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/contrib/_securetransport/low_level.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/contrib/appengine.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/contrib/ntlmpool.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/contrib/pyopenssl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/contrib/securetransport.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/contrib/socks.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/exceptions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/fields.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/filepost.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/packages/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/packages/backports/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/packages/backports/makefile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/packages/ordered_dict.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/packages/six.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/packages/ssl_match_hostname/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/packages/ssl_match_hostname/_implementation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/poolmanager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/response.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/util/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/util/connection.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/util/request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/util/response.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/util/retry.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/util/selectors.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/util/ssl_.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/util/timeout.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/util/url.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/util/wait.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/webencodings/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/webencodings/labels.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/webencodings/mklabels.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/webencodings/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/webencodings/x_user_defined.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/database.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/database.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/column.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/column.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/column.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/column.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/task.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/logs/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/logs/info.log" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/logs/info.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -381,44 +61,47 @@
     <session id="396547445">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.35" value="2" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.60" value="1" />
           <entry key="project.open.time.82" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.opened" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="alchproject" value="1" />
           <entry key="bug_reports" value="4" />
-          <entry key="categories" value="1" />
+          <entry key="categories" value="2" />
           <entry key="columns" value="3" />
           <entry key="css" value="6" />
-          <entry key="html" value="97" />
+          <entry key="html" value="104" />
           <entry key="js" value="1" />
           <entry key="libuser" value="1" />
-          <entry key="projects" value="6" />
-          <entry key="py" value="188" />
+          <entry key="log" value="2" />
+          <entry key="projects" value="7" />
+          <entry key="py" value="210" />
           <entry key="rel" value="3" />
           <entry key="right" value="1" />
           <entry key="sql" value="4" />
           <entry key="sqlite_master" value="2" />
-          <entry key="tasks" value="5" />
+          <entry key="tasks" value="7" />
           <entry key="tracker_djangouser" value="1" />
           <entry key="tracker_project" value="1" />
           <entry key="user" value="2" />
@@ -430,10 +113,11 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="6" />
-          <entry key="Database Element" value="44" />
-          <entry key="HTML" value="97" />
+          <entry key="Database Element" value="48" />
+          <entry key="HTML" value="104" />
           <entry key="JavaScript" value="1" />
-          <entry key="Python" value="188" />
+          <entry key="Log" value="2" />
+          <entry key="Python" value="210" />
           <entry key="Scratch" value="4" />
         </counts>
       </usages-collector>
@@ -441,17 +125,17 @@
         <counts>
           <entry key="Django Console" value="596" />
           <entry key="css" value="15" />
-          <entry key="html" value="8347" />
-          <entry key="py" value="15904" />
-          <entry key="txt" value="77" />
+          <entry key="html" value="9050" />
+          <entry key="py" value="17360" />
+          <entry key="txt" value="112" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="15" />
-          <entry key="HTML" value="8347" />
-          <entry key="PLAIN_TEXT" value="77" />
-          <entry key="Python" value="16500" />
+          <entry key="HTML" value="9050" />
+          <entry key="PLAIN_TEXT" value="112" />
+          <entry key="Python" value="17956" />
         </counts>
       </usages-collector>
     </session>
@@ -461,102 +145,93 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-441">
-              <caret line="219" column="91" selection-start-line="219" selection-start-column="91" selection-end-line="219" selection-end-column="91" />
+            <state relative-caret-position="500">
+              <caret line="239" column="52" selection-start-line="239" selection-start-column="52" selection-end-line="239" selection-end-column="52" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1533910221116" expanded="true" signature="809:1233" ph="..." />
-                <marker date="1533910221116" expanded="true" signature="1872:11114" ph="..." />
-                <marker date="1533910221116" expanded="true" signature="3750:11114" ph="..." />
-                <marker date="1533910221116" expanded="true" signature="4463:11114" ph="..." />
-                <marker date="1533910221116" expanded="true" signature="5916:6088" ph="..." />
-                <marker date="1533910221116" expanded="true" signature="6112:6121" ph="..." />
-                <marker date="1533910221116" expanded="true" signature="10559:10562" ph="..." />
-                <marker date="1533910221116" expanded="true" signature="10584:11114" ph="..." />
-                <marker date="1533910221116" expanded="true" signature="10947:11114" ph="..." />
-                <marker date="1533910221116" expanded="true" signature="11112:11114" ph="..." />
+                <marker date="1534333915403" expanded="true" signature="809:1233" ph="..." />
+                <marker date="1534333915403" expanded="true" signature="1872:11807" ph="..." />
+                <marker date="1534333915403" expanded="true" signature="3750:11807" ph="..." />
+                <marker date="1534333915403" expanded="true" signature="4463:11807" ph="..." />
+                <marker date="1534333915403" expanded="true" signature="5916:6088" ph="..." />
+                <marker date="1534333915403" expanded="true" signature="6112:6121" ph="..." />
+                <marker date="1534333915403" expanded="true" signature="11113:11255" ph="..." />
+                <marker date="1534333915403" expanded="true" signature="11252:11255" ph="..." />
+                <marker date="1534333915403" expanded="true" signature="11277:11807" ph="..." />
+                <marker date="1534333915403" expanded="true" signature="11640:11807" ph="..." />
+                <marker date="1534333915403" expanded="true" signature="11805:11807" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/accounts/views.py">
+        <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/column.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+            <state relative-caret-position="1020">
+              <caret line="68" column="132" selection-start-line="68" selection-start-column="132" selection-end-line="68" selection-end-column="132" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/task.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/task.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/task.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/user.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/adminlte/lib/_main_sidebar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="81" column="68" selection-start-line="81" selection-start-column="68" selection-end-line="81" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/adminlte/lib/_main_header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/tasks/create.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="4" selection-end-column="101" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/adminlte/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/django_adminlte/templates/adminlte/lib/_styles.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/user.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#98#0" expanded="true" />
-                <marker date="1534235517441" expanded="true" signature="590:1131" ph="..." />
-                <marker date="1534235517441" expanded="true" signature="1940:1941" ph="..." />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/accounts/signup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="15" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -609,16 +284,13 @@
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/django/db/models/base.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/user_project.py" />
         <option value="$PROJECT_DIR$/../orm_test/models/user.py" />
-        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/project.py" />
         <option value="$PROJECT_DIR$/tracker/Takinata/build/lib/lib/controllers/project.py" />
         <option value="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/takinata_lib-0.1-py3.6.egg/lib/controllers/project.py" />
         <option value="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/console_api-0.1-py3.6.egg/lib/controllers/project.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/project.py" />
         <option value="$PROJECT_DIR$/templates/column.html" />
-        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/column.py" />
-        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/column.py" />
         <option value="$PROJECT_DIR$/templates/columns.html" />
         <option value="$PROJECT_DIR$/templates/bug_fixing.html" />
         <option value="$PROJECT_DIR$/tracker/models.py" />
@@ -629,19 +301,22 @@
         <option value="$PROJECT_DIR$/templates/adminlte/lib/_main_sidebar.html" />
         <option value="$PROJECT_DIR$/templates/datetimepicker/div.html" />
         <option value="$PROJECT_DIR$/VersionTwo/urls.py" />
-        <option value="$PROJECT_DIR$/VersionTwo/settings.py" />
         <option value="$PROJECT_DIR$/templates/project.html" />
-        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/task.py" />
-        <option value="$PROJECT_DIR$/tracker/forms.py" />
-        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/task.py" />
-        <option value="$PROJECT_DIR$/tracker/views.py" />
         <option value="$PROJECT_DIR$/tracker/urls.py" />
-        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py" />
-        <option value="$PROJECT_DIR$/templates/tasks/create.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/adminlte/base.html" />
-        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/user.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/user.py" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py" />
+        <option value="$PROJECT_DIR$/templates/tasks/create.html" />
+        <option value="$PROJECT_DIR$/VersionTwo/settings.py" />
+        <option value="$PROJECT_DIR$/tracker/forms.py" />
+        <option value="$PROJECT_DIR$/tracker/views.py" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/column.py" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/task.py" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/task.py" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/user.py" />
       </list>
     </option>
   </component>
@@ -651,7 +326,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="459" />
     <option name="y" value="80" />
     <option name="width" value="1390" />
@@ -663,7 +338,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -735,12 +409,84 @@
             <path>
               <item name="VersionTwo" type="b2602c69:ProjectViewProjectNode" />
               <item name="VersionTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="python3.5" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap_datepicker_plus" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VersionTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VersionTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="python3.5" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="takinata_lib-0.1-py3.5.egg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VersionTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VersionTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="python3.5" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="takinata_lib-0.1-py3.5.egg" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VersionTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VersionTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="python3.5" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="takinata_lib-0.1-py3.5.egg" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VersionTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VersionTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="python3.5" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="takinata_lib-0.1-py3.5.egg" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VersionTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VersionTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="python3.5" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="takinata_lib-0.1-py3.5.egg" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VersionTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VersionTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="python3.5" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="takinata_lib-0.1-py3.5.egg" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VersionTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VersionTwo" type="462c0819:PsiDirectoryNode" />
               <item name="VersionTwo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -926,6 +672,14 @@
       <option name="presentableId" value="Default" />
       <updated>1533117585304</updated>
     </task>
+    <task id="LOCAL-00001" summary="fix bug with show profile info">
+      <created>1534235915555</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1534235915555</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -938,15 +692,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="30" width="1920" height="1050" extended-state="7" />
+    <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21077909" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2171825" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4994664" weight="0.3292683" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49786553" visible="true" weight="0.32852387" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49786553" visible="true" weight="0.32852387" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39844617" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -962,7 +716,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32977587" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.20117396" />
+      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.20117396" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20010673" />
@@ -997,92 +751,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create base template and dashbroad for project" />
-    <option name="LAST_COMMIT_MESSAGE" value="create base template and dashbroad for project" />
+    <MESSAGE value="fix bug with show profile info" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug with show profile info" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/sqlalchemy/sql/schema.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4238">
-          <caret line="920" column="8" selection-start-line="920" selection-start-column="8" selection-end-line="920" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/project.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f1249c2e-a869-4558-8a21-d9077612fff3/schema/main/table/projects">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/project.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/column.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f1249c2e-a869-4558-8a21-d9077612fff3/schema/main/table/categories">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/column.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="69" column="41" lean-forward="true" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bug_fixing.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="113" selection-start-line="19" selection-start-column="113" selection-end-line="19" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://f1249c2e-a869-4558-8a21-d9077612fff3/schema/main/table/bug_reports">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1101,13 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tasks/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1162,24 +827,10 @@
     <entry file="file://$PROJECT_DIR$/datetimepicker/urls.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/VersionTwo/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="110" column="10" selection-start-line="110" selection-start-column="10" selection-end-line="110" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VersionTwo/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/accounts/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="33" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1207,74 +858,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://f1249c2e-a869-4558-8a21-d9077612fff3/schema/main/table/tasks">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="78" selection-start-line="1" selection-start-column="78" selection-end-line="1" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/column.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/column_new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="33" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/task.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="54" column="72" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/task.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1285,57 +872,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tasks/create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="4" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/adminlte/lib/_main_header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/django_adminlte/templates/adminlte/lib/_styles.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="das://f1249c2e-a869-4558-8a21-d9077612fff3/schema/main/table/users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/adminlte/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-441">
-          <caret line="219" column="91" selection-start-line="219" selection-start-column="91" selection-end-line="219" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1533910221116" expanded="true" signature="809:1233" ph="..." />
-            <marker date="1533910221116" expanded="true" signature="1872:11114" ph="..." />
-            <marker date="1533910221116" expanded="true" signature="3750:11114" ph="..." />
-            <marker date="1533910221116" expanded="true" signature="4463:11114" ph="..." />
-            <marker date="1533910221116" expanded="true" signature="5916:6088" ph="..." />
-            <marker date="1533910221116" expanded="true" signature="6112:6121" ph="..." />
-            <marker date="1533910221116" expanded="true" signature="10559:10562" ph="..." />
-            <marker date="1533910221116" expanded="true" signature="10584:11114" ph="..." />
-            <marker date="1533910221116" expanded="true" signature="10947:11114" ph="..." />
-            <marker date="1533910221116" expanded="true" signature="11112:11114" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1346,25 +886,230 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#98#0" expanded="true" />
-            <marker date="1534235517441" expanded="true" signature="590:1131" ph="..." />
-            <marker date="1534235517441" expanded="true" signature="1940:1941" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/user.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/adminlte/lib/_main_header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/django_adminlte/templates/adminlte/lib/_styles.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://f1249c2e-a869-4558-8a21-d9077612fff3/schema/main/table/projects">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f1249c2e-a869-4558-8a21-d9077612fff3/schema/main/table/categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="69" column="35" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/adminlte/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="92" column="29" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/django_adminlte/templates/adminlte/lib/_scripts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/column_new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="33" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/logs/error.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-396" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/logs/info.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-846" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/project.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="161" column="47" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="163" selection-start-line="8" selection-start-column="163" selection-end-line="8" selection-end-column="163" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/accounts/signin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tasks/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/bootstrap_datepicker_plus/DatePickerBaseInput.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VersionTwo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="239" column="52" selection-start-line="239" selection-start-column="52" selection-end-line="239" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1534333915403" expanded="true" signature="809:1233" ph="..." />
+            <marker date="1534333915403" expanded="true" signature="1872:11807" ph="..." />
+            <marker date="1534333915403" expanded="true" signature="3750:11807" ph="..." />
+            <marker date="1534333915403" expanded="true" signature="4463:11807" ph="..." />
+            <marker date="1534333915403" expanded="true" signature="5916:6088" ph="..." />
+            <marker date="1534333915403" expanded="true" signature="6112:6121" ph="..." />
+            <marker date="1534333915403" expanded="true" signature="11113:11255" ph="..." />
+            <marker date="1534333915403" expanded="true" signature="11252:11255" ph="..." />
+            <marker date="1534333915403" expanded="true" signature="11277:11807" ph="..." />
+            <marker date="1534333915403" expanded="true" signature="11640:11807" ph="..." />
+            <marker date="1534333915403" expanded="true" signature="11805:11807" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/task.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tasks/create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/accounts/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f1249c2e-a869-4558-8a21-d9077612fff3/schema/main/table/tasks">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/column.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="68" column="132" selection-start-line="68" selection-start-column="132" selection-end-line="68" selection-end-column="132" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
         </state>
       </provider>
     </entry>

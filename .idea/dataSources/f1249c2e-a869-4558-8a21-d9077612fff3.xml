@@ -136,19 +136,19 @@
     </column>
     <column id="41" parent="11" name="start_date">
       <Position>4</Position>
-      <DataType>DATE|0s</DataType>
+      <DataType>VARCHAR|0s</DataType>
     </column>
     <column id="42" parent="11" name="start_time">
       <Position>5</Position>
-      <DataType>TIME|0s</DataType>
+      <DataType>VARCHAR|0s</DataType>
     </column>
     <column id="43" parent="11" name="end_date">
       <Position>6</Position>
-      <DataType>DATE|0s</DataType>
+      <DataType>VARCHAR|0s</DataType>
     </column>
     <column id="44" parent="11" name="end_time">
       <Position>7</Position>
-      <DataType>TIME|0s</DataType>
+      <DataType>VARCHAR|0s</DataType>
     </column>
     <column id="45" parent="11" name="tags">
       <Position>8</Position>

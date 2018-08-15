@@ -125,6 +125,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+#DATE_INPUT_FORMATS = '%d.%m.%Y'
+
 LOGIN_REDIRECT_URL = '/tracker/accounts/profile'
 LOGOUT_REDIRECT_URL = '/tracker '
 

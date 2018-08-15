@@ -38,12 +38,20 @@
                                     {% for error in field.errors %}
                                       <p style="color: red">{{ error }}</p>
                                     {% endfor %}
+
                                   </div>
                                 {% endfor %}
                                 <label>
-                                    <select class="form-control js-example-basic-single" name="select_project">
+                                    <select id='select_project' class="form-control js-example-basic-single" name="select_project">
                                         {% for project in projects %}
-                                            <option>{{ project.name }}</option>
+                                            <option value={{ project.id }}>{{ project.name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </label>
+                                <label>
+                                    <select id='select_column' class="form-control js-example-basic-single" name="select_column">
+                                        {% for column in columns %}
+                                            <option value={{ column.project_id }}>{{ column.name }}</option>
                                         {% endfor %}
                                     </select>
                                 </label>
@@ -72,4 +80,15 @@
             </div>
         </div>
     </section>
+    <script>
+        var $selected_column = $( '#select_column' ),
+        $options = $selected_column.find( 'option' );
+        $(document).ready(function(){
+            $('#select_project').on("select2:select", function(e) {
+                $selected_column.html( $options.filter( '[value="' + this.value + '"]' ) ); console.log(this.value);
+            });
+        });
+        $("#select_project").prop("selectedIndex", -1);
+        $("#select_column").prop("selectedIndex", -1);
+    </script>
 {% endblock %}

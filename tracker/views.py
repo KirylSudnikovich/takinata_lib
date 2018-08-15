@@ -152,7 +152,7 @@ class ColumnNew(View):
                 # column = Column(name=name, desc=description, project_id=project.id)
                 # log.info("")
                 # ColumnStorage.add_column_to_db(column)
-                return redirect('tracker:projects')
+                return redirect('tracker:columns')
         else:
             return render(request, 'no_permission.html')
 
@@ -218,22 +218,28 @@ class SampleView(FormView):
     def get(self, request, **kwargs):
         f = ToDoForm
         projects = ProjectController.show_all(request.user.username, request.user.password)
-        return render(request, 'tasks/create.html', {'form': f, 'projects': projects})
+        columns_to_send = []
+        for project in projects:
+            columns = ColumnController.show_all(request.user.username, request.user.password, project.name)
+            columns_to_send += columns
+        return render(request, 'tasks/create.html', {'form': f, 'projects': projects, 'columns': columns_to_send})
 
     def post(self, request, **kwargs):
         f = ToDoForm(request.POST)
+        print(f.errors)
         if f.is_valid():
-                name = f['name']
-                desc = f['desc']
-                start_date = f['start_date']
-                start_time = f['start_time']
-                end_date = f['end_date']
-                end_time = f['end_time']
-                tags = f['tags']
-                priority = f['priority']
-                TaskController.add_task(request.user.username, request.user.password, )
-                return redirect('tracker:home')
-        return render(request, '404.html')
+            name = f['name'].value()
+            desc = f['desc'].value()
+            start_date = f['start_date'].value()
+            start_time = f['start_time'].value()
+            end_date = f['end_date'].value()
+            end_time = f['end_time'].value()
+            tags = f['tags'].value()
+            priority = f['priority'].value()
+            project = ProjectStorage.get_project_by_id(request.POST['select_project'])
+            column = ColumnStorage.get_column_by_id(project.name, request.POST['select_column'])
+            TaskController.add_task(request.user.username, request.user.password, project.name, column.name, name, desc,
+                                    start_date, start_time, end_date, end_time, tags, priority)
 
     #
     # if request.method == 'POST':
@@ -246,6 +252,14 @@ class SampleView(FormView):
     #     f = SignupForm
     #
     # return render(request, 'registration/signup.html', {'form': f})
+
+
+def filter_columns(columns, project):
+    to_return = []
+    for i in columns:
+        if columns.project_id == project.id:
+            to_return.append(i)
+    return to_return
 
 
 class BugReport(View):

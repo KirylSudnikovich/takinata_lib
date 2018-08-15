@@ -24,11 +24,11 @@ class ToDoForm(forms.Form):
         widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "Task description"})
     )
     start_date = forms.DateField(
-        widget=DatePickerInput(format='%d.%m.%Y', attrs={"placeholder": "Task start date"}), required=False
+        widget=DatePickerInput(format='%m/%d/%Y', attrs={"placeholder": "Task start date"}), required=False
     )
     start_time = forms.TimeField(widget=TimePickerInput(attrs={"placeholder": "Task start time"}), required=False)
     end_date = forms.DateField(
-        widget=DatePickerInput(format='%d.%m.%Y', attrs={"placeholder": "Task end date"}), required=False
+        widget=DatePickerInput(format='%m/%d/%Y', attrs={"placeholder": "Task end date"}), required=False
     )
     end_time = forms.TimeField(widget=TimePickerInput(attrs={"placeholder": "Task end time"}), required=False)
     tags = forms.CharField(
