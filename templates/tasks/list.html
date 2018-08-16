@@ -1,17 +1,39 @@
 {% extends 'adminlte/base.html' %}
 
-{% block title %}List of Projects{% endblock %}
+{% block title %}List of Tasks{% endblock %}
 {% load i18n static %}
 
 {% block content %}
     <section class="content-header">
-        <h1>List of columns</h1>
+        <h1>List of tasks</h1>
     </section>
-    <section class="content">
-        <div class="container-fluid">
+    <div class="container-fluid">
+        <section class="content">
             <div class="row">
-                <h1>Hello world</h1>
+                {% for task in task_list %}
+                    <div class="task" id="task.id">
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <h3 class="box-title"><a href="{% url 'tracker:task_info' project_id=task.project_id column_id=task.category_id task_id=task.id %}">{{ task.name }}</a></h3>
+                            </div>
+                            <div class="box-body">
+                                <p class="info">{{ task.desc }}</p>
+                            </div>
+                            <div class="box-footer">
+                                 <div class="row">
+                                        <div class="col-xs-10">
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <a href="{% url 'tracker:task_info' project_id=task.project_id column_id=task.category_id task_id=task.id %}">
+                                                <button class="btn btn-primary btn-block btn-flat">More Info</button>
+                                            </a>
+                                        </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 {% endblock %}

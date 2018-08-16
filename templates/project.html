@@ -41,6 +41,9 @@
                         {% for column in columns %}
                             <a style="color: #000000" class="text" href="{% url 'tracker:column_info' project.id column.id %}"><h4>{{ column.name }}</h4></a>
                         {% endfor %}
+                        {% if not columns %}
+                            <h4>There is no columns in this project</h4>
+                        {% endif %}
                     </div>
                 </div>
             </div>

@@ -221,7 +221,23 @@ class ColumnEdit(View):
 
 class TaskList(View):
     def get(self, request):
-        return render(request, 'tasks/list.html')
+        if request.user.is_authenticated:
+            username = request.user.username
+            password = request.user.password
+            projects = ProjectController.show_all(username, password)
+            column_list = []
+            task_list = []
+            for project in projects:
+                columns = ColumnController.show_all(username, password, project.id)
+                for column in columns:
+                    tasks = TaskController.show_tasks(username, password, project.id, column.id)
+                    print("tasks = ", tasks)
+                    task_list = task_list + tasks
+                column_list = column_list + columns
+            print("task_list = ",task_list)
+            return render(request, 'tasks/list.html', {'projects': projects, 'columns': column_list, 'task_list': task_list})
+        else:
+            return render(request, 'no_permission.html')
 
 
 class SampleView(FormView):
@@ -230,7 +246,7 @@ class SampleView(FormView):
         projects = ProjectController.show_all(request.user.username, request.user.password)
         columns_to_send = []
         for project in projects:
-            columns = ColumnController.show_all(request.user.username, request.user.password, project.name)
+            columns = ColumnController.show_all(request.user.username, request.user.password, project.id)
             columns_to_send += columns
         return render(request, 'tasks/create.html', {'form': f, 'projects': projects, 'columns': columns_to_send})
 
@@ -247,8 +263,19 @@ class SampleView(FormView):
             tags = f['tags'].value()
             priority = f['priority'].value()
             project = ProjectStorage.get_project_by_id(request.POST['select_project'])
+            projects = ProjectController.show_all(request.user.username, request.user.password)
+            for i in projects:
+                if project.name == i.name:
+                    project = i
+            columns_to_send = []
+            for project in projects:
+                columns = ColumnController.show_all(request.user.username, request.user.password, project.id)
+                columns_to_send += columns
             column = ColumnStorage.get_column_by_id(project.name, request.POST['select_column'])
-            TaskController.add_task(request.user.username, request.user.password, project.name, column.name, name, desc,
+            for i in columns_to_send:
+                if column.name == i.name:
+                    column = i
+            TaskController.add_task(request.user.username, request.user.password, project.id, column.id, name, desc,
                                     start_date, start_time, end_date, end_time, tags, priority)
 
 
@@ -256,12 +283,31 @@ class TaskInfo(View):
     def get(self, request, project_id, column_id, task_id):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
-            column = ColumnStorage.get_column_by_id(project.name, column_id)
-            task = TaskStorage.get_task_by_id(project.name, column.name, task_id)
-            return render(request, 'column.html', {'project': project, 'column': column, 'task': task})
+            column = ColumnStorage.get_column_by_id(project.id, column_id)
+            task = TaskStorage.get_task_by_id(task_id)
+            return render(request, 'tasks/info.html', {'project': project, 'column': column, 'task': task})
         else:
             return render(request, 'no_permission.html')
 
+
+class TaskDelete(View):
+    def get(self, request, project_id, column_id, task_id):
+        if request.user.is_authenticated:
+            project = ProjectStorage.get_project_by_id(project_id)
+            column = ColumnStorage.get_column_by_id(project.name, column_id)
+            task = TaskStorage.get_task_by_id(task_id)
+            return render(request, 'tasks/delete.html', {'project': project, 'column': column, 'task': task})
+        else:
+            return render(request, 'no_permission.html')
+
+    def post(self, request, project_id, column_id, task_id):
+        if request.method == 'POST':
+            if request.user.is_authenticated:
+                task = TaskStorage.get_task_by_id(task_id)
+                TaskStorage.delete_task_from_db(task)
+                return redirect('tracker:task_list')
+            else:
+                return render(request, 'no_permission.html')
 
 class BugReport(View):
     def get(self, request):
