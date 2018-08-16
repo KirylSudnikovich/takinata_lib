@@ -11,6 +11,7 @@ from lib.storage.column import ColumnStorage
 from lib.storage.project import ProjectStorage
 from lib.storage.user import UserStorage
 from lib.controllers.task import TaskController
+from lib.storage.task import TaskStorage
 
 from .controllers.bug_report import BugController
 from .forms import SignupForm, ToDoForm
@@ -19,9 +20,9 @@ from .forms import SignupForm, ToDoForm
 def index(request):
     response = render(request, 'index.html')
     if 'been_before' in request.COOKIES:
-        if request.COOKIES['been_before'] == '1':
-            print("sosi")
-    response.set_cookie(key='been_before', value='1')
+        print("sosi")
+    else:
+        response.set_cookie(key='been_before', value='1')
     return response
 
 
@@ -31,7 +32,6 @@ class ProjectsList(View):
             username = request.user.username
             password = request.user.password
             project_list = ProjectController.show_all(username, password)
-            print(project_list)
             return render(request, 'projects.html', {'project_list': project_list})
         else:
             return render(request, 'no_permission.html')
@@ -56,7 +56,7 @@ class ProjectInfo(View):
     def get(self, request, project_id):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
-            columns = ColumnController.show_all(request.user.username, request.user.password, project.name)
+            columns = ColumnController.show_all(request.user.username, request.user.password, project.id)
             all_users = UserStorage.get_all_users()
             guys = ProjectStorage.get_all_persons_in_project(project)
             all_guys = []
@@ -134,7 +134,7 @@ class ColumnList(View):
             projects = ProjectController.show_all(username, password)
             column_list = []
             for project in projects:
-                columns = ColumnController.show_all(username, password, project.name)
+                columns = ColumnController.show_all(username, password, project.id)
                 column_list = column_list + columns
             return render(request, 'columns.html', {'column_list': column_list})
         else:
@@ -152,12 +152,17 @@ class ColumnNew(View):
                 name = request.POST['name']
                 description = request.POST['description']
                 project = ProjectStorage.get_project(request.POST['select_project'])
+                projects = ProjectController.show_all(request.user.username, request.user.password)
+                for i in projects:
+                    if project.name == i.name:
+                        project = i
+                print("Project_id = ", request.POST['select_project'])
                 ColumnController.create_columm(username=request.user.username, password=request.user.password,
-                                               project_name=project.name, name=name, description=description)
+                                               project_id=project.id, name=name, description=description)
                 # column = Column(name=name, desc=description, project_id=project.id)
                 # log.info("")
                 # ColumnStorage.add_column_to_db(column)
-                return redirect('tracker:columns')
+                return redirect('tracker:column_list')
         else:
             return render(request, 'no_permission.html')
 
@@ -245,6 +250,17 @@ class SampleView(FormView):
             column = ColumnStorage.get_column_by_id(project.name, request.POST['select_column'])
             TaskController.add_task(request.user.username, request.user.password, project.name, column.name, name, desc,
                                     start_date, start_time, end_date, end_time, tags, priority)
+
+
+class TaskInfo(View):
+    def get(self, request, project_id, column_id, task_id):
+        if request.user.is_authenticated:
+            project = ProjectStorage.get_project_by_id(project_id)
+            column = ColumnStorage.get_column_by_id(project.name, column_id)
+            task = TaskStorage.get_task_by_id(project.name, column.name, task_id)
+            return render(request, 'column.html', {'project': project, 'column': column, 'task': task})
+        else:
+            return render(request, 'no_permission.html')
 
 
 class BugReport(View):
