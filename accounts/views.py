@@ -14,6 +14,7 @@ class SignUp(generic.FormView):
 
     def post(self, request, *args, **kwargs):
         form = SignUpForm(request.POST)
+        response = redirect('tracker:home')
         error1 = ''
         if form.is_valid():
             user = form.save()
@@ -24,7 +25,8 @@ class SignUp(generic.FormView):
             user = authenticate(username=user.username, password=raw_password)
             login(request, user)
             UserController.reg(user.username, user.password, email)
-            return redirect('tracker:home')
+            response.set_cookie(key='have_account', value='1')
+            return response
 
         return render(request, 'accounts/signup.html', {'form': form, 'error1': error1})
 

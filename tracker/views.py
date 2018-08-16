@@ -17,7 +17,12 @@ from .forms import SignupForm, ToDoForm
 
 
 def index(request):
-    return render(request, 'index.html')
+    response = render(request, 'index.html')
+    if 'been_before' in request.COOKIES:
+        if request.COOKIES['been_before'] == '1':
+            print("sosi")
+    response.set_cookie(key='been_before', value='1')
+    return response
 
 
 class ProjectsList(View):
@@ -241,26 +246,6 @@ class SampleView(FormView):
             TaskController.add_task(request.user.username, request.user.password, project.name, column.name, name, desc,
                                     start_date, start_time, end_date, end_time, tags, priority)
 
-    #
-    # if request.method == 'POST':
-    #     f = SignupForm(request.POST)
-    #     if f.is_valid():
-    #         f.save()
-    #         messages.success(request, 'Account created successfully')
-    #         return redirect('tracker:home')
-    # else:
-    #     f = SignupForm
-    #
-    # return render(request, 'registration/signup.html', {'form': f})
-
-
-def filter_columns(columns, project):
-    to_return = []
-    for i in columns:
-        if columns.project_id == project.id:
-            to_return.append(i)
-    return to_return
-
 
 class BugReport(View):
     def get(self, request):
@@ -278,34 +263,6 @@ class BugReportList(View):
     def get(self, request):
         report_list = BugController.get_all_bugs()
         return render(request, 'bug_report_list.html', {'report_list': report_list})
-
-
-def register(request):
-    if request.method == 'POST':
-        f = SignupForm(request.POST)
-        if f.is_valid():
-            f.save()
-            messages.success(request, 'Account created successfully')
-            return redirect('tracker:home')
-    else:
-        f = SignupForm
-
-    return render(request, 'registration/signup.html', {'form': f})
-
-
-class UserLogin(TemplateView):
-    def post(self, request):
-        if request.method == 'POST':
-            username = request.POST['username']
-            password = request.POST['password']
-            user = authenticate(request, username=username, password=password)
-            if user is not None:
-                login(request)
-                return redirect('tracker:home')
-        else:
-            form = AuthenticationForm()
-
-        return render(request, 'registration/login.html', {'form': form})
 
 
 def logout_view(request):
