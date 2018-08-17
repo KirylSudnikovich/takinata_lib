@@ -42,7 +42,8 @@
                                   </div>
                                 {% endfor %}
                                 <label>
-                                    <select id='select_project' class="form-control js-example-basic-single" name="select_project">
+                                    <select id='select_project' class="form-control js-example-basic-single"
+                                            name="select_project">
                                         {% for project in projects %}
                                             <option value={{ project.id }}>{{ project.name }}</option>
                                         {% endfor %}
@@ -81,14 +82,18 @@
         </div>
     </section>
     <script>
+        $('#select_column').parent().hide();
         var $selected_column = $( '#select_column' ),
         $options = $selected_column.find( 'option' );
+        $(document).ready(function() {
+        });
         $(document).ready(function(){
             $('#select_project').on("select2:select", function(e) {
-                $selected_column.html( $options.filter( '[value="' + this.value + '"]' ) ); console.log(this.value);
+                $selected_column.html( $options.filter( '[value="' + this.value + '"]' ) );
+                $('#select_column').parent().show();
+                console.log(this.value);
             });
         });
         $("#select_project").prop("selectedIndex", -1);
-        $("#select_column").prop("selectedIndex", -1);
     </script>
 {% endblock %}

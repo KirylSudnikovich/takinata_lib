@@ -1,29 +1,29 @@
 {% extends 'adminlte/base.html' %}
 
-{% block title %}List of Tasks{% endblock %}
+{% block title %}List of Categories{% endblock %}
 {% load i18n static %}
 
 {% block content %}
     <section class="content-header">
-        <h1>List of tasks</h1>
+        <h1>List of columns</h1>
     </section>
     <div class="container-fluid">
         <section class="content">
             <div class="row">
-                {% for task in task_list %}
+                {% for column in column_list %}
                     <div class="col-md-6">
-                        <div class="task" id="task.id">
+                        <div class="project" id="project.id">
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title"><a href="{% url 'tracker:task_info' project_id=task.project_id column_id=task.category_id task_id=task.id %}">{{ task.name }}</a></h3>
+                                    <h3 class="box-title"><a href="{% url 'tracker:column_info' column_id=column.id project_id=column.project_id %}">{{ column.name }}</a></h3>
                                 </div>
                                 <div class="box-body">
-                                    <p class="info">{{ task.desc }}</p>
+                                    <p class="info">{{ column.desc }}</p>
                                 </div>
                                 <div class="box-footer">
                                      <div class="row">
                                             <div class="col-md-4 pull-right">
-                                                <a href="{% url 'tracker:task_info' project_id=task.project_id column_id=task.category_id task_id=task.id %}">
+                                                <a href="{% url 'tracker:column_info' column_id=column.id project_id=column.project_id %}">
                                                     <button class="btn btn-primary btn-block btn-flat">More Info</button>
                                                 </a>
                                             </div>

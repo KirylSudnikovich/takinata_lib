@@ -32,7 +32,7 @@ class ProjectsList(View):
             username = request.user.username
             password = request.user.password
             project_list = ProjectController.show_all(username, password)
-            return render(request, 'projects.html', {'project_list': project_list})
+            return render(request, 'projects/list.html', {'project_list': project_list})
         else:
             return render(request, 'no_permission.html')
 
@@ -66,7 +66,7 @@ class ProjectInfo(View):
             for i in all_users:
                 if i.username not in guys_names:
                     all_guys.append(i)
-            return render(request, 'project.html',
+            return render(request, 'projects/info.html',
                           {'project': project, 'columns': columns, 'guys': guys, 'all_guys': all_guys})
         else:
             return render(request, 'no_permission.html')
@@ -92,7 +92,7 @@ class ProjectDelete(View):
     def get(self, request, project_id):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
-            return render(request, 'project_delete.html', {'project': project})
+            return render(request, 'projects/delete.html', {'project': project})
         else:
             return render(request, 'no_permission.html')
 
@@ -110,7 +110,7 @@ class ProjectEdit(View):
     def get(self, request, project_id):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
-            return render(request, 'project_edit.html', {'project': project})
+            return render(request, 'projects/edit.html', {'project': project})
         else:
             return render(request, 'no_permission.html')
 
@@ -136,7 +136,7 @@ class ColumnList(View):
             for project in projects:
                 columns = ColumnController.show_all(username, password, project.id)
                 column_list = column_list + columns
-            return render(request, 'columns.html', {'column_list': column_list})
+            return render(request, 'categories/columns.html', {'column_list': column_list})
         else:
             return render(request, 'no_permission.html')
 
@@ -144,7 +144,7 @@ class ColumnList(View):
 class ColumnNew(View):
     def get(self, request):
         projects = ProjectController.show_all(request.user.username, request.user.password)
-        return render(request, 'column_new.html', {'projects': projects})
+        return render(request, 'categories/column_new.html', {'projects': projects})
 
     def post(self, request):
         if request.user.is_authenticated:
@@ -172,7 +172,7 @@ class ColumnInfo(View):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
             column = ColumnStorage.get_column_by_id(project.name, column_id)
-            return render(request, 'column.html', {'project': project, 'column': column})
+            return render(request, 'categories/column.html', {'project': project, 'column': column})
         else:
             return render(request, 'no_permission.html')
 
@@ -182,7 +182,7 @@ class ColumnDelete(View):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
             column = ColumnStorage.get_column_by_id(project.name, column_id)
-            return render(request, 'column_delete.html', {'project': project, 'column': column})
+            return render(request, 'categories/column_delete.html', {'project': project, 'column': column})
         else:
             return render(request, 'no_permission.html')
 
@@ -202,7 +202,7 @@ class ColumnEdit(View):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
             column = ColumnStorage.get_column_by_id(project.name, column_id)
-            return render(request, 'column_edit.html', {'project': project, 'column': column})
+            return render(request, 'categories/column_edit.html', {'project': project, 'column': column})
         else:
             return render(request, 'no_permission.html')
 
@@ -311,7 +311,7 @@ class TaskDelete(View):
 
 class BugReport(View):
     def get(self, request):
-        return render(request, 'bug_fixing.html')
+        return render(request, 'bug_tracker/bug_fixing.html')
 
     def post(self, request):
         username = request.user.username
@@ -324,7 +324,7 @@ class BugReport(View):
 class BugReportList(View):
     def get(self, request):
         report_list = BugController.get_all_bugs()
-        return render(request, 'bug_report_list.html', {'report_list': report_list})
+        return render(request, 'bug_tracker/bug_report_list.html', {'report_list': report_list})
 
 
 def logout_view(request):
