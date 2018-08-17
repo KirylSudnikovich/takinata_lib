@@ -136,7 +136,7 @@ class ColumnList(View):
             for project in projects:
                 columns = ColumnController.show_all(username, password, project.id)
                 column_list = column_list + columns
-            return render(request, 'categories/columns.html', {'column_list': column_list})
+            return render(request, 'categories/list.html', {'column_list': column_list})
         else:
             return render(request, 'no_permission.html')
 
@@ -144,7 +144,7 @@ class ColumnList(View):
 class ColumnNew(View):
     def get(self, request):
         projects = ProjectController.show_all(request.user.username, request.user.password)
-        return render(request, 'categories/column_new.html', {'projects': projects})
+        return render(request, 'categories/create.html', {'projects': projects})
 
     def post(self, request):
         if request.user.is_authenticated:
@@ -172,7 +172,7 @@ class ColumnInfo(View):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
             column = ColumnStorage.get_column_by_id(project.name, column_id)
-            return render(request, 'categories/column.html', {'project': project, 'column': column})
+            return render(request, 'categories/info.html', {'project': project, 'column': column})
         else:
             return render(request, 'no_permission.html')
 
@@ -182,7 +182,7 @@ class ColumnDelete(View):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
             column = ColumnStorage.get_column_by_id(project.name, column_id)
-            return render(request, 'categories/column_delete.html', {'project': project, 'column': column})
+            return render(request, 'categories/delete.html', {'project': project, 'column': column})
         else:
             return render(request, 'no_permission.html')
 
@@ -202,7 +202,7 @@ class ColumnEdit(View):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
             column = ColumnStorage.get_column_by_id(project.name, column_id)
-            return render(request, 'categories/column_edit.html', {'project': project, 'column': column})
+            return render(request, 'categories/edit.html', {'project': project, 'column': column})
         else:
             return render(request, 'no_permission.html')
 

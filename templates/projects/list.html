@@ -5,11 +5,23 @@
 
 {% block content %}
     <section class="content-header">
-        <h1>List of projects</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <h1 class="page-header">List of projects</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <a href="{% url 'tracker:project_new' %}"><button class="btn btn-primary btn-block btn-flat">Create project</button></a>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="content">
         <div class="container-fluid">
             <div class="row">
+                {% if not project_list %}
+                    <h1 class="text-center">There is no projects</h1>
+                {% endif %}
                 {% for project in project_list %}
                     <div class="col-md-6">
                         <div class="project" id="project.id">

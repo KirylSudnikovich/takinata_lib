@@ -5,11 +5,23 @@
 
 {% block content %}
     <section class="content-header">
-        <h1>List of columns</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <h1 class="page-header">List of categories</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <a href="{% url 'tracker:column_new' %}"><button class="btn btn-primary btn-block btn-flat">Create category</button></a>
+                </div>
+            </div>
+        </div>
     </section>
     <div class="container-fluid">
         <section class="content">
             <div class="row">
+                {% if not column_list %}
+                    <h1 class="text-center">There is no categories</h1>
+                {% endif %}
                 {% for column in column_list %}
                     <div class="col-md-6">
                         <div class="project" id="project.id">
