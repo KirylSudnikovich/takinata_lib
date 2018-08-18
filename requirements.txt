@@ -8,5 +8,4 @@ peewee==3.6.4
 psycopg2==2.7.5
 pytz==2018.5
 SQLAlchemy==1.2.10
-takinata-lib==0.1
 whitenoise==3.2
