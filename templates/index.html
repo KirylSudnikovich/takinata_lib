@@ -1,18 +1,63 @@
 {% extends 'adminlte/base.html' %}
-{% block title %}Task Create{% endblock %}
+{% block title %}Takinata web{% endblock %}
 {% load i18n static %}
 
 {% block body_class %}login-page{% endblock %}
 
 {% block content %}
     <section class="content-header">
-        <h1>Task list</h1>
+        <h1 class="text-center">Results of beta test</h1>
     </section>
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <h1>PNH</h1>
+                <div class="col-lg-3 col-xs-6">
+                    <div class="small-box bg-yellow">
+                        <div class="inner">
+                            <h3>{{ users }}</h3>
+                            <p>User Registrations</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-user-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                    <div class="small-box bg-aqua">
+                        <div class="inner">
+                            <h3>{{ projects }}</h3>
+                            <p>Projects Created</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-hdd-o"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                            <h3>{{ categories }}</h3>
+                            <p>Categories Created</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-folder-o"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                    <div class="small-box bg-red">
+                        <div class="inner">
+                            <h3>{{ tasks }}</h3>
+                            <p>Tasks Created</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-save"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
+    <script src="https://unpkg.com/ionicons@4.3.0/dist/ionicons.js"></script>
 {% endblock %}

@@ -81,8 +81,12 @@ WSGI_APPLICATION = 'VersionTwo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'takinata-lib',
+        'USER': 'postgres',
+        'PASSWORD': '1337228',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -127,17 +131,10 @@ USE_TZ = True
 
 #DATE_INPUT_FORMATS = '%d.%m.%Y'
 
-LOGIN_REDIRECT_URL = '/tracker/accounts/profile'
-LOGOUT_REDIRECT_URL = '/tracker '
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/ '
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
-import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
-DATABASES['default']['CONN_MAX_AGE'] = 500
-
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'

@@ -30,10 +30,7 @@ def get_path_to_db():
         print(path)
         return path
     except Exception as e:
-        print(e)
-        path = os.path.dirname(os.path.abspath(__file__))
-        path = path[:-3]
-        path = os.path.join(path, 'database.sqlite3')
+        path = "postgresql://postgres:1337228@localhost:5432/takinata-lib"
         print(path)
         return path
 

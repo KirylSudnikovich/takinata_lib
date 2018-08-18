@@ -1,12 +1,15 @@
 from sqlalchemy import Column, Integer, String, Table, ForeignKey, create_engine, Date, Time, Text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
-Base = declarative_base()
-engine = create_engine('sqlite:////home/snitch/PycharmProjects/VersionTwo/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/database.sqlite3', echo=True)
+from lib.conf import get_path_to_db
+
+Base = declarative_base(get_path_to_db())
+engine = create_engine()
 
 rel = Table('user_project', Base.metadata,
             Column('user_id', Integer, ForeignKey('users.id')),
             Column('project_id', Integer, ForeignKey('projects.id')))
+
 
 class Task(Base):
     __tablename__ = 'tasks'
@@ -35,6 +38,7 @@ class Category(Base):
     desc = Column(String)
     project_id = Column(Integer, ForeignKey('projects.id'))
 
+
 class User(Base):
     __tablename__ = 'users'
 
@@ -42,7 +46,8 @@ class User(Base):
     username = Column(String)
     password = Column(String)
     email = Column(String)
-    #projects = relationship('Project', secondary=rel, backref='users')
+    # projects = relationship('Project', secondary=rel, backref='users')
+
 
 class Project(Base):
     __tablename__ = 'projects'
@@ -56,6 +61,7 @@ class Project(Base):
 
 
 Base.metadata.create_all(engine)
+print("Engine - ", engine)
 
 def create_tables():
     Base.metadata.create_all(engine)

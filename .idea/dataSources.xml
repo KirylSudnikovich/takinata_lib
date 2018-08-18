@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="database.sqlite3" uuid="f1249c2e-a869-4558-8a21-d9077612fff3">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="takinata-lib@localhost" uuid="fbead64b-bfe3-496d-a8e7-69767a57a3ae">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/database.sqlite3</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/takinata-lib</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="d96b78norrg5t5@ec2-54-235-94-36.compute-1.amazonaws.com" uuid="ebc35916-7b62-47e1-be9e-cdec770ae4c6">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-54-235-94-36.compute-1.amazonaws.com:5432/d96b78norrg5t5</jdbc-url>
       <driver-properties>
-        <property name="enable_load_extension" value="true" />
+        <property name="ssl" value="true" />
+        <property name="sslfactory" value="org.postgresql.ssl.NonValidatingFactory" />
       </driver-properties>
     </data-source>
   </component>

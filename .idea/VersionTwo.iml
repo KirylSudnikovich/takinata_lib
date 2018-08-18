@@ -26,6 +26,7 @@
     <orderEntry type="library" name="bootstrap-datetimepicker" level="application" />
     <orderEntry type="library" name="moment-with-locales" level="application" />
     <orderEntry type="library" name="datepicker-widget" level="application" />
+    <orderEntry type="library" name="ionicons" level="application" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

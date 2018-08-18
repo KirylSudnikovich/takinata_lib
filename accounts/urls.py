@@ -3,6 +3,7 @@ from django.urls import path
 from django.views.generic.base import RedirectView
 
 
+
 app_name = 'accounts'
 urlpatterns = [
     path('signin/', views.SignIn.as_view(), name='signin'),

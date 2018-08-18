@@ -13,12 +13,14 @@ from lib.storage.user import UserStorage
 from lib.controllers.task import TaskController
 from lib.storage.task import TaskStorage
 
-from .controllers.bug_report import BugController
+from .controllers.tracker_controller import BugController, all_users, all_projects, all_categories, all_tasks
 from .forms import SignupForm, ToDoForm
 
 
 def index(request):
-    response = render(request, 'index.html')
+    dict_to_template = {'users': all_users(), 'projects': all_projects, 'categories': all_categories(),
+                        'tasks': all_tasks()}
+    response = render(request, 'index.html', dict_to_template)
     if 'been_before' in request.COOKIES:
         print("sosi")
     else:
@@ -135,6 +137,7 @@ class ColumnList(View):
             column_list = []
             for project in projects:
                 columns = ColumnController.show_all(username, password, project.id)
+                print("LIST of COLUMNS - ", columns)
                 column_list = column_list + columns
             return render(request, 'categories/list.html', {'column_list': column_list})
         else:
@@ -159,9 +162,6 @@ class ColumnNew(View):
                 print("Project_id = ", request.POST['select_project'])
                 ColumnController.create_columm(username=request.user.username, password=request.user.password,
                                                project_id=project.id, name=name, description=description)
-                # column = Column(name=name, desc=description, project_id=project.id)
-                # log.info("")
-                # ColumnStorage.add_column_to_db(column)
                 return redirect('tracker:column_list')
         else:
             return render(request, 'no_permission.html')
@@ -272,6 +272,8 @@ class SampleView(FormView):
                 columns = ColumnController.show_all(request.user.username, request.user.password, project.id)
                 columns_to_send += columns
             column = ColumnStorage.get_column_by_id(project.name, request.POST['select_column'])
+            print("SELECTED_PROJECT = ", request.POST['select_project'])
+            print("SELECTED_COLUMN = ", request.POST['select_column'])
             for i in columns_to_send:
                 if column.name == i.name:
                     column = i

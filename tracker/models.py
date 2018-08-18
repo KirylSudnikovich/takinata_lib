@@ -1,11 +1,10 @@
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
+from lib.conf import conf
 
 Base = declarative_base()
 
-engine = create_engine(
-    'sqlite:////home/snitch/PycharmProjects/VersionTwo/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/database.sqlite3',
-    echo=True)
+engine = create_engine(conf.get_path_to_db())
 
 
 class BugReport(Base):

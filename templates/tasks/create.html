@@ -91,6 +91,7 @@
             $('#select_project').on("select2:select", function(e) {
                 $selected_column.html( $options.filter( '[value="' + this.value + '"]' ) );
                 $('#select_column').parent().show();
+                $("#select_column").prop("selectedIndex", -1);
                 console.log(this.value);
             });
         });
