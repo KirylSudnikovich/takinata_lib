@@ -121,14 +121,14 @@
           <entry key="css" value="15" />
           <entry key="html" value="10575" />
           <entry key="py" value="19536" />
-          <entry key="txt" value="115" />
+          <entry key="txt" value="116" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="15" />
           <entry key="HTML" value="10575" />
-          <entry key="PLAIN_TEXT" value="115" />
+          <entry key="PLAIN_TEXT" value="116" />
           <entry key="Python" value="20132" />
         </counts>
       </usages-collector>
@@ -206,8 +206,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -952,8 +952,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
