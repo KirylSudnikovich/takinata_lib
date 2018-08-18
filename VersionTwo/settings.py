@@ -26,7 +26,7 @@ SECRET_KEY = '#t6$&*i4@1_34_gn5wc537#i#fq-$m-5a35j%mofn3+%f15%h+'
 #
 # ALLOWED_HOSTS = []
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'takinata-lib.herokuapp.com']
 
 # Application definition
 
@@ -134,3 +134,10 @@ LOGOUT_REDIRECT_URL = '/tracker '
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE'] = 500
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
