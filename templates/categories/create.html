@@ -26,11 +26,17 @@
                                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                                     </div>
                             <label>
-                                <select class="form-control js-example-basic-single" name="select_project">
-                                    {% for project in projects %}
+                                {% if projects %}
+                                    <select class="form-control js-example-basic-single" name="select_project">
+                                        {% for project in projects %}
+                                            <option>{{ project.name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                {% elif project %}
+                                    <select class="form-control js-example-basic-single" name="select_project">
                                         <option>{{ project.name }}</option>
-                                    {% endfor %}
-                                </select>
+                                    </select>
+                                {% endif %}
                             </label>
                             <div class="box-footer">
                                 <div class="row">

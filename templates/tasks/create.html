@@ -42,12 +42,22 @@
                                   </div>
                                 {% endfor %}
                                 <label>
-                                    <select id='select_project' class="form-control js-example-basic-single"
-                                            name="select_project">
-                                        {% for project in projects %}
-                                            <option value={{ project.id }}>{{ project.name }}</option>
-                                        {% endfor %}
-                                    </select>
+                                    {% if projects %}
+                                        <select id='select_project' class="form-control js-example-basic-single"
+                                                name="select_project">
+                                            {% for project in projects %}
+                                                <option value={{ project.id }}>{{ project.name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    {% endif %}
+                                    {% if project %}
+                                        <select id='select_project' class="form-control js-example-basic-single"
+                                                name="select_project">
+                                            {% for project in projects %}
+                                                <option value={{ project.id }}>{{ project.name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    {% endif %}
                                 </label>
                                 <label>
                                     <select id='select_column' class="form-control js-example-basic-single" name="select_column">

@@ -59,6 +59,10 @@ class ProjectInfo(View):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
             columns = ColumnController.show_all(request.user.username, request.user.password, project.id)
+            task_list = []
+            for column in columns:
+                tasks = TaskStorage.get_all_tasks(project.id, column.id)
+                task_list = task_list + tasks
             all_users = UserStorage.get_all_users()
             guys = ProjectStorage.get_all_persons_in_project(project)
             all_guys = []
@@ -68,13 +72,17 @@ class ProjectInfo(View):
             for i in all_users:
                 if i.username not in guys_names:
                     all_guys.append(i)
+            creator = guys[0]
+            guys = guys[1:]
             return render(request, 'projects/info.html',
-                          {'project': project, 'columns': columns, 'guys': guys, 'all_guys': all_guys})
+                          {'project': project, 'columns': columns, 'tasks': task_list, 'guys': guys, 'creator': creator,
+                           'all_guys': all_guys})
         else:
             return render(request, 'no_permission.html')
 
     def post(self, request, project_id):
         if request.method == 'POST':
+            print("kek")
             if 'add_to_project' in request.POST:
                 username = request.POST['add_select']
                 project = ProjectStorage.get_project_by_id(project_id)
@@ -88,6 +96,16 @@ class ProjectInfo(View):
                 ProjectController.delete_person_from_project(request.user.username, request.user.password, project,
                                                              user)
                 return redirect('tracker:project_info', project_id)
+            elif 'add_column' in request.POST:
+                project = ProjectStorage.get_project_by_id(project_id)
+                return render(request, 'categories/create.html', {'project': project})
+            elif 'add_task' in request.POST:
+                project = ProjectStorage.get_project_by_id(project_id)
+                columns_to_send = ColumnStorage.get_all_columns(project.id)
+                projects = [project,]
+                f = ToDoForm
+                return render(request, 'tasks/create.html',
+                              {'form': f, 'projects': projects, 'columns': columns_to_send})
 
 
 class ProjectDelete(View):
@@ -172,7 +190,8 @@ class ColumnInfo(View):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
             column = ColumnStorage.get_column_by_id(project.name, column_id)
-            return render(request, 'categories/info.html', {'project': project, 'column': column})
+            tasks = TaskStorage.get_all_tasks(project.id, column.id)
+            return render(request, 'categories/info.html', {'project': project, 'column': column, 'tasks': tasks})
         else:
             return render(request, 'no_permission.html')
 
@@ -229,13 +248,15 @@ class TaskList(View):
             task_list = []
             for project in projects:
                 columns = ColumnController.show_all(username, password, project.id)
+                print("columns - ", columns)
                 for column in columns:
                     tasks = TaskController.show_tasks(username, password, project.id, column.id)
                     print("tasks = ", tasks)
                     task_list = task_list + tasks
                 column_list = column_list + columns
-            print("task_list = ",task_list)
-            return render(request, 'tasks/list.html', {'projects': projects, 'columns': column_list, 'task_list': task_list})
+            print("task_list = ", task_list)
+            return render(request, 'tasks/list.html', {'projects': projects, 'columns': column_list,
+                                                       'task_list': task_list})
         else:
             return render(request, 'no_permission.html')
 
@@ -271,7 +292,7 @@ class SampleView(FormView):
             for project in projects:
                 columns = ColumnController.show_all(request.user.username, request.user.password, project.id)
                 columns_to_send += columns
-            column = ColumnStorage.get_column_by_id(project.name, request.POST['select_column'])
+            column = ColumnStorage.get_column_by_id(project.name, int(request.POST['select_column'])+1)
             print("SELECTED_PROJECT = ", request.POST['select_project'])
             print("SELECTED_COLUMN = ", request.POST['select_column'])
             for i in columns_to_send:
@@ -279,6 +300,7 @@ class SampleView(FormView):
                     column = i
             TaskController.add_task(request.user.username, request.user.password, project.id, column.id, name, desc,
                                     start_date, start_time, end_date, end_time, tags, priority)
+            return redirect('tracker:task_list')
 
 
 class TaskInfo(View):
