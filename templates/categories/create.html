@@ -11,20 +11,20 @@
             <div class="box box-primary">
                 <!-- /.login-logo -->
                 <div class="box-header with-border">
-                    <h3 class="box-title">Column Create</h3>
+                    <h3 class="box-title">Category Create</h3>
                 </div>
                     <form action="" method="post">
                         {% csrf_token %}
                         <div class="box-body">
-                            <h2>New Column</h2>
-                                    <div class="form-group has-feedback">
-                                        <input name="name" class="form-control" placeholder="Column Name">
-                                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                                    </div>
-                                    <div class="form-group has-feedback">
-                                        <textarea name="description" rows="5" class="form-control" placeholder="Column Description" style="resize: none"></textarea>
-                                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                                    </div>
+                            <h2>New Category</h2>
+                            <div class="form-group has-feedback">
+                                <input name="name" class="form-control" placeholder="Category Name">
+                                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <textarea name="description" rows="5" class="form-control" placeholder="Category Description" style="resize: none"></textarea>
+                                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                            </div>
                             <label>
                                 {% if projects %}
                                     <select class="form-control js-example-basic-single" name="select_project">
@@ -54,10 +54,31 @@
         <div class="col-md-6">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Column Info</h3>
+                    <h3 class="box-title">Category Info</h3>
                 </div>
                 <div class="box-body">
-                    <h2>Kek</h2>
+                    <h3>What is category?</h3>
+                    <p class="lead">
+                        A category is a set of tasks grouped by one topic or area.</p>
+                    <hr>
+                    <h3>For what?</h3>
+                    <p class="lead">
+                        Categories are designed to group tasks on some basis. For example, the task of "doing homework"
+                        and "Buy notebooks" both belong to the project "Study", but to put them in the same semantic
+                        group will not be correct. And storage task "mow the lawn" to "redecorate bedroom" in one
+                        category of "House" is very strange. But the items "brush your teeth" and" prepare Breakfast
+                        "can be safely placed in the category of "Daily routine".
+                    </p>
+                    <hr>
+                    <h3>Example of use</h3>
+                    <p class="lead">
+                        - Category "Scientific work" in the project "Study", which will contain tasks that will bring
+                        you closer to writing a scientific work at the University.<br>
+                        - Category " Car "in the project "Life", which will contain tasks related to your iron horse,
+                        like "change oil", "call for maintenance", etc.<br>
+                        - Category "Daily routine", which will contain all sorts of tasks that people perform every day,
+                        like "brush your teeth", walk the dog" and the like.<br>
+                    </p>
                 </div>
             </div>
         </div>
