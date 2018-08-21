@@ -26,7 +26,7 @@ SECRET_KEY = '#t6$&*i4@1_34_gn5wc537#i#fq-$m-5a35j%mofn3+%f15%h+'
 #
 # ALLOWED_HOSTS = []
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'takinata-lib.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -137,4 +137,6 @@ LOGOUT_REDIRECT_URL = '/ '
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 STATIC_URL = '/static/'

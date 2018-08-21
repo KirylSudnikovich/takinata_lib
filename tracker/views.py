@@ -1,3 +1,5 @@
+import sys
+
 from django.contrib import messages
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
@@ -36,7 +38,7 @@ class ProjectsList(View):
             project_list = ProjectController.show_all(username, password)
             return render(request, 'projects/list.html', {'project_list': project_list})
         else:
-            return render(request, 'no_permission.html')
+            return render(request, '501.html')
 
 
 class ProjectNew(TemplateView):
@@ -51,7 +53,7 @@ class ProjectNew(TemplateView):
                     ProjectController.create(username, password, name, description)
                     return redirect('tracker:projects')
         else:
-            return render(request, 'no_permission.html')
+            return render(request, '501.html')
 
 
 class ProjectInfo(View):
@@ -78,7 +80,7 @@ class ProjectInfo(View):
                           {'project': project, 'columns': columns, 'tasks': task_list, 'guys': guys, 'creator': creator,
                            'all_guys': all_guys})
         else:
-            return render(request, 'no_permission.html')
+            return render(request, '501.html')
 
     def post(self, request, project_id):
         if request.method == 'POST':
@@ -102,7 +104,7 @@ class ProjectInfo(View):
             elif 'add_task' in request.POST:
                 project = ProjectStorage.get_project_by_id(project_id)
                 columns_to_send = ColumnStorage.get_all_columns(project.id)
-                projects = [project,]
+                projects = [project, ]
                 f = ToDoForm
                 return render(request, 'tasks/create.html',
                               {'form': f, 'projects': projects, 'columns': columns_to_send})
@@ -114,7 +116,7 @@ class ProjectDelete(View):
             project = ProjectStorage.get_project_by_id(project_id)
             return render(request, 'projects/delete.html', {'project': project})
         else:
-            return render(request, 'no_permission.html')
+            return render(request, '501.html')
 
     def post(self, request, project_id):
         if request.method == 'POST':
@@ -123,7 +125,7 @@ class ProjectDelete(View):
                 ProjectStorage.delete_with_object(project)
                 return redirect('tracker:projects')
             else:
-                return render(request, 'no_permission.html')
+                return render(request, '501.html')
 
 
 class ProjectEdit(View):
@@ -132,7 +134,7 @@ class ProjectEdit(View):
             project = ProjectStorage.get_project_by_id(project_id)
             return render(request, 'projects/edit.html', {'project': project})
         else:
-            return render(request, 'no_permission.html')
+            return render(request, '501.html')
 
     def post(self, request, project_id):
         if request.method == 'POST':
@@ -143,7 +145,7 @@ class ProjectEdit(View):
                 ProjectStorage.save(project)
                 return redirect('tracker:projects')
             else:
-                return render(request, 'no_permission.html')
+                return render(request, '501.html')
 
 
 class ColumnList(View):
@@ -159,7 +161,7 @@ class ColumnList(View):
                 column_list = column_list + columns
             return render(request, 'categories/list.html', {'column_list': column_list})
         else:
-            return render(request, 'no_permission.html')
+            return render(request, '501.html')
 
 
 class ColumnNew(View):
@@ -182,7 +184,7 @@ class ColumnNew(View):
                                                project_id=project.id, name=name, description=description)
                 return redirect('tracker:column_list')
         else:
-            return render(request, 'no_permission.html')
+            return render(request, '501.html')
 
 
 class ColumnInfo(View):
@@ -193,7 +195,7 @@ class ColumnInfo(View):
             tasks = TaskStorage.get_all_tasks(project.id, column.id)
             return render(request, 'categories/info.html', {'project': project, 'column': column, 'tasks': tasks})
         else:
-            return render(request, 'no_permission.html')
+            return render(request, '501.html')
 
 
 class ColumnDelete(View):
@@ -203,7 +205,7 @@ class ColumnDelete(View):
             column = ColumnStorage.get_column_by_id(project.name, column_id)
             return render(request, 'categories/delete.html', {'project': project, 'column': column})
         else:
-            return render(request, 'no_permission.html')
+            return render(request, '501.html')
 
     def post(self, request, project_id, column_id):
         if request.method == 'POST':
@@ -213,7 +215,7 @@ class ColumnDelete(View):
                 ColumnStorage.delete_column_from_db(column)
                 return redirect('tracker:projects')
             else:
-                return render(request, 'no_permission.html')
+                return render(request, '501.html')
 
 
 class ColumnEdit(View):
@@ -223,7 +225,7 @@ class ColumnEdit(View):
             column = ColumnStorage.get_column_by_id(project.name, column_id)
             return render(request, 'categories/edit.html', {'project': project, 'column': column})
         else:
-            return render(request, 'no_permission.html')
+            return render(request, '501.html')
 
     def post(self, request, project_id, column_id):
         if request.method == 'POST':
@@ -235,7 +237,7 @@ class ColumnEdit(View):
                 ColumnStorage.save(column)
                 return redirect('tracker:projects')
             else:
-                return render(request, 'no_permission.html')
+                return render(request, '501.html')
 
 
 class TaskList(View):
@@ -258,7 +260,7 @@ class TaskList(View):
             return render(request, 'tasks/list.html', {'projects': projects, 'columns': column_list,
                                                        'task_list': task_list})
         else:
-            return render(request, 'no_permission.html')
+            return render(request, '501.html')
 
 
 class SampleView(FormView):
@@ -292,7 +294,7 @@ class SampleView(FormView):
             for project in projects:
                 columns = ColumnController.show_all(request.user.username, request.user.password, project.id)
                 columns_to_send += columns
-            column = ColumnStorage.get_column_by_id(project.name, int(request.POST['select_column'])+1)
+            column = ColumnStorage.get_column_by_id(project.name, int(request.POST['select_column']) + 1)
             print("SELECTED_PROJECT = ", request.POST['select_project'])
             print("SELECTED_COLUMN = ", request.POST['select_column'])
             for i in columns_to_send:
@@ -311,7 +313,7 @@ class TaskInfo(View):
             task = TaskStorage.get_task_by_id(task_id)
             return render(request, 'tasks/info.html', {'project': project, 'column': column, 'task': task})
         else:
-            return render(request, 'no_permission.html')
+            return render(request, '501.html')
 
 
 class TaskDelete(View):
@@ -322,7 +324,7 @@ class TaskDelete(View):
             task = TaskStorage.get_task_by_id(task_id)
             return render(request, 'tasks/delete.html', {'project': project, 'column': column, 'task': task})
         else:
-            return render(request, 'no_permission.html')
+            return render(request, '501.html')
 
     def post(self, request, project_id, column_id, task_id):
         if request.method == 'POST':
@@ -331,7 +333,8 @@ class TaskDelete(View):
                 TaskStorage.delete_task_from_db(task)
                 return redirect('tracker:task_list')
             else:
-                return render(request, 'no_permission.html')
+                return render(request, '501.html')
+
 
 class BugReport(View):
     def get(self, request):
@@ -362,4 +365,12 @@ def handler404(request, exception):
     err_code = 404
     response = render_to_response('404.html', {"code": err_code}, context)
     response.status_code = 404
+    return response
+
+
+def handler500(request):
+    type_, value, traceback = sys.exc_info()
+    print(type_)
+    response = render_to_response('500.html', {'type': type_, 'value': value})
+    response.status_code = 500
     return response

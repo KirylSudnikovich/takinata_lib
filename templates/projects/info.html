@@ -26,7 +26,8 @@
                     </div>
                     <div class="box-body">
                         <a href="{% url 'tracker:project_edit' project.id %}" class="btn btn-block btn-warning">Edit</a>
-                        <a href="{% url 'tracker:project_delete' project.id %}" class="btn btn-block btn-danger">Delete</a>
+                        <a href="{% url 'tracker:project_delete' project.id %}"
+                           class="btn btn-block btn-danger">Delete</a>
                     </div>
                 </div>
             </div>
@@ -42,13 +43,17 @@
                         <div class="col-md-4">
                             <form action="{% url 'tracker:column_new' %}" role="form">
                                 {% csrf_token %}
-                                <button type="submit" name="add_column" class="btn btn-primary btn-block pull-right">Create</button>
+                                <button type="submit" name="add_column" class="btn btn-primary btn-block pull-right">
+                                    Create
+                                </button>
                             </form>
                         </div>
                     </div>
                     <div class="box-body">
                         {% for column in columns %}
-                            <a style="color: #000000" class="text" href="{% url 'tracker:column_info' project.id column.id %}"><h4>{{ column.name }}</h4></a>
+                            <a style="color: #000000" class="text"
+                               href="{% url 'tracker:column_info' project.id column.id %}"><h4>{{ column.name }}</h4>
+                            </a>
                         {% endfor %}
                         {% if not columns %}
                             <h4>There is no columns in this project</h4>
@@ -66,13 +71,17 @@
                         <div class="col-md-4">
                             <form role="form" method="post">
                                 {% csrf_token %}
-                                <button type="submit" name="add_task" class="btn btn-primary btn-block pull-right">Create</button>
+                                <button type="submit" name="add_task" class="btn btn-primary btn-block pull-right">
+                                    Create
+                                </button>
                             </form>
                         </div>
                     </div>
                     <div class="box-body">
                         {% for task in tasks %}
-                            <a style="color: #000000" class="text" href="{% url 'tracker:task_info' project.id task.category_id task.id%}"><h4>{{ task.name }}</h4></a>
+                            <a style="color: #000000" class="text"
+                               href="{% url 'tracker:task_info' project.id task.category_id task.id %}">
+                                <h4>{{ task.name }}</h4></a>
                         {% endfor %}
                         {% if not tasks %}
                             <h4>There is no tasks in this project</h4>
@@ -108,44 +117,54 @@
                         <form role="form" method="post">
                             {% csrf_token %}
                             <div class="row">
-                                <div class="form-group">
-                                    <div class="col-xs-8">
-                                    <label>Remove from project: </label>
-                                    <label>
-                                        <select class="form-control js-example-basic-single" name="remove_select">
-                                        {% for user in guys %}
-                                            <option>{{ user.username }}</option>
-                                        {% endfor %}
-                                        </select>
-                                    </label>
+                                {% if guys %}
+                                    <div class="form-group">
+                                        <div class="col-md-5">
+                                            <label>Remove from project: </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>
+                                                <select class="form-control js-example-basic-single"
+                                                        name="remove_select">
+                                                    {% for user in guys %}
+                                                        <option>{{ user.username }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <button type="submit" name='remove_from_project'
+                                                    class="btn btn-primary btn-block">OK
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div class="col-xs-4">
-                                        <button type="submit" name='remove_from_project' class="btn btn-primary btn-block">OK</button>
-                                    </div>
-                                </div>
+                                {% endif %}
                             </div>
                             <div class="row">
-                                <div class="form-group">
-                                    <div class="col-xs-8">
-                                    <label>Add to project: </label>
-                                    <label>
-                                        <select class="form-control js-example-basic-single" name="add_select">
-                                        {% for user in all_guys %}
-                                            <option>{{ user.username }}</option>
-                                        {% endfor %}
-                                        </select>
-                                    </label>
+                                {% if all_guys %}
+                                    <div class="form-group">
+                                        <div class="col-xs-8">
+                                            <label>Add to project: </label>
+                                            <label>
+                                                <select class="form-control js-example-basic-single" name="add_select">
+                                                    {% for user in all_guys %}
+                                                        <option>{{ user.username }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <button type="submit" name="add_to_project" class="btn btn-primary btn-block">OK
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div class="col-xs-4">
-                                        <button type="submit" name="add_to_project" class="btn btn-primary btn-block">OK</button>
-                                    </div>
-                                </div>
+                                {% endif %}
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
         </div>
     </section>
 {% endblock %}

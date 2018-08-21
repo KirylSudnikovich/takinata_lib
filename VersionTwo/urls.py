@@ -23,3 +23,4 @@ urlpatterns = [
 ]
 
 handler404 = 'tracker.views.handler404'
+handler500 = 'tracker.views.handler500'
