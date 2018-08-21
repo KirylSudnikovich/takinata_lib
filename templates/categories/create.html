@@ -18,7 +18,7 @@
                         <div class="box-body">
                             <h2>New Category</h2>
                             <div class="form-group has-feedback">
-                                <input name="name" class="form-control" placeholder="Category Name">
+                                <input required name="name" class="form-control" placeholder="Category Name">
                                 <span class="fa fa-file form-control-feedback"></span>
                             </div>
                             <div class="form-group has-feedback">
@@ -36,6 +36,8 @@
                                     <select class="form-control js-example-basic-single" name="select_project">
                                         <option>{{ project.name }}</option>
                                     </select>
+                                 {% else %}
+                                    <h3>There is no project to add category</h3>
                                 {% endif %}
                             </label>
                             <div class="box-footer">
@@ -43,7 +45,9 @@
                                     <div class="col-xs-8">
                                     </div>
                                     <div class="col-xs-4">
-                                        <button type="submit" class="btn btn-primary btn-block btn-flat">Create</button>
+                                        {% if projects or project %}
+                                            <button type="submit" class="btn btn-primary btn-block btn-flat">Create</button>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>

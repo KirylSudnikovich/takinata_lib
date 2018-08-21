@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5737bc37-cee3-4085-bcde-fc9e59a384da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VersionTwo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/VersionTwo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VersionTwo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/VersionTwo/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VersionTwo/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/VersionTwo/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/no_permission.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/501.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/projects/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projects/info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/categories/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/create.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,12 +148,12 @@
           <entry key="categories" value="7" />
           <entry key="columns" value="3" />
           <entry key="css" value="6" />
-          <entry key="html" value="186" />
+          <entry key="html" value="187" />
           <entry key="js" value="1" />
           <entry key="libuser" value="1" />
           <entry key="log" value="2" />
           <entry key="projects" value="15" />
-          <entry key="py" value="301" />
+          <entry key="py" value="303" />
           <entry key="rel" value="3" />
           <entry key="right" value="1" />
           <entry key="sql" value="6" />
@@ -180,11 +173,11 @@
         <counts>
           <entry key="CSS" value="6" />
           <entry key="Database Element" value="82" />
-          <entry key="HTML" value="186" />
+          <entry key="HTML" value="187" />
           <entry key="JavaScript" value="1" />
           <entry key="Log" value="2" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="301" />
+          <entry key="Python" value="303" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="6" />
         </counts>
@@ -195,28 +188,55 @@
           <entry key="Procfile" value="19" />
           <entry key="css" value="15" />
           <entry key="dummy" value="18" />
-          <entry key="html" value="13130" />
-          <entry key="py" value="23211" />
+          <entry key="html" value="13238" />
+          <entry key="py" value="23233" />
           <entry key="txt" value="129" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="15" />
-          <entry key="HTML" value="13130" />
+          <entry key="HTML" value="13238" />
           <entry key="PLAIN_TEXT" value="166" />
-          <entry key="Python" value="23808" />
+          <entry key="Python" value="23830" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/projects/info.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
               <caret line="165" column="12" selection-start-line="165" selection-start-column="12" selection-end-line="165" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/categories/create.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracker/exceptions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/exception.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="10" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -257,8 +277,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -283,7 +303,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py" />
         <option value="$PROJECT_DIR$/templates/project.html" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/task.py" />
         <option value="$PROJECT_DIR$/templates/tasks/delete.html" />
@@ -325,7 +344,6 @@
         <option value="$PROJECT_DIR$/tracker/urls.py" />
         <option value="$PROJECT_DIR$/templates/tasks/create.html" />
         <option value="$PROJECT_DIR$/templates/projects/create.html" />
-        <option value="$PROJECT_DIR$/templates/categories/create.html" />
         <option value="$PROJECT_DIR$/VersionTwo/wsgi.py" />
         <option value="$PROJECT_DIR$/templates/tasks/500.html" />
         <option value="$PROJECT_DIR$/VersionTwo/urls.py" />
@@ -334,6 +352,8 @@
         <option value="$PROJECT_DIR$/VersionTwo/settings.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py" />
         <option value="$PROJECT_DIR$/templates/projects/info.html" />
+        <option value="$PROJECT_DIR$/tracker/exceptions.py" />
+        <option value="$PROJECT_DIR$/templates/categories/create.html" />
       </list>
     </option>
   </component>
@@ -678,12 +698,12 @@
     <frame x="1366" y="30" width="1920" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25026682" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25026682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4994664" weight="0.3292683" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49786553" visible="true" weight="0.32852387" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49786553" visible="true" weight="0.32852387" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39844617" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -749,16 +769,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/adminlte/lib/_messages.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://ebc35916-7b62-47e1-be9e-cdec770ae4c6/database/d96b78norrg5t5/schema/public/table/bug_reports">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ebc35916-7b62-47e1-be9e-cdec770ae4c6/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -954,13 +964,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/categories/create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/tasks/create.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1290">
@@ -1075,6 +1078,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="165" column="12" selection-start-line="165" selection-start-column="12" selection-end-line="165" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="10" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/exceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/categories/create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
         </state>
       </provider>
     </entry>
