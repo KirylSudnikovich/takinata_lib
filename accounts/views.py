@@ -18,18 +18,18 @@ class SignUp(generic.FormView):
         response = redirect('tracker:home')
         error1 = ''
         if form.is_valid():
-            user = form.save()
-            user.refresh_from_db()
-            user.save()
             raw_password = form.cleaned_data.get('password1')
             email = form.cleaned_data.get('email')
             users = UserStorage.get_all_users()
             have = False
             for u in users:
-                if user.email == u.email:
+                if email == u.email:
                     have = True
                     error1 = "An account with this name is already registered"
             if not have:
+                user = form.save()
+                user.refresh_from_db()
+                user.save()
                 user = authenticate(username=user.username, password=raw_password)
                 login(request, user)
                 UserController.reg(user.username, user.password, email)

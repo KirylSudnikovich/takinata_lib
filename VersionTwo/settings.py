@@ -25,7 +25,7 @@ SECRET_KEY = '#t6$&*i4@1_34_gn5wc537#i#fq-$m-5a35j%mofn3+%f15%h+'
 # DEBUG = True
 #
 # ALLOWED_HOSTS = []
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 # Application definition
@@ -121,7 +121,7 @@ BOOTSTRAP3 = {
 
 LANGUAGE_CODE = 'en-en'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Minsk'
 
 USE_I18N = True
 
