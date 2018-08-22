@@ -35,7 +35,11 @@
 
     {% block extra_head %}{% endblock %}
 </head>
+{% if request.user.is_authenticated %}
 <body class="hold-transition skin-blue sidebar-mini {% block body_class %}{% block bodyclass %}{% endblock %}{% endblock %}">
+{% else %}
+<body class="hold-transition skin-blue sidebar-mini layout-top-nav {% block body_class1 %}{% block bodyclass1 %}{% endblock %}{% endblock %}">
+{% endif %}
 
 {% block body %}
     <div class="wrapper">

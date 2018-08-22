@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.views import generic
 from .forms import SignUpForm, SignInForm
 from lib.controllers.user import UserController
+from lib.storage.user import UserStorage
 
 
 class SignUp(generic.FormView):
@@ -40,18 +41,22 @@ class SignIn(generic.FormView):
 
     def post(self, request, *args, **kwargs):
         form = SignInForm(request.POST)
-        print(form.errors)
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
+            user = UserStorage.get_user_by_name(username)
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
                 return redirect('tracker:home')
             else:
+                if user is None:
+                    error = "Incorrect username"
+                elif user.password != password:
+                    error = "Incorrect password"
                 return render(request, 'accounts/signin.html', {
                     'form': form,
-                    'error_message': "incorrect username/password",
+                    'error_message': error,
                 })
         return render(request, 'accounts/signin.html', {'form': form})
 

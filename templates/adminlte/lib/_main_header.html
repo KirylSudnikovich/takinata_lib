@@ -14,18 +14,27 @@
     {% block nav_bar %}
     <nav class="navbar navbar-static-top">
         <!-- Sidebar toggle button-->
+        {% if request.user.is_authenticated  %}
         <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </a>
-
+        {% endif %}
         {% block nav_bar_center %}{% endblock %}
 
         {% block nav_custom_menu %}
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
+                {% if not request.user.is_authenticated %}
+                    <a href="/" class="logo left-side">
+                        <!-- mini logo for sidebar mini 50x50 pixels -->
+                        <span class="logo-mini">{% block logo_text_small1 %}<b>T</b>lib{% endblock %}</span>
+                        <!-- logo for regular state and mobile devices -->
+                        <span class="logo-lg">{% block logo_text1 %}<b>Takinata</b> lib{% endblock %}</span>
+                    </a>
+                {% endif %}
                 {% block header_dropdowns %}
                     {% if request.user.is_authenticated %}
                         <li class="dropdown user user-menu">
@@ -47,10 +56,6 @@
                                 <!-- Menu Footer-->
                                 {% block menu_footer %}
                                 <li class="user-footer">
-                                    <div class="pull-left">
-                                        <a href="{% block change_password_url %}{% url 'admin:password_change' %}{% endblock %}"
-                                           class="btn btn-default btn-flat">{% trans 'Change password' %}</a>
-                                    </div>
                                     <div class="pull-right">
                                         <a href="{% block logout_url %}{% logout_url %}{% endblock %}" class="btn btn-default btn-flat">Sign out</a>
                                     </div>

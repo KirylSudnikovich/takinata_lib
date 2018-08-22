@@ -1,6 +1,6 @@
 {% extends 'adminlte/base.html' %}
 
-{% block title %}Project Create{% endblock %}
+{% block title %}404. Page not found{% endblock %}
 {% load i18n static %}
 
 {% block body_class %}login-page{% endblock %}
@@ -17,7 +17,7 @@
                     </h3>
                     <p>
                         We could not find the page you were looking for. Meanwhile, you may return to
-                        <a href="/tracker">dashboard or try using the search form.</a>
+                        <a href="{% url 'tracker:home' %}">main page.</a>
                     </p>
                 </div>
             </div>

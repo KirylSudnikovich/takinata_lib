@@ -1,5 +1,6 @@
 {% load adminlte_helpers %}
 <!-- Left side column. contains the sidebar -->
+{% if request.user.is_authenticated %}
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
@@ -98,3 +99,4 @@
     </section>
     <!-- /.sidebar -->
 </aside>
+{% endif %}

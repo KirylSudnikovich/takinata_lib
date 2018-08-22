@@ -1,7 +1,7 @@
 {% extends "adminlte/base.html" %}
 {% load i18n static %}
-
-{% block body_class %}login-page{% endblock %}
+{% block title %}Sign In{% endblock %}
+{% block body_class1 %}login-page{% endblock %}
 
 {% block body %}
     <div class="login-box">
@@ -18,15 +18,16 @@
                     <p class="alert alert-danger">
                         {% if form.errors.items|length == 1 %}{% trans "Please correct the error below." %}{% else %}
                             {% trans "Please correct the errors below." %}{% endif %}
+                        <p>{{ error_message }}</p>
                     </p>
                 {% endif %}
-
+                {% if error_message %}
+                    <p class="alert alert-danger"> Error!. {{ error_message }}</p>
+                {% endif %}
                 {% if form.non_field_errors %}
-                    {% for error in form.non_field_errors %}
-                        <p class="alert alert-danger">
-                            {{ error }}
-                        </p>
-                    {% endfor %}
+                    <ul class='form-errors'>
+                        <p>{{ error_message }}</p>
+                    </ul>
                 {% endif %}
             {% endblock login_errors %}
 
@@ -36,14 +37,18 @@
                     {% if message %}
                         <p class="login-box-msg" style="color: red;">{{ message }}</p>
                     {% endif %}
-                    <div class="form-group has-feedback">
-                        <input name="username" class="form-control" placeholder="Username">
-                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                    </div>
-                    <div class="form-group has-feedback">
-                        <input type="password" name="password" class="form-control" placeholder="Password">
-                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                    </div>
+                    {% for field in form %}
+                        <div class="form-group has-feedback">
+                            {{ field.label_tag }}<br>
+                            {{ field }}
+                            {% if field.help_text %}
+                                <small style="color: grey">{{ field.help_text | safe }}</small>
+                            {% endif %}
+                            {% for error in field.errors %}
+                                <p style="color: red">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
                     <div class="row">
                         <div class="col-xs-8">
                             {% block login_form_links %}
