@@ -6,13 +6,9 @@
 {% block content %}
     <section class="content-header">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row col-md-2">
                 <h1 class="page-header">List of projects</h1>
-            </div>
-            <div class="row">
-                <div class="col-md-2 text-center">
-                    <a href="{% url 'tracker:project_new' %}"><button class="btn btn-primary btn-block btn-block">Create project</button></a>
-                </div>
+                <a href="{% url 'tracker:project_new' %}"><button class="btn btn-primary btn-block btn-block">Create project</button></a>
             </div>
         </div>
     </section>
@@ -29,9 +25,11 @@
                                 <div class="box-header with-border">
                                     <h3 class="box-title"><a href="{% url 'tracker:project_info' project_id=project.id %}">{{ project.name }}</a></h3>
                                 </div>
-                                <div class="box-body">
-                                    <p class="info">{{ project.description }}</p>
-                                </div>
+                                {% if project.description %}
+                                    <div class="box-body">
+                                        <p class="info">{{ project.description }}</p>
+                                    </div>
+                                {% endif %}
                                 <div class="box-footer">
                                      <div class="row">
                                             <div class="col-md-4 pull-right">

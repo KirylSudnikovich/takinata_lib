@@ -4,9 +4,9 @@
     {% block logo %}
     <a href="{% block logo_href %}/{% endblock %}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini">{% block logo_text_small %}<b>T</b>lib{% endblock %}</span>
+        <span class="logo-mini">{% block logo_text_small %}<b>T</b>web{% endblock %}</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg">{% block logo_text %}<b>Takinata</b> lib{% endblock %}</span>
+        <span class="logo-lg">{% block logo_text %}<b>Takinata</b> web{% endblock %}</span>
     </a>
     {% endblock %}
 
@@ -30,9 +30,9 @@
                 {% if not request.user.is_authenticated %}
                     <a href="/" class="logo left-side">
                         <!-- mini logo for sidebar mini 50x50 pixels -->
-                        <span class="logo-mini">{% block logo_text_small1 %}<b>T</b>lib{% endblock %}</span>
+                        <span class="logo-mini">{% block logo_text_small1 %}<b>T</b>web{% endblock %}</span>
                         <!-- logo for regular state and mobile devices -->
-                        <span class="logo-lg">{% block logo_text1 %}<b>Takinata</b> lib{% endblock %}</span>
+                        <span class="logo-lg">{% block logo_text1 %}<b>Takinata</b> web{% endblock %}</span>
                     </a>
                 {% endif %}
                 {% block header_dropdowns %}

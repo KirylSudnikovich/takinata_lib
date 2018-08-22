@@ -6,13 +6,9 @@
 {% block content %}
     <section class="content-header">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row col-md-2">
                 <h1 class="page-header">List of tasks</h1>
-            </div>
-            <div class="row">
-                <div class="col-md-2 text-center">
-                    <a href="{% url 'tracker:task_create' %}"><button class="btn btn-primary btn-block btn-flat">Create task</button></a>
-                </div>
+                <a href="{% url 'tracker:task_create' %}"><button class="btn btn-primary btn-block btn-flat">Create task</button></a>
             </div>
         </div>
     </section>
@@ -34,11 +30,11 @@
                                 </div>
                                 <div class="box-footer">
                                      <div class="row">
-                                            <div class="col-md-4 pull-right">
-                                                <a href="{% url 'tracker:task_info' project_id=task.project_id column_id=task.category_id task_id=task.id %}">
-                                                    <button class="btn btn-primary btn-block btn-flat">More Info</button>
-                                                </a>
-                                            </div>
+                                         <div class="col-md-4 pull-right">
+                                             <a href="{% url 'tracker:task_info' project_id=task.project_id column_id=task.category_id task_id=task.id %}">
+                                                 <button class="btn btn-primary btn-block btn-flat">More Info</button>
+                                             </a>
+                                         </div>
                                      </div>
                                 </div>
                             </div>

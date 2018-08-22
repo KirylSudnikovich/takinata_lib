@@ -87,6 +87,7 @@ class ProjectInfo(View):
             print("kek")
             if 'add_to_project' in request.POST:
                 username = request.POST['add_select']
+                print("add_to_project_username - ", username)
                 project = ProjectStorage.get_project_by_id(project_id)
                 user = UserStorage.get_user_by_name(username)
                 ProjectController.add_person_to_project(request.user.username, request.user.password, project, user)
@@ -121,8 +122,7 @@ class ProjectDelete(View):
     def post(self, request, project_id):
         if request.method == 'POST':
             if request.user.is_authenticated:
-                project = ProjectStorage.get_project_by_id(project_id)
-                ProjectStorage.delete_with_object(project)
+                ProjectController.delete_by_id(request.user.username, request.user.password, project_id)
                 return redirect('tracker:projects')
             else:
                 return render(request, '501.html')
@@ -140,8 +140,10 @@ class ProjectEdit(View):
         if request.method == 'POST':
             if request.user.is_authenticated:
                 project = ProjectStorage.get_project_by_id(project_id)
-                project.name = request.POST['name']
-                project.description = request.POST['description']
+                ProjectController.edit_name_by_id(request.user.username, request.user.password, project.id,
+                                                  request.POST['name'])
+                ProjectController.edit_description_by_id(request.user.username, request.user.password, project.id,
+                                                         request.POST['description'])
                 ProjectStorage.save(project)
                 return redirect('tracker:projects')
             else:
@@ -157,7 +159,6 @@ class ColumnList(View):
             column_list = []
             for project in projects:
                 columns = ColumnController.show_all(username, password, project.id)
-                print("LIST of COLUMNS - ", columns)
                 column_list = column_list + columns
             return render(request, 'categories/list.html', {'column_list': column_list})
         else:
@@ -191,27 +192,28 @@ class ColumnInfo(View):
     def get(self, request, project_id, column_id):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
-            column = ColumnStorage.get_column_by_id(project.name, column_id)
+            column = ColumnStorage.get_column_by_id(column_id)
             tasks = TaskStorage.get_all_tasks(project.id, column.id)
             return render(request, 'categories/info.html', {'project': project, 'column': column, 'tasks': tasks})
         else:
             return render(request, '501.html')
 
 
-class ColumnDelete(View):
-    def get(self, request, project_id, column_id):
-        if request.user.is_authenticated:
-            project = ProjectStorage.get_project_by_id(project_id)
-            column = ColumnStorage.get_column_by_id(project.name, column_id)
-            return render(request, 'categories/delete.html', {'project': project, 'column': column})
-        else:
-            return render(request, '501.html')
+def get(request, project_id, column_id):
+    if request.user.is_authenticated:
+        project = ProjectStorage.get_project_by_id(project_id)
+        column = ColumnStorage.get_column_by_id(column_id)
+        return render(request, 'categories/delete.html', {'project': project, 'column': column})
+    else:
+        return render(request, '501.html')
 
+
+class ColumnDelete(View):
     def post(self, request, project_id, column_id):
         if request.method == 'POST':
             if request.user.is_authenticated:
                 project = ProjectStorage.get_project_by_id(project_id)
-                column = ColumnStorage.get_column_by_id(project.name, column_id)
+                column = ColumnStorage.get_column_by_id(column_id)
                 ColumnStorage.delete_column_from_db(column)
                 return redirect('tracker:projects')
             else:
@@ -222,7 +224,7 @@ class ColumnEdit(View):
     def get(self, request, project_id, column_id):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
-            column = ColumnStorage.get_column_by_id(project.name, column_id)
+            column = ColumnStorage.get_column_by_id(column_id)
             return render(request, 'categories/edit.html', {'project': project, 'column': column})
         else:
             return render(request, '501.html')
@@ -230,12 +232,12 @@ class ColumnEdit(View):
     def post(self, request, project_id, column_id):
         if request.method == 'POST':
             if request.user.is_authenticated:
-                project = ProjectStorage.get_project_by_id(project_id)
-                column = ColumnStorage.get_column_by_id(project.name, column_id)
-                column.name = request.POST['name']
-                column.desc = request.POST['description']
-                ColumnStorage.save(column)
-                return redirect('tracker:projects')
+                column = ColumnStorage.get_column_by_id(column_id)
+                ColumnController.edit_name_by_id(request.user.username, request.user.password, project_id, column_id,
+                                                 request.POST['name'])
+                ColumnController.edit_desc_by_id(request.user.username, request.user.password, project_id, column_id,
+                                                 request.POST['description'])
+                return redirect("tracker:column_list")
             else:
                 return render(request, '501.html')
 

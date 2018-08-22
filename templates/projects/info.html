@@ -1,6 +1,6 @@
 {% extends 'adminlte/base.html' %}
 
-{% block title %}{{ project.name }}{% endblock %}
+{% block title %}Takinata web{% endblock %}
 {% load i18n static %}
 
 {% block body_class %}login-page{% endblock %}
@@ -119,44 +119,50 @@
                             <div class="row">
                                 {% if guys %}
                                     <div class="form-group">
-                                        <div class="col-md-5">
-                                            <label>Remove from project: </label>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label>
-                                                <select class="form-control js-example-basic-single"
-                                                        name="remove_select">
-                                                    {% for user in guys %}
-                                                        <option>{{ user.username }}</option>
-                                                    {% endfor %}
-                                                </select>
-                                            </label>
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <button type="submit" name='remove_from_project'
-                                                    class="btn btn-primary btn-block">OK
-                                            </button>
-                                        </div>
+                                        <row>
+                                            <div class="col-md-12">
+                                                <label>Remove from project: </label>
+                                            </div>
+                                        </row>
+                                        <row>
+                                            <div class="col-md-5">
+                                                <label>
+                                                    <select style="display: inline-block" class="form-control js-example-basic-single"
+                                                            name="remove_select" id="remove_select">
+                                                        {% for user in guys %}
+                                                            <option>{{ user.username }}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-5 pull-right">
+                                                <button type="submit" name='remove_from_project'
+                                                        class="btn btn-primary btn-block">Remove
+                                                </button>
+                                            </div>
+                                        </row>
                                     </div>
                                 {% endif %}
                             </div>
                             <div class="row">
                                 {% if all_guys %}
                                     <div class="form-group">
-                                        <div class="col-xs-8">
-                                            <label>Add to project: </label>
-                                            <label>
-                                                <select class="form-control js-example-basic-single" name="add_select">
-                                                    {% for user in all_guys %}
-                                                        <option>{{ user.username }}</option>
-                                                    {% endfor %}
-                                                </select>
-                                            </label>
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <button type="submit" name="add_to_project" class="btn btn-primary btn-block">OK
-                                            </button>
-                                        </div>
+                                        <row>
+                                            <div class="col-md-12">
+                                                <label>Add to project: </label>
+                                            </div>
+                                        </row>
+                                        <row>
+                                            <div class="col-md-5">
+                                                <label>
+                                                    <input name="add_select" class="form-control" placeholder="username">
+                                                </label>
+                                            </div>
+                                            <div class="col-md-5 pull-right">
+                                                <button type="submit" name="add_to_project" class="btn btn-primary btn-block">Add
+                                                </button>
+                                            </div>
+                                        </row>
                                     </div>
                                 {% endif %}
                             </div>
@@ -167,4 +173,9 @@
         </div>
         </div>
     </section>
+    <script>
+    $(document).ready(function() {
+        $("#remove_select").select2({ width: 'resolve' });
+    });
+    </script>
 {% endblock %}
