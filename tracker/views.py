@@ -36,6 +36,7 @@ class ProjectsList(View):
             username = request.user.username
             password = request.user.password
             project_list = ProjectController.show_all(username, password)
+            print(project_list)
             return render(request, 'projects/list.html', {'project_list': project_list})
         else:
             return render(request, '501.html')
@@ -232,7 +233,6 @@ class ColumnEdit(View):
     def post(self, request, project_id, column_id):
         if request.method == 'POST':
             if request.user.is_authenticated:
-                column = ColumnStorage.get_column_by_id(column_id)
                 ColumnController.edit_name_by_id(request.user.username, request.user.password, project_id, column_id,
                                                  request.POST['name'])
                 ColumnController.edit_desc_by_id(request.user.username, request.user.password, project_id, column_id,

@@ -2,108 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5737bc37-cee3-4085-bcde-fc9e59a384da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VersionTwo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/VersionTwo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datetimepicker/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/datetimepicker/widgets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/adminlte/lib/_main_header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/adminlte/lib/_main_header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categories/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/categories/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/categories/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/categories/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/categories/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/projects/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projects/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/projects/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projects/info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/projects/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projects/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tasks/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tasks/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/distlib/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/distlib/compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/distlib/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/distlib/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/distlib/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/distlib/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/distlib/metadata.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/distlib/metadata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/distlib/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/distlib/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/distlib/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/distlib/wheel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/html5lib/treebuilders/etree.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/html5lib/treebuilders/etree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/pkg_resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/pkg_resources/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/requests/packages/urllib3/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/requests/packages/urllib3/connection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/requests/packages/urllib3/contrib/appengine.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/requests/packages/urllib3/contrib/appengine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/requests/packages/urllib3/packages/six.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/requests/packages/urllib3/packages/six.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/requests/sessions.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/requests/sessions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/requests/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/requests/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/six.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/_vendor/six.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/baseparser.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/baseparser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/commands/show.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/commands/show.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/utils/logging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/utils/packaging.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/utils/packaging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pip/wheel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pkg_resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pkg_resources/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pkg_resources/_vendor/six.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/pkg_resources/_vendor/six.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/setuptools/command/bdist_egg.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/setuptools/command/bdist_egg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/setuptools/command/easy_install.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/setuptools/command/easy_install.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/setuptools/command/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/setuptools/command/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/setuptools/package_index.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib/python3.6/site-packages/setuptools/package_index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/_vendor/distlib/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/_vendor/distlib/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/_vendor/distlib/metadata.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/_vendor/distlib/metadata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/_vendor/distlib/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/_vendor/distlib/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/_vendor/requests/packages/urllib3/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/_vendor/requests/packages/urllib3/connection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/_vendor/requests/packages/urllib3/contrib/appengine.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/_vendor/requests/packages/urllib3/contrib/appengine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/commands/show.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/commands/show.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/utils/logging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/utils/packaging.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/utils/packaging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pip/wheel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pkg_resources/_vendor/six.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/pkg_resources/_vendor/six.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/setuptools/command/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/setuptools/command/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/setuptools/package_index.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/most_wanted/lib64/python3.6/site-packages/setuptools/package_index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/baseparser.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/baseparser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/build_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/build_env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/show.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/show.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/req/req_install.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/req/req_install.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/logging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/misc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/packaging.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/utils/packaging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/wheel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/_backport/sysconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/_backport/sysconfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/metadata.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/metadata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/wheel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distro.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/etree.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/etree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/msgpack/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/msgpack/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/pkg_resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/pkg_resources/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/sessions.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/sessions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/six.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/six.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/connection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/connectionpool.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/connectionpool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/contrib/appengine.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/contrib/appengine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/packages/six.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/packages/six.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/baseparser.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/baseparser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/build_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/build_env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/show.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/commands/show.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_internal/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/_backport/sysconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/_backport/sysconfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/distlib/wheel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/msgpack/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/msgpack/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/sessions.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/sessions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/requests/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/connection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/connectionpool.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/connectionpool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/packages/six.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/Takinata/venv/lib64/python3.5/site-packages/pip-10.0.1-py3.5.egg/pip/_vendor/urllib3/packages/six.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/datetimepicker/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/datetimepicker/widgets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/column.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/column.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/task.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/logs/info.log" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/logs/info.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -247,15 +156,15 @@
           <entry key="alchproject" value="1" />
           <entry key="auth_user" value="4" />
           <entry key="bug_reports" value="5" />
-          <entry key="categories" value="8" />
+          <entry key="categories" value="9" />
           <entry key="columns" value="3" />
           <entry key="css" value="7" />
-          <entry key="html" value="214" />
+          <entry key="html" value="222" />
           <entry key="js" value="1" />
           <entry key="libuser" value="1" />
           <entry key="log" value="2" />
-          <entry key="projects" value="16" />
-          <entry key="py" value="323" />
+          <entry key="projects" value="18" />
+          <entry key="py" value="329" />
           <entry key="rel" value="3" />
           <entry key="right" value="1" />
           <entry key="sql" value="6" />
@@ -265,21 +174,21 @@
           <entry key="tracker_project" value="1" />
           <entry key="txt" value="3" />
           <entry key="user" value="2" />
-          <entry key="user_project" value="7" />
+          <entry key="user_project" value="8" />
           <entry key="userproject" value="1" />
-          <entry key="users" value="18" />
+          <entry key="users" value="19" />
           <entry key="users_id_seq" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="7" />
-          <entry key="Database Element" value="89" />
-          <entry key="HTML" value="214" />
+          <entry key="Database Element" value="94" />
+          <entry key="HTML" value="222" />
           <entry key="JavaScript" value="1" />
           <entry key="Log" value="2" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="323" />
+          <entry key="Python" value="329" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="6" />
         </counts>
@@ -290,100 +199,41 @@
           <entry key="Procfile" value="19" />
           <entry key="css" value="15" />
           <entry key="dummy" value="18" />
-          <entry key="html" value="14583" />
-          <entry key="py" value="24537" />
+          <entry key="html" value="15310" />
+          <entry key="py" value="24818" />
           <entry key="txt" value="129" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="15" />
-          <entry key="HTML" value="14583" />
+          <entry key="HTML" value="15310" />
           <entry key="PLAIN_TEXT" value="166" />
-          <entry key="Python" value="25134" />
+          <entry key="Python" value="25415" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/projects/create.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-              <folding>
-                <element signature="e#2511#2535#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/projects/info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="160" column="64" selection-start-line="160" selection-start-column="64" selection-end-line="160" selection-end-column="64" />
+            <state relative-caret-position="45">
+              <caret line="42" column="114" selection-start-line="42" selection-start-column="114" selection-end-line="42" selection-end-column="114" />
               <folding>
-                <element signature="e#5912#5934#0#HTML" expanded="true" />
+                <element signature="e#1754#1821#0#HTML" expanded="true" />
+                <element signature="e#3101#3168#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://fbead64b-bfe3-496d-a8e7-69767a57a3ae/database/takinata-lib/schema/public/table/categories">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/projects/list.html">
+        <entry file="file://$PROJECT_DIR$/templates/adminlte/lib/_main_sidebar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tracker/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="239" column="52" selection-start-line="239" selection-start-column="52" selection-end-line="239" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/task.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="42" column="106" lean-forward="true" selection-start-line="42" selection-start-column="106" selection-end-line="42" selection-end-column="106" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="136" column="65" selection-start-line="136" selection-start-column="65" selection-end-line="136" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/column.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+            <state relative-caret-position="204">
+              <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="53" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -424,9 +274,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/runtime.txt" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/lib/storage/user.py" />
         <option value="$PROJECT_DIR$/accounts/urls.py" />
         <option value="$PROJECT_DIR$/lib/models/user.py" />
@@ -442,12 +289,10 @@
         <option value="$PROJECT_DIR$/tracker/controllers/bug_report.py" />
         <option value="$PROJECT_DIR$/tracker/controllers/tracker_controller.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/categories/info.html" />
         <option value="$PROJECT_DIR$/tracker/urls.py" />
         <option value="$PROJECT_DIR$/VersionTwo/wsgi.py" />
         <option value="$PROJECT_DIR$/templates/tasks/500.html" />
         <option value="$PROJECT_DIR$/VersionTwo/urls.py" />
-        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py" />
         <option value="$PROJECT_DIR$/tracker/exceptions.py" />
         <option value="$PROJECT_DIR$/templates/projects/edit.html" />
         <option value="$PROJECT_DIR$/templates/projects/delete.html" />
@@ -461,20 +306,25 @@
         <option value="$PROJECT_DIR$/templates/accounts/signin.html" />
         <option value="$PROJECT_DIR$/templates/accounts/signup.html" />
         <option value="$PROJECT_DIR$/accounts/views.py" />
-        <option value="$PROJECT_DIR$/templates/categories/list.html" />
         <option value="$PROJECT_DIR$/templates/tasks/list.html" />
         <option value="$PROJECT_DIR$/VersionTwo/settings.py" />
         <option value="$PROJECT_DIR$/templates/projects/create.html" />
         <option value="$PROJECT_DIR$/templates/categories/create.html" />
         <option value="$PROJECT_DIR$/templates/tasks/create.html" />
-        <option value="$PROJECT_DIR$/templates/projects/list.html" />
         <option value="$PROJECT_DIR$/templates/adminlte/lib/_main_header.html" />
-        <option value="$PROJECT_DIR$/templates/projects/info.html" />
-        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/project.py" />
-        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/task.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/column.py" />
+        <option value="$PROJECT_DIR$/templates/categories/list.html" />
+        <option value="$PROJECT_DIR$/templates/projects/list.html" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/project.py" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py" />
         <option value="$PROJECT_DIR$/tracker/views.py" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py" />
+        <option value="$PROJECT_DIR$/templates/categories/info.html" />
+        <option value="$PROJECT_DIR$/templates/categories/edit.html" />
+        <option value="$PROJECT_DIR$/templates/categories/delete.html" />
+        <option value="$PROJECT_DIR$/templates/projects/info.html" />
       </list>
     </option>
   </component>
@@ -837,7 +687,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4994664" weight="0.3292683" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49786553" weight="0.32852387" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49786553" visible="true" weight="0.32852387" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39844617" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -853,7 +703,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32977587" />
-      <window_info anchor="right" id="Database" order="4" weight="0.19210246" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.19210246" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
@@ -903,27 +753,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/adminlte/lib/_styles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="87" lean-forward="true" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ebc35916-7b62-47e1-be9e-cdec770ae4c6/database/d96b78norrg5t5/schema/public/table/categories">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ebc35916-7b62-47e1-be9e-cdec770ae4c6/database/d96b78norrg5t5/schema/public/table/projects">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/controllers/tracker_controller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -948,13 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="122" column="38" selection-start-line="122" selection-start-column="38" selection-end-line="122" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/categories/info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="34" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1020,13 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/adminlte/lib/_main_sidebar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="101" column="8" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/adminlte/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-165">
@@ -1071,13 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/accounts/signin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1106,13 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/categories/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/tasks/list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -1124,18 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/categories/create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="77" column="47" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
-          <folding>
-            <element signature="e#3286#3310#0#HTML" expanded="true" />
-            <element signature="e#3486#3510#0#HTML" expanded="true" />
-            <element signature="e#4179#4203#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1166,31 +955,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://fbead64b-bfe3-496d-a8e7-69767a57a3ae/database/takinata-lib/schema/public/table/user_project">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="ctid" enabled="false" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fbead64b-bfe3-496d-a8e7-69767a57a3ae/database/takinata-lib/schema/public/table/projects">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://fbead64b-bfe3-496d-a8e7-69767a57a3ae/database/takinata-lib/schema/public/table/auth_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fbead64b-bfe3-496d-a8e7-69767a57a3ae/database/takinata-lib/schema/public/table/users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1204,23 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/projects/info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="160" column="64" selection-start-line="160" selection-start-column="64" selection-end-line="160" selection-end-column="64" />
-          <folding>
-            <element signature="e#5912#5934#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://fbead64b-bfe3-496d-a8e7-69767a57a3ae/database/takinata-lib/schema/public/table/categories">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/projects/create.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -1228,37 +976,6 @@
           <folding>
             <element signature="e#2511#2535#0#HTML" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/project.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1785">
-          <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/projects/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="158" column="8" selection-start-line="158" selection-start-column="8" selection-end-line="158" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="136" column="65" selection-start-line="136" selection-start-column="65" selection-end-line="136" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -1276,12 +993,137 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/categories/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="34" lean-forward="true" selection-start-column="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/projects/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="58" lean-forward="true" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="97" column="55" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://fbead64b-bfe3-496d-a8e7-69767a57a3ae/database/takinata-lib/schema/public/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tracker/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="239" column="52" selection-start-line="239" selection-start-column="52" selection-end-line="239" selection-end-column="52" />
+        <state relative-caret-position="195">
+          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://fbead64b-bfe3-496d-a8e7-69767a57a3ae/database/takinata-lib/schema/public/table/user_project">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/project.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="181" column="8" selection-start-line="181" selection-start-column="8" selection-end-line="181" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://fbead64b-bfe3-496d-a8e7-69767a57a3ae/database/takinata-lib/schema/public/table/projects">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://fbead64b-bfe3-496d-a8e7-69767a57a3ae/database/takinata-lib/schema/public/table/categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/categories/info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/categories/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/categories/create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="77" column="47" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/categories/delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/adminlte/lib/_messages.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/adminlte/lib/_main_sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="53" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/projects/info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="42" column="114" selection-start-line="42" selection-start-column="114" selection-end-line="42" selection-end-column="114" />
+          <folding>
+            <element signature="e#1754#1821#0#HTML" expanded="true" />
+            <element signature="e#3101#3168#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

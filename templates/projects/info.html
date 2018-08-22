@@ -36,18 +36,15 @@
             <div class="col-md-4">
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                        <div class="col-md-3">
-                            <h3 class="box-title">Categories</h3>
-                        </div>
-                        <div class="col-md-5"></div>
-                        <div class="col-md-4">
                             <form action="{% url 'tracker:column_new' %}" role="form">
+                                <div class="col-md-12">
                                 {% csrf_token %}
-                                <button type="submit" name="add_column" class="btn btn-primary btn-block pull-right">
+                                <h3 class="box-title" style="vertical-align: middle; display: inline-block; margin: 10px"> Categories</h3>
+                                <button type="submit" name="add_column" class="btn btn-primary pull-right col-md-4">
                                     Create
                                 </button>
+                                </div>
                             </form>
-                        </div>
                     </div>
                     <div class="box-body">
                         {% for column in columns %}
@@ -64,18 +61,15 @@
             <div class="col-md-4">
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                        <div class="col-md-3">
-                            <h3 class="box-title">Tasks</h3>
-                        </div>
-                        <div class="col-md-5"></div>
-                        <div class="col-md-4">
                             <form role="form" method="post">
+                                <div class="col-md-12">
                                 {% csrf_token %}
-                                <button type="submit" name="add_task" class="btn btn-primary btn-block pull-right">
-                                    Create
-                                </button>
+                                    <h3 class="box-title" style="vertical-align: middle; display: inline-block; margin: 10px"> Tasks</h3>
+                                    <button type="submit" name="add_task" class="btn btn-primary pull-right col-md-4">
+                                        Create
+                                    </button>
+                                </div>
                             </form>
-                        </div>
                     </div>
                     <div class="box-body">
                         {% for task in tasks %}

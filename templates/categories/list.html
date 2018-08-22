@@ -6,9 +6,15 @@
 {% block content %}
     <section class="content-header">
         <div class="container-fluid">
-            <div class="row col-md-2">
-                <h1 class="page-header">List of categories</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <h1 class="page-header">List of categories</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
                 <a href="{% url 'tracker:column_new' %}"><button class="btn btn-primary btn-block btn-flat">Create category</button></a>
+                </div>
             </div>
         </div>
     </section>
