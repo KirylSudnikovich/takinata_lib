@@ -23,12 +23,18 @@ class SignUp(generic.FormView):
             user.save()
             raw_password = form.cleaned_data.get('password1')
             email = form.cleaned_data.get('email')
-            user = authenticate(username=user.username, password=raw_password)
-            login(request, user)
-            UserController.reg(user.username, user.password, email)
-            response.set_cookie(key='have_account', value='1')
-            return response
-
+            users = UserStorage.get_all_users()
+            have = False
+            for u in users:
+                if user.email == u.email:
+                    have = True
+                    error1 = "An account with this name is already registered"
+            if not have:
+                user = authenticate(username=user.username, password=raw_password)
+                login(request, user)
+                UserController.reg(user.username, user.password, email)
+                response.set_cookie(key='have_account', value='1')
+                return response
         return render(request, 'accounts/signup.html', {'form': form, 'error1': error1})
 
 

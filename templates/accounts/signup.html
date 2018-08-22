@@ -14,6 +14,9 @@
                     {% if message %}
                         <p class="login-box-msg" style="color: red;">{{ message }}</p>
                     {% endif %}
+                    {% if error1 %}
+                        <p class="alert alert-danger"> Error! {{ error1 }}</p>
+                    {% endif %}
                 {% for field in form %}
                   <div class="form-group has-feedback">
                     {{ field.label_tag }}<br>
