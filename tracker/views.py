@@ -87,7 +87,6 @@ class ProjectInfo(View):
         if request.method == 'POST':
             if 'add_to_project' in request.POST:
                 username = request.POST['add_select']
-                print("add_to_project_username - ", username)
                 project = ProjectStorage.get_project_by_id(project_id)
                 user = UserStorage.get_user_by_name(username)
                 ProjectController.add_person_to_project(request.user.username, request.user.password, project, user)
