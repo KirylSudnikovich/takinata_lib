@@ -85,7 +85,6 @@ class ProjectInfo(View):
 
     def post(self, request, project_id):
         if request.method == 'POST':
-            print("kek")
             if 'add_to_project' in request.POST:
                 username = request.POST['add_select']
                 print("add_to_project_username - ", username)

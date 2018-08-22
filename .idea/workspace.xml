@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5737bc37-cee3-4085-bcde-fc9e59a384da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/categories/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categories/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categories/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categories/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/projects/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projects/info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/projects/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projects/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/logs/info.log" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/logs/info.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +154,7 @@
           <entry key="libuser" value="1" />
           <entry key="log" value="2" />
           <entry key="projects" value="18" />
-          <entry key="py" value="329" />
+          <entry key="py" value="330" />
           <entry key="rel" value="3" />
           <entry key="right" value="1" />
           <entry key="sql" value="6" />
@@ -188,7 +178,7 @@
           <entry key="JavaScript" value="1" />
           <entry key="Log" value="2" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="329" />
+          <entry key="Python" value="330" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="6" />
         </counts>
@@ -199,7 +189,7 @@
           <entry key="Procfile" value="19" />
           <entry key="css" value="15" />
           <entry key="dummy" value="18" />
-          <entry key="html" value="15310" />
+          <entry key="html" value="15319" />
           <entry key="py" value="24818" />
           <entry key="txt" value="129" />
         </counts>
@@ -207,7 +197,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="15" />
-          <entry key="HTML" value="15310" />
+          <entry key="HTML" value="15319" />
           <entry key="PLAIN_TEXT" value="166" />
           <entry key="Python" value="25415" />
         </counts>
@@ -219,8 +209,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/projects/info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="42" column="114" selection-start-line="42" selection-start-column="114" selection-end-line="42" selection-end-column="114" />
+            <state relative-caret-position="30">
+              <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
               <folding>
                 <element signature="e#1754#1821#0#HTML" expanded="true" />
                 <element signature="e#3101#3168#0#HTML" expanded="true" />
@@ -234,6 +224,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="53" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracker/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="86" column="36" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -319,11 +321,11 @@
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/project.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py" />
-        <option value="$PROJECT_DIR$/tracker/views.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/column.py" />
         <option value="$PROJECT_DIR$/templates/categories/info.html" />
         <option value="$PROJECT_DIR$/templates/categories/edit.html" />
         <option value="$PROJECT_DIR$/templates/categories/delete.html" />
+        <option value="$PROJECT_DIR$/tracker/views.py" />
         <option value="$PROJECT_DIR$/templates/projects/info.html" />
       </list>
     </option>
@@ -1021,16 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/project.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1117,10 +1109,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="86" column="36" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/projects/info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="42" column="114" selection-start-line="42" selection-start-column="114" selection-end-line="42" selection-end-column="114" />
+        <state relative-caret-position="30">
+          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
           <folding>
             <element signature="e#1754#1821#0#HTML" expanded="true" />
             <element signature="e#3101#3168#0#HTML" expanded="true" />
