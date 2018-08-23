@@ -1,8 +1,7 @@
 from tracker.views import ProjectNew, ProjectsList, ProjectInfo, ProjectDelete, ProjectEdit, ColumnNew, ColumnInfo, \
-    ColumnDelete, ColumnEdit, BugReport, BugReportList, ColumnList, TaskList, SampleView, TaskInfo, TaskDelete
+    ColumnDelete, ColumnEdit, BugReport, BugReportList, CategoryList, TaskList, SampleView, TaskInfo, TaskDelete
 from . import views
-from django.urls import path, include
-import django.contrib.auth.views as auth_views
+from django.urls import path
 
 app_name = 'tracker'
 
@@ -13,7 +12,7 @@ urlpatterns = [
     path('projects/<int:project_id>/', ProjectInfo.as_view(), name='project_info'),
     path('projects/<int:project_id>/delete/', ProjectDelete.as_view(), name='project_delete'),
     path('projects/<int:project_id>/edit/', ProjectEdit.as_view(), name='project_edit'),
-    path('categories/', ColumnList.as_view(), name='column_list'),
+    path('categories/', CategoryList.as_view(), name='column_list'),
     path('categories/new/', ColumnNew.as_view(), name='column_new'),
     path('categories/<int:category_id>/', ColumnInfo.as_view(), name='column_info'),
     path('categories/<int:category_id>/delete', ColumnDelete.as_view(), name='column_delete'),

@@ -79,8 +79,8 @@
                                             <p style="font-size: large">Category:</p>
                                             <label class="btn-block">
                                                 <select id='select_column' class="form-control js-example-basic-single" name="select_column">
-                                                    {% for column in columns %}
-                                                        <option class="{{ column.project_id }}" value={{ column.id }}>{{ column.name }}</option>
+                                                    {% for category in categories %}
+                                                        <option class="{{ category.project_id }}" value={{ category.id }}>{{ category.name }}</option>
                                                     {% endfor %}
                                                 </select>
                                             </label>

@@ -1,6 +1,6 @@
 {% extends 'adminlte/base.html' %}
 
-{% block title %}Takinata web{% endblock %}
+{% block title %}Takinata web. {{ category.name }}{% endblock %}
 {% load i18n static %}
 
 {% block body_class %}login-page{% endblock %}
@@ -14,8 +14,8 @@
                         <h3 class="box-title">Main Information</h3>
                     </div>
                     <div class="box-body">
-                        <p><b>Title: </b>{{ column.name }}</p>
-                        <p><b>Description: </b>{{ column.desc }}</p>
+                        <p><b>Title: </b>{{ category.name }}</p>
+                        <p><b>Description: </b>{{ category.desc }}</p>
                         <p><b>Project : </b>{{ project.name }}</p>
                     </div>
                 </div>
@@ -41,8 +41,8 @@
                         <h3 class="box-title">Manage Column</h3>
                     </div>
                     <div class="box-body">
-                        <a href="{% url 'tracker:column_edit' column.id %}" class="btn btn-block btn-warning">Edit</a>
-                        <a href="{% url 'tracker:column_delete' column.id%}" class="btn btn-block btn-danger">Delete</a>
+                        <a href="{% url 'tracker:column_edit' category.id %}" class="btn btn-block btn-warning">Edit</a>
+                        <a href="{% url 'tracker:column_delete' category.id%}" class="btn btn-block btn-danger">Delete</a>
                     </div>
                 </div>
             </div>
