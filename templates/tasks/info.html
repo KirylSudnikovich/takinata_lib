@@ -70,7 +70,7 @@
                             {% csrf_token %}
                             <a href="#" class="btn btn-block btn-warning">Edit</a>
                             <a href="{% url 'tracker:task_delete' task.id %}" class="btn btn-block btn-danger">Delete</a>
-                            {% if status == Done %}
+                            {% if not archive %}
                             <button class="btn btn-block btn-success" name="cancel_task">DONE</button>
                             {% endif %}
                         </form>

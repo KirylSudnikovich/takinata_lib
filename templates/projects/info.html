@@ -73,9 +73,17 @@
                     </div>
                     <div class="box-body">
                         {% for task in tasks %}
+                            {% if task.is_archive != 1 %}
                             <a style="color: #000000" class="text"
-                               href="{% url 'tracker:task_info' task.id %}">
-                                <h4>{{ task.name }}</h4></a>
+                                href="{% url 'tracker:task_info' task.id %}">
+                                <h4>{{ task.name }}</h4>
+                            </a>
+                            {% else %}
+                                <a style="color: #000000" class="text"
+                                href="{% url 'tracker:task_info' task.id %}">
+                                    <h4><s>{{ task.name }}</s></h4>
+                                </a>
+                            {% endif %}
                         {% endfor %}
                         {% if not tasks %}
                             <h4>There is no tasks in this project</h4>

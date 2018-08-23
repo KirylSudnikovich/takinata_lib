@@ -21,9 +21,15 @@
                 {% for task in task_list %}
                     <div class="col-md-6">
                         <div class="task" id="task.id">
+                            {% if task.is_archive == 0 %}
                             <div class="box box-primary">
                                 <div class="box-header with-border">
                                     <h3 class="box-title"><a href="{% url 'tracker:task_info' task_id=task.id %}">{{ task.name }}</a></h3>
+                            {% else %}
+                                <div class="box box-success">
+                                <div class="box-header with-border">
+                                <h3 class="box-title"><a href="{% url 'tracker:task_info' task_id=task.id %}"><s>{{ task.name }}</s></a></h3>
+                            {% endif %}
                                 </div>
                                 {% if task.desc %}
                                     <div class="box-body">

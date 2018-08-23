@@ -63,6 +63,14 @@ class ProjectInfo(View):
             for category in categories:
                 tasks = TaskStorage.get_all_tasks(project.id, category.id)
                 task_list = task_list + tasks
+            available_tasks = []
+            canceled_tasks = []
+            for task in task_list:
+                if task.is_archive == 0:
+                    available_tasks.append(task)
+                else:
+                    canceled_tasks.append(task)
+            task_list = available_tasks + canceled_tasks
             all_users = UserStorage.get_all_users()
             guys = ProjectStorage.get_all_persons_in_project(project)
             all_guys = []
@@ -240,6 +248,14 @@ class TaskList(View):
         if request.user.is_authenticated:
             username = request.user.username
             task_list = TaskStorage.get_all_user_task(UserStorage.get_user_by_name(username))
+            available_tasks = []
+            canceled_tasks = []
+            for task in task_list:
+                if task.is_archive == 0:
+                    available_tasks.append(task)
+                else:
+                    canceled_tasks.append(task)
+            task_list = available_tasks + canceled_tasks
             return render(request, 'tasks/list.html', {'task_list': task_list})
         else:
             return render(request, '501.html')
@@ -291,14 +307,17 @@ class TaskInfo(View):
             elif task.priority == "low":
                 badge = "label label-success"
             status = None
+            archive = None
             if task.is_archive == 0:
                 status_badge = "label label-danger"
                 status = "In progress"
             elif task.is_archive == 1:
                 status_badge = "label label-success"
                 status = "Done"
+                archive = 1
+            print(archive)
             return render(request, 'tasks/info.html',
-                          {'project': project, 'category': category, 'task': task, 'badge': badge, 'status': status, 'status_badge': status_badge})
+                          {'project': project, 'category': category, 'task': task, 'badge': badge, 'status': status, 'status_badge': status_badge, 'archive': archive})
         else:
             return render(request, '501.html')
 

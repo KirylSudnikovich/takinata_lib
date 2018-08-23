@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5737bc37-cee3-4085-bcde-fc9e59a384da" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/projects/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projects/info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tasks/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tasks/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/task.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +152,7 @@
           <entry key="categories" value="10" />
           <entry key="columns" value="3" />
           <entry key="css" value="7" />
-          <entry key="html" value="247" />
+          <entry key="html" value="251" />
           <entry key="js" value="1" />
           <entry key="libuser" value="1" />
           <entry key="log" value="2" />
@@ -175,7 +177,7 @@
         <counts>
           <entry key="CSS" value="7" />
           <entry key="Database Element" value="100" />
-          <entry key="HTML" value="247" />
+          <entry key="HTML" value="251" />
           <entry key="JavaScript" value="1" />
           <entry key="Log" value="2" />
           <entry key="PLAIN_TEXT" value="4" />
@@ -190,28 +192,28 @@
           <entry key="Procfile" value="19" />
           <entry key="css" value="15" />
           <entry key="dummy" value="18" />
-          <entry key="html" value="17021" />
-          <entry key="py" value="27230" />
+          <entry key="html" value="17310" />
+          <entry key="py" value="27519" />
           <entry key="txt" value="129" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="15" />
-          <entry key="HTML" value="17021" />
+          <entry key="HTML" value="17310" />
           <entry key="PLAIN_TEXT" value="166" />
-          <entry key="Python" value="27827" />
+          <entry key="Python" value="28116" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="308" column="29" selection-start-line="308" selection-start-column="29" selection-end-line="308" selection-end-column="29" />
+            <state relative-caret-position="442">
+              <caret line="257" column="56" selection-start-line="257" selection-start-column="56" selection-end-line="257" selection-end-column="56" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -241,21 +243,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/tasks/info.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/tasks/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
-              <folding>
-                <element signature="e#1150#1175#0#HTML" expanded="true" />
-                <element signature="e#1292#1315#0#HTML" expanded="true" />
-                <element signature="e#1468#1493#0#HTML" expanded="true" />
-                <element signature="e#1766#1791#0#HTML" expanded="true" />
-                <element signature="e#2062#2087#0#HTML" expanded="true" />
-                <element signature="e#2347#2372#0#HTML" expanded="true" />
-                <element signature="e#2199#2224#0#HTML" expanded="true" />
-                <element signature="e#2695#2718#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="30" column="132" selection-start-line="30" selection-start-column="132" selection-end-line="30" selection-end-column="132" />
             </state>
           </provider>
         </entry>
@@ -287,6 +279,7 @@
       <find>column_id</find>
       <find>column</find>
       <find>save</find>
+      <find>task</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -340,17 +333,17 @@
         <option value="$PROJECT_DIR$/tracker/forms.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/user.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/task.py" />
-        <option value="$PROJECT_DIR$/templates/tasks/list.html" />
         <option value="$PROJECT_DIR$/templates/categories/info.html" />
         <option value="$PROJECT_DIR$/tracker/urls.py" />
         <option value="$PROJECT_DIR$/templates/categories/list.html" />
-        <option value="$PROJECT_DIR$/templates/projects/info.html" />
         <option value="$PROJECT_DIR$/templates/categories/edit.html" />
         <option value="$PROJECT_DIR$/templates/categories/delete.html" />
         <option value="$PROJECT_DIR$/templates/tasks/create.html" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/task.py" />
         <option value="$PROJECT_DIR$/templates/tasks/info.html" />
+        <option value="$PROJECT_DIR$/templates/projects/info.html" />
         <option value="$PROJECT_DIR$/tracker/views.py" />
+        <option value="$PROJECT_DIR$/templates/tasks/list.html" />
       </list>
     </option>
   </component>
@@ -360,7 +353,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="30" />
     <option name="width" value="1920" />
     <option name="height" value="1050" />
@@ -711,31 +704,7 @@
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16808964" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4994664" weight="0.3292683" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49786553" visible="true" weight="0.32852387" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39844617" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49893278" weight="0.32852387" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32963374" />
-      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32963374" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010672" side_tool="true" weight="0.32852387" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733192" weight="0.32741398" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32741398" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32963374" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32977587" />
-      <window_info anchor="right" id="Database" order="4" weight="0.19210246" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16808964" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16808964" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -756,7 +725,31 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32977587" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.19210246" />
+      <window_info anchor="right" id="Database" order="4" weight="0.19210246" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16808964" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4994664" weight="0.3292683" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49786553" visible="true" weight="0.32852387" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39844617" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49893278" weight="0.32852387" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32963374" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32963374" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010672" side_tool="true" weight="0.32852387" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733192" weight="0.32741398" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32741398" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32963374" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32977587" />
+      <window_info anchor="right" id="Database" order="4" weight="0.19210246" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1024,13 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/projects/info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/projects/edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1063,13 +1049,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-120">
           <caret line="82" column="133" selection-start-line="82" selection-start-column="133" selection-end-line="82" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tasks/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="81" selection-start-line="35" selection-start-column="81" selection-end-line="35" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -1117,6 +1096,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/column.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="47" column="37" lean-forward="true" selection-start-line="43" selection-end-line="47" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/projects/info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="79" column="28" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://fbead64b-bfe3-496d-a8e7-69767a57a3ae/database/takinata-lib/schema/public/table/tasks">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1124,10 +1117,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/column.py">
+    <entry file="file://$PROJECT_DIR$/templates/tasks/info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="47" column="37" lean-forward="true" selection-start-line="43" selection-end-line="47" selection-end-column="37" />
+        <state relative-caret-position="1080">
+          <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+          <folding>
+            <element signature="e#1150#1175#0#HTML" expanded="true" />
+            <element signature="e#1292#1315#0#HTML" expanded="true" />
+            <element signature="e#1468#1493#0#HTML" expanded="true" />
+            <element signature="e#1766#1791#0#HTML" expanded="true" />
+            <element signature="e#2062#2087#0#HTML" expanded="true" />
+            <element signature="e#2347#2372#0#HTML" expanded="true" />
+            <element signature="e#2199#2224#0#HTML" expanded="true" />
+            <element signature="e#2695#2718#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1142,30 +1145,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tasks/info.html">
+    <entry file="file://$PROJECT_DIR$/tracker/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+        <state relative-caret-position="442">
+          <caret line="257" column="56" selection-start-line="257" selection-start-column="56" selection-end-line="257" selection-end-column="56" />
           <folding>
-            <element signature="e#1150#1175#0#HTML" expanded="true" />
-            <element signature="e#1292#1315#0#HTML" expanded="true" />
-            <element signature="e#1468#1493#0#HTML" expanded="true" />
-            <element signature="e#1766#1791#0#HTML" expanded="true" />
-            <element signature="e#2062#2087#0#HTML" expanded="true" />
-            <element signature="e#2347#2372#0#HTML" expanded="true" />
-            <element signature="e#2199#2224#0#HTML" expanded="true" />
-            <element signature="e#2695#2718#0#HTML" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/tasks/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="308" column="29" selection-start-line="308" selection-start-column="29" selection-end-line="308" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="30" column="132" selection-start-line="30" selection-start-column="132" selection-end-line="30" selection-end-column="132" />
         </state>
       </provider>
     </entry>
