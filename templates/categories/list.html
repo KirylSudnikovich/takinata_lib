@@ -29,7 +29,7 @@
                         <div class="project" id="project.id">
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title"><a href="{% url 'tracker:column_info' column_id=column.id project_id=column.project_id %}">{{ column.name }}</a></h3>
+                                    <h3 class="box-title"><a href="{% url 'tracker:column_info' column_id=column.id %}">{{ column.name }}</a></h3>
                                 </div>
                                 <div class="box-body">
                                     <p class="info">{{ column.desc }}</p>
@@ -37,7 +37,7 @@
                                 <div class="box-footer">
                                      <div class="row">
                                             <div class="col-md-4 pull-right">
-                                                <a href="{% url 'tracker:column_info' column_id=column.id project_id=column.project_id %}">
+                                                <a href="{% url 'tracker:column_info' column_id=column.id %}">
                                                     <button class="btn btn-primary btn-block btn-flat">More Info</button>
                                                 </a>
                                             </div>

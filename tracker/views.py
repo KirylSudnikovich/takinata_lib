@@ -188,52 +188,51 @@ class ColumnNew(View):
 
 
 class ColumnInfo(View):
-    def get(self, request, project_id, column_id):
+    def get(self, request, category_id):
         if request.user.is_authenticated:
-            project = ProjectStorage.get_project_by_id(project_id)
-            column = ColumnStorage.get_column_by_id(column_id)
-            tasks = TaskStorage.get_all_tasks(project.id, column.id)
-            return render(request, 'categories/info.html', {'project': project, 'column': column, 'tasks': tasks})
+            category = ColumnStorage.get_column_by_id(category_id)
+            project = ProjectStorage.get_project_by_id(category.project_id)
+            tasks = TaskStorage.get_all_tasks(project.id, category.id)
+            return render(request, 'categories/info.html', {'project': project, 'column': category, 'tasks': tasks})
         else:
             return render(request, '501.html')
 
 
-def get(request, project_id, column_id):
-    if request.user.is_authenticated:
-        project = ProjectStorage.get_project_by_id(project_id)
-        column = ColumnStorage.get_column_by_id(column_id)
-        return render(request, 'categories/delete.html', {'project': project, 'column': column})
-    else:
-        return render(request, '501.html')
-
-
 class ColumnDelete(View):
-    def post(self, request, project_id, column_id):
+    def get(self, request, category_id):
+        if request.user.is_authenticated:
+            category = ColumnStorage.get_column_by_id(category_id)
+            project = ProjectStorage.get_project_by_id(category.project_id)
+            return render(request, 'categories/delete.html', {'project': project, 'column': category})
+        else:
+            return render(request, '501.html')
+
+    def post(self, request, category_id):
         if request.method == 'POST':
             if request.user.is_authenticated:
-                project = ProjectStorage.get_project_by_id(project_id)
-                column = ColumnStorage.get_column_by_id(column_id)
-                ColumnStorage.delete_column_from_db(column)
+                category = ColumnStorage.get_column_by_id(category_id)
+                ColumnStorage.delete_column_from_db(category)
                 return redirect('tracker:projects')
             else:
                 return render(request, '501.html')
 
 
 class ColumnEdit(View):
-    def get(self, request, project_id, column_id):
+    def get(self, request, category_id):
         if request.user.is_authenticated:
-            project = ProjectStorage.get_project_by_id(project_id)
-            column = ColumnStorage.get_column_by_id(column_id)
-            return render(request, 'categories/edit.html', {'project': project, 'column': column})
+            category = ColumnStorage.get_column_by_id(category_id)
+            project = ProjectStorage.get_project_by_id(category.project_id)
+            return render(request, 'categories/edit.html', {'project': project, 'column': category})
         else:
             return render(request, '501.html')
 
-    def post(self, request, project_id, column_id):
+    def post(self, request, category_id):
         if request.method == 'POST':
             if request.user.is_authenticated:
-                ColumnController.edit_name_by_id(request.user.username, request.user.password, project_id, column_id,
+                project = ProjectStorage.get_project_by_id(ColumnStorage.get_column_by_id(category_id))
+                ColumnController.edit_name_by_id(request.user.username, request.user.password, project.id, category_id,
                                                  request.POST['name'])
-                ColumnController.edit_desc_by_id(request.user.username, request.user.password, project_id, column_id,
+                ColumnController.edit_desc_by_id(request.user.username, request.user.password, project.id, category_id,
                                                  request.POST['description'])
                 return redirect("tracker:column_list")
             else:
@@ -308,7 +307,8 @@ class TaskInfo(View):
                 badge = "label label-primary"
             elif task.priority == "low":
                 badge = "label label-success"
-            return render(request, 'tasks/info.html', {'project': project, 'column': column, 'task': task, 'badge': badge})
+            return render(request, 'tasks/info.html',
+                          {'project': project, 'column': column, 'task': task, 'badge': badge})
         else:
             return render(request, '501.html')
 

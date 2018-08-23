@@ -27,7 +27,7 @@
                     </div>
                     <div class="box-body">
                         {% for task in tasks %}
-                            <a style="color: #000000" class="text" href="{% url 'tracker:task_info' project.id column.id task.id%}"><h4>{{ task.name }}</h4></a>
+                            <a style="color: #000000" class="text" href="{% url 'tracker:task_info' task.id%}"><h4>{{ task.name }}</h4></a>
                         {% endfor %}
                         {% if not tasks %}
                             <h4>There is no tasks in this category</h4>
@@ -41,8 +41,8 @@
                         <h3 class="box-title">Manage Column</h3>
                     </div>
                     <div class="box-body">
-                        <a href="{% url 'tracker:column_edit' project.id column.id %}" class="btn btn-block btn-warning">Edit</a>
-                        <a href="{% url 'tracker:column_delete' project.id column.id%}" class="btn btn-block btn-danger">Delete</a>
+                        <a href="{% url 'tracker:column_edit' column.id %}" class="btn btn-block btn-warning">Edit</a>
+                        <a href="{% url 'tracker:column_delete' column.id%}" class="btn btn-block btn-danger">Delete</a>
                     </div>
                 </div>
             </div>
