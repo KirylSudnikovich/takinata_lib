@@ -329,9 +329,14 @@ class TaskInfo(View):
                     new_list.append(tsk)
             print("task_list - ", task_list)
             a_task = TaskController.get_assosiated_task(task)
+            parent_task = TaskController.get_parent_task(task)
+            subtasks = None
+            if task.is_parent:
+                subtasks = TaskController.get_all_subtask(task)
             return render(request, 'tasks/info.html',
                           {'project': project, 'category': category, 'task': task, 'badge': badge, 'status': status,
-                           'status_badge': status_badge, 'archive': archive, 'task_list': new_list, 'a_task':a_task})
+                           'status_badge': status_badge, 'archive': archive, 'task_list': new_list, 'a_task': a_task,
+                           'parent': parent_task, 'subtasks': subtasks})
         else:
             return render(request, '501.html')
 
@@ -354,8 +359,6 @@ class TaskInfo(View):
             task_with_id = int(request.POST.get('add_subtask', False))
             TaskController.new_set_subtask(task, TaskStorage.get_task_by_id(task_with_id))
             return self.get(request, task_id)
-
-
 
 
 class TaskDelete(View):

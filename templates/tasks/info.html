@@ -38,6 +38,18 @@
                                     <a href="{% url 'tracker:task_info' a_task.id %}">{{ a_task.name }}</a>
                                 </p>
                             {% endif %}
+                            {% if parent %}
+                                <p style="font-size: medium"><b>Parent task: </b>
+                                    <a href="{% url 'tracker:task_info' parent.id %}">{{ parent.name }}</a>
+                                </p>
+                            {% endif %}
+                            {% if subtasks %}
+                                <p style="font-size: medium"><b>Subtasks: </b>
+                                    {% for task in subtasks %}
+                                        <a href="{% url 'tracker:task_info' task.id %}">{{ task.name }}, </a>
+                                    {% endfor %}
+                                </p>
+                            {% endif %}
                         </div>
                         <div class="col-md-6">
                             <p style="font-size: medium">
@@ -102,7 +114,7 @@
                 </div>
                 {% if task.type == 1 %}
                     {% if not archive %}
-                        {% if task.assosiated_task_id == None and task.is_subtask == 0 and task.parent_task_id == 0 %}
+                        {% if task.assosiated_task_id == None and task.is_subtask == 0 and task.parent_task_id == None and task.is_parent == None %}
                             <div class="box box-primary">
                                 <div class="box-header with-border">
                                     <h3 class="box-title">Set subtask</h3>
