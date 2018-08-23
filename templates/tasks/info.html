@@ -20,15 +20,22 @@
                             {% if project %}
                                 <p style="font-size: medium"><b>Project : </b>{{ project.name }}</p>
                                 <p style="font-size: medium"><b>Category : </b>{{ category.name }}</p>
-                                <p style="font-size: medium"><b>Type: </b>
+                            {% endif %}
+                            <p style="font-size: medium"><b>Type: </b>
                                 {% if task.type == 1 %}
                                     One-time
                                 {% else %}
                                     Regular
                                 {% endif %}
-                                </p>
+                            </p>
+                            {% if task.type == 2 %}
                                 <p style="font-size: medium"><b>Period: </b>
-                                {{ task.period }} days
+                                    {{ task.period }} days
+                                </p>
+                            {% endif %}
+                            {% if task.assosiated_task_id != None %}
+                                <p style="font-size: medium"><b>Assosiated with: </b>
+                                    <a href="{% url 'tracker:task_info' a_task.id %}">{{ a_task.name }}</a>
                                 </p>
                             {% endif %}
                         </div>
@@ -39,32 +46,32 @@
                             </p>
                             {% if task.start_date %}
                                 <p style="font-size: medium">
-                                <b>Start date: </b>
-                                {{ task.start_date }}
+                                    <b>Start date: </b>
+                                    {{ task.start_date }}
                                 </p>
                             {% endif %}
                             {% if task.start_time %}
                                 <p style="font-size: medium">
-                                <b>Start time: </b>
-                                {{ task.start_time }}
+                                    <b>Start time: </b>
+                                    {{ task.start_time }}
                                 </p>
                             {% endif %}
                             {% if task.end_date %}
                                 <p style="font-size: medium">
-                                <b>End date: </b>
-                                {{ task.end_date }}
+                                    <b>End date: </b>
+                                    {{ task.end_date }}
                                 </p>
                             {% endif %}
                             {% if task.end_time %}
                                 <p style="font-size: medium">
-                                <b>End time: </b>
-                                {{ task.end_time }}
+                                    <b>End time: </b>
+                                    {{ task.end_time }}
                                 </p>
                             {% endif %}
-                                <p style="font-size: medium">
+                            <p style="font-size: medium">
                                 <b>Status: </b>
                                 <span class="{{ status_badge }}" style="font-size: 15px">{{ status }}</span>
-                                </p>
+                            </p>
                             </p>
                         </div>
                     </div>
@@ -80,15 +87,66 @@
                             {% csrf_token %}
                             <a href="#" class="btn btn-block btn-primary">Edit</a>
                             {% if not archive and task.type == 2 %}
-                                <button type="submit" class="btn btn-block btn-primary" name="start_again" >Start again</button>
+                                <button type="submit" class="btn btn-block btn-primary" name="start_again">Start again
+                                </button>
                             {% endif %}
-                            <a href="{% url 'tracker:task_delete' task.id %}" class="btn btn-block btn-danger">Delete</a>
+                            <a href="{% url 'tracker:task_delete' task.id %}"
+                               class="btn btn-block btn-danger">Delete</a>
                             {% if not archive %}
-                                <button type="submit" class="btn btn-block btn-success" name="cancel_task" style="margin-top: 20px">DONE</button>
+                                <button type="submit" class="btn btn-block btn-success" name="cancel_task"
+                                        style="margin-top: 20px">DONE
+                                </button>
                             {% endif %}
                         </form>
                     </div>
                 </div>
+                {% if task.type == 1 %}
+                    {% if not archive %}
+                        {% if task.assosiated_task_id == None and task.parent_task_id == None %}
+                            <div class="box box-primary">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Set subtask</h3>
+                                </div>
+                                <div class="box-body">
+                                    <form action="" method="post">
+                                        {% csrf_token %}
+                                        <label class="btn-block">
+                                            <select style="display: inline-block"
+                                                    class="form-control js-example-basic-single"
+                                                    name="add_subtask" id="add_subtask">
+                                            </select>
+                                        </label>
+                                        <button type="submit" name='remove_from_project'
+                                                class="btn btn-primary btn-block">Add
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="box box-primary">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Set assosiated task</h3>
+                                </div>
+                                <div class="box-body">
+                                    <form action="" method="post">
+                                        {% csrf_token %}
+                                        <label class="btn-block">
+                                            <select style="display: inline-block"
+                                                    class="form-control js-example-basic-single"
+                                                    name="add_assosiate" id="add_assosiate">
+                                                {% for task in task_list %}
+                                                    <option value="{{ task.id }}">{{ task.name }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </label>
+                                        <button type="submit" name='remove_from_project'
+                                                class="btn btn-primary btn-block">Set
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
             </div>
         </div>
     </section>

@@ -316,23 +316,33 @@ class TaskInfo(View):
                 status_badge = "label label-success"
                 status = "Done"
                 archive = 1
-            print(task.type)
+            task_list = TaskStorage.get_all_tasks(task.project_id, task.category_id)
+            for tsk in task_list:
+                if tsk.id == task_id:
+                    task_list.remove(tsk)
+            for tsk in task_list:
+                if tsk.is_archive == 1 or tsk.assosiated_task_id is not None or tsk.type == 2:
+                    task_list.remove(tsk)
+            a_task = TaskController.get_assosiated_task(task)
             return render(request, 'tasks/info.html',
                           {'project': project, 'category': category, 'task': task, 'badge': badge, 'status': status,
-                           'status_badge': status_badge, 'archive': archive})
+                           'status_badge': status_badge, 'archive': archive, 'task_list': task_list, 'a_task':a_task})
         else:
             return render(request, '501.html')
 
     def post(self, request, task_id):
         if 'cancel_task' in request.POST:
             task = TaskStorage.get_task_by_id(task_id)
-            TaskStorage.cancel_task(task)
-            if task.project_id is None:
-                TaskStorage.delete_task_from_db(task)
+            TaskController.cancel_task(task)
             return redirect('tracker:task_list')
         if 'start_again' in request.POST:
             task = TaskStorage.get_task_by_id(task_id)
             TaskController.start_again(task)
+            return self.get(request, task_id)
+        if 'add_assosiate' in request.POST:
+            task = TaskStorage.get_task_by_id(task_id)
+            task_with_id = int(request.POST.get('add_assosiate', False))
+            TaskController.set_assosiated_task(task, task_with_id)
             return self.get(request, task_id)
 
 
