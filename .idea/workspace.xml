@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5737bc37-cee3-4085-bcde-fc9e59a384da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/regular_task.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/models/regular_task.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/regular_task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -156,7 +154,7 @@
           <entry key="libuser" value="1" />
           <entry key="log" value="2" />
           <entry key="projects" value="19" />
-          <entry key="py" value="372" />
+          <entry key="py" value="373" />
           <entry key="rel" value="3" />
           <entry key="right" value="1" />
           <entry key="sql" value="6" />
@@ -181,7 +179,7 @@
           <entry key="JavaScript" value="1" />
           <entry key="Log" value="2" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="372" />
+          <entry key="Python" value="373" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="6" />
         </counts>
@@ -194,7 +192,7 @@
           <entry key="css" value="15" />
           <entry key="dummy" value="18" />
           <entry key="html" value="18919" />
-          <entry key="py" value="31645" />
+          <entry key="py" value="31651" />
           <entry key="txt" value="129" />
         </counts>
       </usages-collector>
@@ -203,7 +201,7 @@
           <entry key="CSS" value="15" />
           <entry key="HTML" value="18919" />
           <entry key="PLAIN_TEXT" value="166" />
-          <entry key="Python" value="32242" />
+          <entry key="Python" value="32248" />
           <entry key="Scratch" value="3" />
         </counts>
       </usages-collector>
@@ -262,7 +260,18 @@
         <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="551">
-              <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+              <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/user.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#1#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -329,7 +338,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/conf.py" />
         <option value="$PROJECT_DIR$/templates/adminlte/lib/_scripts.html" />
         <option value="$PROJECT_DIR$/templates/adminlte/lib/_styles.html" />
         <option value="$PROJECT_DIR$/tracker/controllers/bug_report.py" />
@@ -379,6 +387,7 @@
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/task.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/regular_task.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/regular_task.py" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/user.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py" />
       </list>
     </option>
@@ -807,13 +816,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/500.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1197,10 +1199,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/controllers/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#1#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/takinata_lib-0.1-py3.5.egg/lib/storage/user.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
-          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
         </state>
       </provider>
     </entry>
