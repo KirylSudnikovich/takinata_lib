@@ -1,6 +1,6 @@
 import sys
 
-from django.contrib.auth import authenticate, logout
+from django.contrib.auth import logout
 from django.shortcuts import render, redirect, render_to_response
 from django.template import RequestContext
 from django.views import View
@@ -322,7 +322,6 @@ class TaskInfo(View):
                 if tsk.id == task_id:
                     task_list.remove(tsk)
             for tsk in task_list:
-                print("task_name - {}, is_archive - {}".format(tsk.name, tsk.is_archive))
                 if tsk.is_archive == 1 or tsk.assosiated_task_id is not None or tsk.type == 2:
                     pass
                 else:
@@ -331,7 +330,7 @@ class TaskInfo(View):
             a_task = TaskController.get_assosiated_task(task)
             parent_task = TaskController.get_parent_task(task)
             subtasks = None
-            if task.is_parent:
+            if task.is_parent == 1:
                 subtasks = TaskController.get_all_subtask(task)
             return render(request, 'tasks/info.html',
                           {'project': project, 'category': category, 'task': task, 'badge': badge, 'status': status,
@@ -375,7 +374,7 @@ class TaskDelete(View):
         if request.method == 'POST':
             if request.user.is_authenticated:
                 task = TaskStorage.get_task_by_id(task_id)
-                TaskStorage.delete_task_from_db(task)
+                TaskController.delete_task(task.id)
                 return redirect('tracker:task_list')
             else:
                 return render(request, '501.html')
