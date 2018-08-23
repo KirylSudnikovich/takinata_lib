@@ -351,6 +351,10 @@ class TaskInfo(View):
             return self.get(request, task_id)
         if 'add_subtask' in request.POST:
             task = TaskStorage.get_task_by_id(task_id)
+            task_with_id = int(request.POST.get('add_subtask', False))
+            TaskController.new_set_subtask(task, TaskStorage.get_task_by_id(task_with_id))
+            return self.get(request, task_id)
+
 
 
 

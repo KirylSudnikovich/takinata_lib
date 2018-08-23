@@ -102,7 +102,7 @@
                 </div>
                 {% if task.type == 1 %}
                     {% if not archive %}
-                        {% if task.assosiated_task_id == None and task.parent_task_id == None %}
+                        {% if task.assosiated_task_id == None and task.is_subtask == 0 and task.parent_task_id == 0 %}
                             <div class="box box-primary">
                                 <div class="box-header with-border">
                                     <h3 class="box-title">Set subtask</h3>
