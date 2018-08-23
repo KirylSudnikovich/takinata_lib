@@ -225,7 +225,7 @@ class ColumnEdit(View):
     def post(self, request, category_id):
         if request.method == 'POST':
             if request.user.is_authenticated:
-                project = ProjectStorage.get_project_by_id(ColumnStorage.get_column_by_id(category_id).project_id   )
+                project = ProjectStorage.get_project_by_id(ColumnStorage.get_column_by_id(category_id).project_id)
                 ColumnController.edit_name_by_id(request.user.username, request.user.password, project.id, category_id,
                                                  request.POST['name'])
                 ColumnController.edit_desc_by_id(request.user.username, request.user.password, project.id, category_id,
@@ -283,16 +283,32 @@ class TaskInfo(View):
             project = ProjectStorage.get_project_by_id(task.project_id)
             category = ColumnStorage.get_column_by_id(task.category_id)
             badge = None
+            status_badge = None
             if task.priority == "max":
                 badge = "label label-danger"
             elif task.priority == "medium":
                 badge = "label label-primary"
             elif task.priority == "low":
                 badge = "label label-success"
+            status = None
+            if task.is_archive == 0:
+                status_badge = "label label-danger"
+                status = "In progress"
+            elif task.is_archive == 1:
+                status_badge = "label label-success"
+                status = "Done"
             return render(request, 'tasks/info.html',
-                          {'project': project, 'category': category, 'task': task, 'badge': badge})
+                          {'project': project, 'category': category, 'task': task, 'badge': badge, 'status': status, 'status_badge': status_badge})
         else:
             return render(request, '501.html')
+
+    def post(self, request, task_id):
+        if 'cancel_task' in request.POST:
+            task = TaskStorage.get_task_by_id(task_id)
+            TaskStorage.cancel_task(task)
+            if task.project_id is None:
+                TaskStorage.delete_task_from_db(task)
+            return redirect('tracker:task_list')
 
 
 class TaskDelete(View):
