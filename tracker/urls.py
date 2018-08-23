@@ -21,9 +21,9 @@ urlpatterns = [
     path('bug_report/', BugReport.as_view(), name='bug_report'),
     path('bug_list/', BugReportList.as_view(), name='bug_report_list'),
     path('tasks/', TaskList.as_view(), name='task_list'),
-    path('tasks/<int:project_id>/<int:column_id>/<int:task_id>/', TaskInfo.as_view(), name='task_info'),
+    path('tasks/<int:task_id>/', TaskInfo.as_view(), name='task_info'),
     path('tasks/create', SampleView.as_view(), name='task_create'),
-    path('tasks/<int:project_id>/<int:column_id>/<int:task_id>/delete', TaskDelete.as_view(), name='task_delete'),
+    path('tasks/<int:task_id>/delete', TaskDelete.as_view(), name='task_delete'),
 ]
 
 handler404 = 'views.handler404'

@@ -256,6 +256,7 @@ class TaskList(View):
                     print("tasks = ", tasks)
                     task_list = task_list + tasks
                 column_list = column_list + columns
+            task_list = TaskStorage.get_all_user_task(UserStorage.get_user_by_name(username))
             print("task_list = ", task_list)
             return render(request, 'tasks/list.html', {'projects': projects, 'columns': column_list,
                                                        'task_list': task_list})
@@ -287,28 +288,19 @@ class SampleView(FormView):
             project_id = int(request.POST.get('select_project', False))
             column_id = int(request.POST.get('select_column', False))
             if project_id == False or column_id == False:
-                projects = ProjectController.show_all(request.user.username, request.user.password)
-                columns_to_send = []
-                for project in projects:
-                    columns = ColumnController.show_all(request.user.username, request.user.password, project.id)
-                    columns_to_send += columns
-                return render(request, 'tasks/create.html',
-                              {'form': f, 'projects': projects, 'columns': columns_to_send, 'error': "You did "
-                                                                                                     "not choose a "
-                                                                                                     "project or a category."})
-            project = ProjectStorage.get_project_by_id(project_id)
-            column = ColumnStorage.get_column_by_id(column_id)
-            TaskController.add_task(request.user.username, request.user.password, project.id, column.id, name, desc,
+                TaskController.add_task(request.user.username, request.user.password, None, None, name, desc,
+                                        start_date, start_time, end_date, end_time, priority)
+            TaskController.add_task(request.user.username, request.user.password, project_id, column_id, name, desc,
                                     start_date, start_time, end_date, end_time, priority)
             return redirect('tracker:task_list')
 
 
 class TaskInfo(View):
-    def get(self, request, project_id, column_id, task_id):
+    def get(self, request, task_id):
         if request.user.is_authenticated:
-            project = ProjectStorage.get_project_by_id(project_id)
-            column = ColumnStorage.get_column_by_id(column_id)
             task = TaskStorage.get_task_by_id(task_id)
+            project = ProjectStorage.get_project_by_id(task.project_id)
+            column = ColumnStorage.get_column_by_id(task.category_id)
             badge = None
             if task.priority == "max":
                 badge = "label label-danger"
@@ -322,11 +314,11 @@ class TaskInfo(View):
 
 
 class TaskDelete(View):
-    def get(self, request, project_id, column_id, task_id):
+    def get(self, request, task_id):
         if request.user.is_authenticated:
-            project = ProjectStorage.get_project_by_id(project_id)
-            column = ColumnStorage.get_column_by_id(project.name, column_id)
             task = TaskStorage.get_task_by_id(task_id)
+            project = ProjectStorage.get_project_by_id(task.project_id)
+            column = ColumnStorage.get_column_by_id(project.name, task.category_id)
             return render(request, 'tasks/delete.html', {'project': project, 'column': column, 'task': task})
         else:
             return render(request, '501.html')

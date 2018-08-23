@@ -17,8 +17,10 @@
                         <div class="col-md-6">
                             <p style="font-size: medium"><b>Title: </b>{{ task.name }}</p>
                             <p style="font-size: medium"><b>Description: </b>{{ task.desc }}</p>
+                            {% if project %}
                             <p style="font-size: medium"><b>Project : </b>{{ project.name }}</p>
                             <p style="font-size: medium"><b>Column : </b>{{ column.name }}</p>
+                            {% endif %}
                         </div>
                         <div class="col-md-6">
                             <p style="font-size: medium">
@@ -57,7 +59,7 @@
                     </div>
                     <div class="box-body">
                         <a href="#" class="btn btn-block btn-warning">Edit</a>
-                        <a href="{% url 'tracker:task_delete' project.id column.id task.id %}" class="btn btn-block btn-danger">Delete</a>
+                        <a href="{% url 'tracker:task_delete' task.id %}" class="btn btn-block btn-danger">Delete</a>
                     </div>
                 </div>
             </div>
