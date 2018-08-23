@@ -25,76 +25,83 @@
                         </div>
                         <form method="post">
                             {% csrf_token %}
-                        <div class="box-body">
-                                    {% if message %}
-                                        <p class="login-box-msg" style="color: red;">{{ message }}</p>
-                                    {% endif %}
-                                    {% if error %}
-                                        <p class="alert alert-danger"> Error! {{ error }}</p>
-                                    {% endif %}
+                            <div class="box-body">
+                                {% if message %}
+                                    <p class="login-box-msg" style="color: red;">{{ message }}</p>
+                                {% endif %}
+                                {% if error %}
+                                    <p class="alert alert-danger"> Error! {{ error }}</p>
+                                {% endif %}
                                 {% for field in form %}
-                                  <div class="form-group has-feedback">
-                                    {{ field }}
-                                     {% if field.help_text %}
-                                          <small style="color: grey">{{ field.help_text | safe }}</small>
-                                    {% endif %}
-                                    {% for error in field.errors %}
-                                      <p style="color: red">{{ error }}</p>
-                                    {% endfor %}
-                                  </div>
+                                    <div class="form-group has-feedback">
+                                        {{ field }}
+                                        {% if field.help_text %}
+                                            <small style="color: grey">{{ field.help_text | safe }}</small>
+                                        {% endif %}
+                                        {% for error in field.errors %}
+                                            <p style="color: red">{{ error }}</p>
+                                        {% endfor %}
+                                    </div>
                                 {% endfor %}
-                                    <row>
-                                        <div class="col-md-4" style="padding-left: 0px;">
-                                            <p style="font-size: large">Priority: </p>
-                                            <label>
-                                                <select name="priority" class="form-control js-example-basic-single">
-                                                    <option>max</option>
-                                                    <option>medium</option>
-                                                    <option>low</option>
-                                                </select>
-                                            </label>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <p style="font-size: large">Project:</p>
-                                            <label>
-                                                {% if projects %}
-                                                    <select id='select_project' class="form-control js-example-basic-single"
-                                                            name="select_project">
-                                                        {% for project in projects %}
-                                                            <option value={{ project.id }}>{{ project.name }}</option>
-                                                        {% endfor %}
-                                                    </select>
-                                                {% endif %}
-                                                {% if project %}
-                                                    <select id='select_project' class="form-control js-example-basic-single"
-                                                            name="select_project">
-                                                        {% for project in projects %}
-                                                            <option value={{ project.id }}>{{ project.name }}</option>
-                                                        {% endfor %}
-                                                    </select>
-                                                {% endif %}
-                                            </label>
-                                        </div>
-                                        <div class="col-md-4" style="padding-right: 0px; padding-left: 20px">
-                                            <p style="font-size: large">Category:</p>
-                                            <label class="btn-block">
-                                                <select id='select_column' class="form-control js-example-basic-single" name="select_column">
-                                                    {% for category in categories %}
-                                                        <option class="{{ category.project_id }}" value={{ category.id }}>{{ category.name }}</option>
+                                <row>
+                                    <select id='select_type' class="form-control js-example-basic-single"
+                                            name="select_type">
+                                        <option selected="selected" value="1">One-time</option>
+                                        <option value="2">Regular</option>
+                                    </select>
+                                    <div class="col-md-4" style="padding-left: 0px;">
+                                        <p style="font-size: large">Priority: </p>
+                                        <label>
+                                            <select name="priority" class="form-control js-example-basic-single">
+                                                <option>max</option>
+                                                <option>medium</option>
+                                                <option>low</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p style="font-size: large">Project:</p>
+                                        <label>
+                                            {% if projects %}
+                                                <select id='select_project' class="form-control js-example-basic-single"
+                                                        name="select_project">
+                                                    {% for project in projects %}
+                                                        <option value={{ project.id }}>{{ project.name }}</option>
                                                     {% endfor %}
                                                 </select>
-                                            </label>
-                                        </div>
-                                    </row>
-                        </div>
-                        <div class="box-footer">
-                            <div class="row">
-                                <div class="col-md-8"></div>
-                                <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary btn-block btn-flat">Create</button>
+                                            {% endif %}
+                                            {% if project %}
+                                                <select id='select_project' class="form-control js-example-basic-single"
+                                                        name="select_project">
+                                                    {% for project in projects %}
+                                                        <option value={{ project.id }}>{{ project.name }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            {% endif %}
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4" style="padding-right: 0px; padding-left: 20px">
+                                        <p style="font-size: large">Category:</p>
+                                        <label class="btn-block">
+                                            <select id='select_column' class="form-control js-example-basic-single"
+                                                    name="select_column">
+                                                {% for category in categories %}
+                                                    <option class="{{ category.project_id }}"
+                                                            value={{ category.id }}>{{ category.name }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </label>
+                                    </div>
+                                </row>
+                            </div>
+                            <div class="box-footer">
+                                <div class="row">
+                                    <div class="col-md-8"></div>
+                                    <div class="col-md-4">
+                                        <button type="submit" class="btn btn-primary btn-block btn-flat">Create</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </form>
                     </div>
                 </div>
@@ -133,18 +140,19 @@
     </section>
     <script>
         $('#select_column').prop('disabled', 'disabled');
-        var $selected_column = $( '#select_column' ),
-        $options = $selected_column.find( 'option' );
-        $(document).ready(function() {
+        var $selected_column = $('#select_column'),
+            $options = $selected_column.find('option');
+        $(document).ready(function () {
         });
-        $(document).ready(function(){
-            $('#select_project').on("select2:select", function(e) {
-                $selected_column.html( $options.filter( '[class="' + this.value + '"]' ) );
+        $(document).ready(function () {
+            $('#select_project').on("select2:select", function (e) {
+                $selected_column.html($options.filter('[class="' + this.value + '"]'));
                 {#$('#select_column').parent().show();#}
                 $("#select_column").prop("selectedIndex", -1);
                 $('#select_column').prop('disabled', false);
             });
         });
         $("#select_project").prop("selectedIndex", -1);
+        $("#select_column").prop("selectedIndex", -1);
     </script>
 {% endblock %}

@@ -10,7 +10,7 @@
             <div class="col-md-5 text-center">
                 <h2>Are you sure you want to delete the task? <br>After confirmation, you can not restore it in any way</h2>
                 <div class="col-md-6">
-                    <a href="{% url 'tracker:task_info' project.id column.id task.id%}" class="btn btn-block btn-primary btn-lg">Undo</a>
+                    <a href="{% url 'tracker:task_info' task.id%}" class="btn btn-block btn-primary btn-lg">Undo</a>
                 </div>
                 <form action="" method="post">
                     <div class="col-md-6">

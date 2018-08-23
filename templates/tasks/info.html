@@ -20,6 +20,16 @@
                             {% if project %}
                                 <p style="font-size: medium"><b>Project : </b>{{ project.name }}</p>
                                 <p style="font-size: medium"><b>Category : </b>{{ category.name }}</p>
+                                <p style="font-size: medium"><b>Type: </b>
+                                {% if task.type == 1 %}
+                                    One-time
+                                {% else %}
+                                    Regular
+                                {% endif %}
+                                </p>
+                                <p style="font-size: medium"><b>Period: </b>
+                                {{ task.period }} days
+                                </p>
                             {% endif %}
                         </div>
                         <div class="col-md-6">
@@ -68,10 +78,13 @@
                     <div class="box-body">
                         <form action="" method="post">
                             {% csrf_token %}
-                            <a href="#" class="btn btn-block btn-warning">Edit</a>
+                            <a href="#" class="btn btn-block btn-primary">Edit</a>
+                            {% if not archive and task.type == 2 %}
+                                <button type="submit" class="btn btn-block btn-primary" name="start_again" >Start again</button>
+                            {% endif %}
                             <a href="{% url 'tracker:task_delete' task.id %}" class="btn btn-block btn-danger">Delete</a>
                             {% if not archive %}
-                            <button class="btn btn-block btn-success" name="cancel_task">DONE</button>
+                                <button type="submit" class="btn btn-block btn-success" name="cancel_task" style="margin-top: 20px">DONE</button>
                             {% endif %}
                         </form>
                     </div>

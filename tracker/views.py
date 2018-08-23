@@ -284,11 +284,12 @@ class SampleView(FormView):
             priority = request.POST['priority']
             project_id = int(request.POST.get('select_project', False))
             column_id = int(request.POST.get('select_column', False))
+            task_type = int(request.POST.get('select_type', False))
             if project_id == False or column_id == False:
-                TaskController.add_task(request.user.username, request.user.password, None, None, name, desc,
+                TaskController.add_task(request.user.username, request.user.password, None, None, name, desc, task_type,
                                         start_date, start_time, end_date, end_time, priority)
             TaskController.add_task(request.user.username, request.user.password, project_id, column_id, name, desc,
-                                    start_date, start_time, end_date, end_time, priority)
+                                    task_type, start_date, start_time, end_date, end_time, priority)
             return redirect('tracker:task_list')
 
 
@@ -315,9 +316,10 @@ class TaskInfo(View):
                 status_badge = "label label-success"
                 status = "Done"
                 archive = 1
-            print(archive)
+            print(task.type)
             return render(request, 'tasks/info.html',
-                          {'project': project, 'category': category, 'task': task, 'badge': badge, 'status': status, 'status_badge': status_badge, 'archive': archive})
+                          {'project': project, 'category': category, 'task': task, 'badge': badge, 'status': status,
+                           'status_badge': status_badge, 'archive': archive})
         else:
             return render(request, '501.html')
 
@@ -328,6 +330,11 @@ class TaskInfo(View):
             if task.project_id is None:
                 TaskStorage.delete_task_from_db(task)
             return redirect('tracker:task_list')
+        if 'start_again' in request.POST:
+            task = TaskStorage.get_task_by_id(task_id)
+            TaskController.start_again(task)
+            return self.get(request, task_id)
+
 
 
 class TaskDelete(View):
