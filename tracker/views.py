@@ -294,9 +294,7 @@ class SampleView(FormView):
             for project in projects:
                 columns = ColumnController.show_all(request.user.username, request.user.password, project.id)
                 columns_to_send += columns
-            column = ColumnStorage.get_column_by_id(project.name, int(request.POST['select_column']) + 1)
-            print("SELECTED_PROJECT = ", request.POST['select_project'])
-            print("SELECTED_COLUMN = ", request.POST['select_column'])
+            column = ColumnStorage.get_column_by_id(int(request.POST['select_column']) + 1)
             for i in columns_to_send:
                 if column.name == i.name:
                     column = i
