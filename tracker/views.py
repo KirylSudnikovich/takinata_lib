@@ -317,16 +317,21 @@ class TaskInfo(View):
                 status = "Done"
                 archive = 1
             task_list = TaskStorage.get_all_tasks(task.project_id, task.category_id)
+            new_list = []
             for tsk in task_list:
                 if tsk.id == task_id:
                     task_list.remove(tsk)
             for tsk in task_list:
+                print("task_name - {}, is_archive - {}".format(tsk.name, tsk.is_archive))
                 if tsk.is_archive == 1 or tsk.assosiated_task_id is not None or tsk.type == 2:
-                    task_list.remove(tsk)
+                    pass
+                else:
+                    new_list.append(tsk)
+            print("task_list - ", task_list)
             a_task = TaskController.get_assosiated_task(task)
             return render(request, 'tasks/info.html',
                           {'project': project, 'category': category, 'task': task, 'badge': badge, 'status': status,
-                           'status_badge': status_badge, 'archive': archive, 'task_list': task_list, 'a_task':a_task})
+                           'status_badge': status_badge, 'archive': archive, 'task_list': new_list, 'a_task':a_task})
         else:
             return render(request, '501.html')
 
@@ -344,6 +349,8 @@ class TaskInfo(View):
             task_with_id = int(request.POST.get('add_assosiate', False))
             TaskController.set_assosiated_task(task, task_with_id)
             return self.get(request, task_id)
+        if 'add_subtask' in request.POST:
+            task = TaskStorage.get_task_by_id(task_id)
 
 
 

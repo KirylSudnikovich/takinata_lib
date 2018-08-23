@@ -114,6 +114,9 @@
                                             <select style="display: inline-block"
                                                     class="form-control js-example-basic-single"
                                                     name="add_subtask" id="add_subtask">
+                                                {% for task in task_list %}
+                                                    <option value="{{ task.id }}">{{ task.name }}</option>
+                                                {% endfor %}
                                             </select>
                                         </label>
                                         <button type="submit" name='remove_from_project'
