@@ -23,11 +23,14 @@
                         <div class="box-header with-border">
                             <h3 class="box-title">Task Create</h3>
                         </div>
+                        <form method="post">
+                            {% csrf_token %}
                         <div class="box-body">
-                            <form method="post">
-                                {% csrf_token %}
                                     {% if message %}
                                         <p class="login-box-msg" style="color: red;">{{ message }}</p>
+                                    {% endif %}
+                                    {% if error %}
+                                        <p class="alert alert-danger"> Error! {{ error }}</p>
                                     {% endif %}
                                 {% for field in form %}
                                   <div class="form-group has-feedback">
@@ -44,7 +47,7 @@
                                         <div class="col-md-4" style="padding-left: 0px;">
                                             <p style="font-size: large">Priority: </p>
                                             <label>
-                                                <select class="form-control js-example-basic-single">
+                                                <select name="priority" class="form-control js-example-basic-single">
                                                     <option>max</option>
                                                     <option>medium</option>
                                                     <option>low</option>
@@ -77,13 +80,12 @@
                                             <label class="btn-block">
                                                 <select id='select_column' class="form-control js-example-basic-single" name="select_column">
                                                     {% for column in columns %}
-                                                        <option value={{ column.project_id }}>{{ column.name }}</option>
+                                                        <option class="{{ column.project_id }}" value={{ column.id }}>{{ column.name }}</option>
                                                     {% endfor %}
                                                 </select>
                                             </label>
                                         </div>
                                     </row>
-                            </form>
                         </div>
                         <div class="box-footer">
                             <div class="row">
@@ -93,6 +95,7 @@
                                 </div>
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -136,11 +139,10 @@
         });
         $(document).ready(function(){
             $('#select_project').on("select2:select", function(e) {
-                $selected_column.html( $options.filter( '[value="' + this.value + '"]' ) );
+                $selected_column.html( $options.filter( '[class="' + this.value + '"]' ) );
                 {#$('#select_column').parent().show();#}
                 $("#select_column").prop("selectedIndex", -1);
                 $('#select_column').prop('disabled', false);
-                console.log(this.value);
             });
         });
         $("#select_project").prop("selectedIndex", -1);

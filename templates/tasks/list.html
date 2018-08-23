@@ -25,9 +25,11 @@
                                 <div class="box-header with-border">
                                     <h3 class="box-title"><a href="{% url 'tracker:task_info' project_id=task.project_id column_id=task.category_id task_id=task.id %}">{{ task.name }}</a></h3>
                                 </div>
-                                <div class="box-body">
-                                    <p class="info">{{ task.desc }}</p>
-                                </div>
+                                {% if task.desc %}
+                                    <div class="box-body">
+                                        <p class="info">{{ task.desc }}</p>
+                                    </div>
+                                {% endif %}
                                 <div class="box-footer">
                                      <div class="row">
                                          <div class="col-md-4 pull-right">

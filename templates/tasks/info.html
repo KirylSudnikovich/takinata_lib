@@ -1,6 +1,6 @@
 {% extends 'adminlte/base.html' %}
 
-{% block title %}{{ task.name }}{% endblock %}
+{% block title %}Takinata web. {{ task.name }}{% endblock %}
 {% load i18n static %}
 
 {% block body_class %}login-page{% endblock %}
@@ -14,10 +14,39 @@
                         <h3 class="box-title">Main Information</h3>
                     </div>
                     <div class="box-body">
-                        <p><b>Title: </b>{{ task.name }}</p>
-                        <p><b>Description: </b>{{ task.desc }}</p>
-                        <p><b>Project : </b>{{ project.name }}</p>
-                        <p><b>Column : </b>{{ column.name }}</p>
+                        <div class="col-md-6">
+                            <p style="font-size: medium"><b>Title: </b>{{ task.name }}</p>
+                            <p style="font-size: medium"><b>Description: </b>{{ task.desc }}</p>
+                            <p style="font-size: medium"><b>Project : </b>{{ project.name }}</p>
+                            <p style="font-size: medium"><b>Column : </b>{{ column.name }}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p style="font-size: medium">
+                                <b>Priority: </b>
+                                <span class="label label-danger" style="font-size: 15px">{{ task.priority }}</span>
+                            </p>
+                            {% if task.start_date %}
+                                <p style="font-size: medium">
+                                <b>Start date: </b>
+                                {{ task.start_date }}
+                            {% endif %}
+                            {% if task.start_time %}
+                                <p style="font-size: medium">
+                                <b>Start time: </b>
+                                {{ task.start_time }}
+                            {% endif %}
+                            {% if task.end_date %}
+                                <p style="font-size: medium">
+                                <b>End date: </b>
+                                {{ task.end_date }}
+                            {% endif %}
+                            {% if task.end_time %}
+                                <p style="font-size: medium">
+                                <b>End time: </b>
+                                {{ task.end_time }}
+                            {% endif %}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
