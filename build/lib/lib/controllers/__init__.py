@@ -5,7 +5,7 @@ __________
 
 Description of internal files
 
-column.py - the file containing the logic of data processing and interaction with the database for Column
+category.py - the file containing the logic of data processing and interaction with the database for Column
 
 project.py - the file containing the logic of data processing and interaction with the database for Project
 
@@ -13,6 +13,6 @@ regular_task.py - the file containing the logic of data processing and interacti
 
 task.py - the file containing the logic of data processing and interaction with the database for Task
 
-user.py - the file containing the logic of data processing and interaction with the database for User
+models.py - the file containing the logic of data processing and interaction with the database for User
 
 """

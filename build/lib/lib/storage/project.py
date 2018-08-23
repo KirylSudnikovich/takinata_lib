@@ -3,7 +3,7 @@ import lib.conf as conf
 import copy
 from lib.exception import *
 from lib.models.project import *
-from lib.models.user import *
+from lib.models.models import *
 from lib.storage.user import UserStorage
 from sqlalchemy import create_engine, update
 from sqlalchemy.orm import sessionmaker

@@ -3,7 +3,7 @@ import lib.conf as conf
 
 from lib.exception import *
 from lib.models.project import *
-from lib.models.user import *
+from lib.models.models import *
 
 
 class ProjectStorage:

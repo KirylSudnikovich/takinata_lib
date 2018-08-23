@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from tracker.models import BugReport
 from lib.conf import get_path_to_db
-from lib.models.user import User, Project, Category, Task
+from lib.models.models import User, Project, Category, Task
 
 engine = create_engine(get_path_to_db())
 Session = sessionmaker(bind=engine)

@@ -8,7 +8,7 @@ import console.presentations.project as project_view
 import console.presentations.task as task_view
 from console.presentations.project import *
 from console.presentations.regular_task import *
-from lib.controllers.column import *
+from lib.controllers.category import *
 from lib.controllers.project import *
 from lib.controllers.regular_task import *
 from lib.controllers.task import *

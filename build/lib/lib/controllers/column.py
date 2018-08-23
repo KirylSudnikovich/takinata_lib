@@ -1,8 +1,8 @@
 import lib.logger as logger
 from lib.exception import *
-from lib.storage.column import ColumnStorage
+from lib.storage.category import ColumnStorage
 from lib.storage.project import *
-from lib.models.user import Category
+from lib.models.models import Category
 import os
 from lib.storage.user import *
 

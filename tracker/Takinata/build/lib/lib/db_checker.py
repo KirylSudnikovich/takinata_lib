@@ -4,7 +4,7 @@ from lib.controllers.project import ProjectController
 from lib.controllers.regular_task import RegularTaskController
 from lib.controllers.task import TaskController
 from lib.controllers.user import UserController
-from lib.controllers.column import ColumnController
+from lib.controllers.category import ColumnController
 
 
 def check_tracker_folder(path):

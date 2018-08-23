@@ -2,7 +2,7 @@ from datetime import *
 
 from lib.exception import *
 from lib.models.task import Task
-from lib.storage.column import *
+from lib.storage.category import *
 from lib.storage.project import *
 from lib.storage.task import *
 from lib.storage.user import *

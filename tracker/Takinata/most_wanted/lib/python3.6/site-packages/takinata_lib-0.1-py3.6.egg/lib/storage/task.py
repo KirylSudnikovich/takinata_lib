@@ -2,7 +2,7 @@ import sqlite3
 import lib.conf as conf
 from lib.exception import *
 from lib.models.task import *
-from lib.storage.column import *
+from lib.storage.category import *
 
 
 class TaskStorage:

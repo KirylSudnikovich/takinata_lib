@@ -1,7 +1,7 @@
 import lib.logger as logger
 import os
 from lib.exception import *
-from lib.models.user import Project
+from lib.models.models import Project
 from lib.storage.project import ProjectStorage
 from lib.storage.user import UserStorage
 import lib.conf as conf

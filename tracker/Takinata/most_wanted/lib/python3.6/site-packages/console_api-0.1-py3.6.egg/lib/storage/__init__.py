@@ -5,7 +5,7 @@ __________
 
 Description of internal files
 
-column.py - the logic of interaction with the database for Column
+category.py - the logic of interaction with the database for Column
 
 project.py - the logic of interaction with the database for Project
 
@@ -13,6 +13,6 @@ regular_task.py - the logic of interaction with the database for Regular Task
 
 task.py - the logic of interaction with the database for Task
 
-user.py - the logic of interaction with the database for User
+models.py - the logic of interaction with the database for User
 
 """

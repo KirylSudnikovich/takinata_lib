@@ -2,7 +2,7 @@ import lib.logger as logger
 
 from datetime import *
 from lib.storage.project import *
-from lib.storage.column import *
+from lib.storage.category import *
 from lib.storage.regular_task import *
 from lib.storage.user import *
 from lib.models.regular_task import *

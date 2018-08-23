@@ -1,7 +1,7 @@
 import os
 
 import lib.logger as logger
-from lib.models.user import User, create_tables
+from lib.models.models import User, create_tables
 from lib.storage.user import UserStorage
 from lib.storage.project import ProjectStorage
 from lib.exception import *

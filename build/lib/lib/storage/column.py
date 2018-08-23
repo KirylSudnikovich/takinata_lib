@@ -1,7 +1,7 @@
 import sqlite3
 
 import lib.conf as conf
-from lib.models.user import Category, Project
+from lib.models.models import Category, Project
 from lib.storage.project import ProjectStorage
 from lib.exception import *
 from sqlalchemy import create_engine, update

@@ -2,7 +2,7 @@ import sqlite3
 
 import lib.conf as conf
 from lib.models.regular_task import *
-from lib.storage.column import *
+from lib.storage.category import *
 from lib.storage.project import *
 from lib.controllers.regular_task import *
 

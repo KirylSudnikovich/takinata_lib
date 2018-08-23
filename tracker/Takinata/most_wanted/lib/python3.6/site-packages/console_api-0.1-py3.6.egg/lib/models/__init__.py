@@ -4,7 +4,7 @@ __________
 
 Description of internal files
 
-column.py - description and fields for Column
+category.py - description and fields for Column
 
 project.py - description and fields for Project
 
@@ -12,6 +12,6 @@ regular_task.py - description and fields for Regular Task
 
 task.py - description and fields for Task
 
-user.py - description and fields for User
+models.py - description and fields for User
 
 """
