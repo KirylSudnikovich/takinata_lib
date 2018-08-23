@@ -5,9 +5,9 @@ from django.shortcuts import render, redirect, render_to_response
 from django.template import RequestContext
 from django.views import View
 from django.views.generic import TemplateView, FormView
-from lib.controllers.category import ColumnController
+from lib.controllers.category import CategoryController
 from lib.controllers.project import ProjectController
-from lib.storage.category import ColumnStorage
+from lib.storage.category import CategoryStorage
 from lib.storage.project import ProjectStorage
 from lib.storage.user import UserStorage
 from lib.controllers.task import TaskController
