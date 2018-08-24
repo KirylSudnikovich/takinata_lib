@@ -17,15 +17,20 @@ from .forms import ToDoForm
 
 
 def index(request):
-    red_list, yellow_list, green_list = TaskController.check_notifications(request.user.username, request.user.password)
-    print(red_list)
-    dict_to_template = {'users': all_users(), 'projects': all_projects, 'categories': all_categories(),
-                        'tasks': all_tasks(), 'red_list':red_list, 'yellow_list':yellow_list, 'green_list':green_list}
-    response = render(request, 'index.html', dict_to_template)
     if 'been_before' in request.COOKIES:
-        pass
-        # print("sosi")
+        if 'have_account' in request.COOKIES:
+            response = redirect('accounts:login')
+        else:
+            response = redirect('accounts:registration')
+        if request.user.is_authenticated:
+            red_list, yellow_list, green_list = TaskController.check_notifications(request.user.username,
+                                                                                   request.user.password)
+            dict_to_template = {'users': all_users(), 'projects': all_projects, 'categories': all_categories(),
+                                'tasks': all_tasks(), 'red_list': red_list, 'yellow_list': yellow_list,
+                                'green_list': green_list}
+            response = render(request, 'index.html', dict_to_template)
     else:
+        response = redirect('accounts:registration')
         response.set_cookie(key='been_before', value='1')
     return response
 
