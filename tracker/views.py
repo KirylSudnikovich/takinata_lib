@@ -40,7 +40,7 @@ class ProjectsList(View):
         if request.user.is_authenticated:
             username = request.user.username
             password = request.user.password
-            project_list = ProjectController.show_all(username, password)
+            project_list = ProjectStorage.show_all_for_user(username, password)
             print(project_list)
             return render(request, 'projects/list.html', {'project_list': project_list})
         else:
@@ -162,7 +162,7 @@ class CategoryList(View):
         if request.user.is_authenticated:
             username = request.user.username
             password = request.user.password
-            projects = ProjectController.show_all(username, password)
+            projects = ProjectStorage.show_all_for_user(username, password)
             category_list = []
             for project in projects:
                 categories = CategoryController.show_all(username, password, project.id)
@@ -174,7 +174,7 @@ class CategoryList(View):
 
 class ColumnNew(View):
     def get(self, request):
-        projects = ProjectController.show_all(request.user.username, request.user.password)
+        projects = ProjectStorage.show_all_for_user(request.user.username, request.user.password)
         return render(request, 'categories/create.html', {'projects': projects})
 
     def post(self, request):
@@ -183,7 +183,7 @@ class ColumnNew(View):
                 name = request.POST['name']
                 description = request.POST['description']
                 project = ProjectStorage.get_project_by_id(request.POST['select_project'])
-                projects = ProjectController.show_all(request.user.username, request.user.password)
+                projects = ProjectStorage.show_all_for_user(request.user.username, request.user.password)
                 for i in projects:
                     if project.name == i.name:
                         project = i
@@ -228,7 +228,7 @@ class ColumnDelete(View):
             if request.user.is_authenticated:
                 category = CategoryStorage.get_category_by_id(category_id)
                 CategoryStorage.delete_column_from_db(category)
-                return redirect('tracker:projects')
+                return redirect('tracker:column_list')
             else:
                 return render(request, '501.html')
 
@@ -281,7 +281,7 @@ class TaskList(View):
 class SampleView(FormView):
     def get(self, request, **kwargs):
         f = ToDoForm
-        projects = ProjectController.show_all(request.user.username, request.user.password)
+        projects = ProjectStorage.show_all_for_user(request.user.username, request.user.password)
         categories_to_send = []
         for project in projects:
             categories = CategoryController.show_all(request.user.username, request.user.password, project.id)

@@ -1,11 +1,7 @@
 from bootstrap_datepicker_plus import *
-
-from datetimepicker.helpers import js_loader_url
-from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
-from datetimepicker.widgets import DateTimePicker
 
 
 class SignupForm(UserCreationForm):
