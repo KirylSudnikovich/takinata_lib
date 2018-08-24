@@ -56,7 +56,70 @@
                     </div>
                 </div>
             </div>
-
+            <h1 class="text-center">Notifications</h1>
+            <div class="col-md-4">
+                {% if red_list %}
+                    <div class="alert alert-danger alert-dismissable">
+                        <h4>
+                            <i class="icon fa fa-ban"></i> Alert!
+                        </h4>
+                    </div>
+                    <div class="box box-danger">
+                        <div class="box-body">
+                            {% for task in red_list %}
+                                <p class="lead">
+                                <td><a href="{% url 'tracker:task_info' task.id %}">{{ task.name }}</a> -
+                                    Remaining {{ task.to_deadline }} days
+                                </td>
+                                </p>
+                                <br>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="col-md-4">
+                {% if yellow_list %}
+                    <div class="alert alert-warning alert-dismissable">
+                        <h4>
+                            <i class="icon fa fa-warning"></i> Warning!
+                        </h4>
+                    </div>
+                    <div class="box box-warning">
+                        <div class="box-body">
+                            {% for task in yellow_list %}
+                                <p class="lead">
+                                <td><a href="{% url 'tracker:task_info' task.id %}">{{ task.name }}</a> -
+                                    Remaining {{ task.to_deadline }} days
+                                </td>
+                                </p>
+                                <br>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="col-md-4">
+                {% if green_list %}
+                    <div class="alert alert-success alert-dismissable">
+                        <h4>
+                            <i class="icon fa fa-check"></i> Keep calm
+                        </h4>
+                    </div>
+                    <div class="box box-success">
+                        <div class="box-body">
+                            {% for task in green_list %}
+                                <p class="lead">
+                                <td><a href="{% url 'tracker:task_info' task.id %}">{{ task.name }}</a> -
+                                    Remaining {{ task.to_deadline }} days
+                                </td>
+                                </p>
+                                <br>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
         </div>
     </section>
     <script src="https://unpkg.com/ionicons@4.3.0/dist/ionicons.js"></script>
