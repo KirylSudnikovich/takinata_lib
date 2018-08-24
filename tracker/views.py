@@ -193,6 +193,7 @@ class ColumnInfo(View):
             category = CategoryStorage.get_category_by_id(category_id)
             project = ProjectStorage.get_project_by_id(category.project_id)
             tasks = TaskStorage.get_all_tasks(category.id)
+            print(ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project))
             if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
                 return render(request, 'categories/info.html',
                               {'project': project, 'category': category, 'tasks': tasks})
