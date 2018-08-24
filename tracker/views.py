@@ -1,7 +1,6 @@
 import sys
 
 from django.contrib.auth import logout
-from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, render_to_response
 from django.template import RequestContext
 from django.views import View
@@ -135,7 +134,7 @@ class CategoryList(View):
             projects = ProjectStorage.show_all_for_user(username, password)
             category_list = []
             for project in projects:
-                categories = CategoryController.show_all(username, password, project.id)
+                categories = CategoryController.show_all(username, password, project)
                 category_list = category_list + categories
             return render(request, 'categories/list.html', {'category_list': category_list})
         else:
@@ -157,7 +156,6 @@ class ColumnNew(View):
                 for i in projects:
                     if project.name == i.name:
                         project = i
-                print("Project_id = ", request.POST['select_project'])
                 CategoryController.create_category(username=request.user.username, password=request.user.password,
                                                    project_id=project.id, name=name, description=description)
                 return redirect('tracker:column_list')
@@ -171,7 +169,6 @@ class ColumnInfo(View):
             category = CategoryStorage.get_category_by_id(category_id)
             project = ProjectStorage.get_project_by_id(category.project_id)
             tasks = TaskStorage.get_all_tasks(category.id)
-            print(ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project))
             if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
                 return render(request, 'categories/info.html',
                               {'project': project, 'category': category, 'tasks': tasks})
@@ -197,7 +194,7 @@ class ColumnDelete(View):
         if request.method == 'POST':
             if request.user.is_authenticated:
                 category = CategoryStorage.get_category_by_id(category_id)
-                CategoryStorage.delete_column_from_db(category)
+                CategoryStorage.delete_category_from_db(category)
                 return redirect('tracker:column_list')
             else:
                 return render(request, '501.html')
@@ -216,25 +213,23 @@ class ColumnEdit(View):
             return render(request, '501.html')
 
     def post(self, request, category_id):
-        if request.method == 'POST':
-            if request.user.is_authenticated:
-                project = ProjectStorage.get_project_by_id(CategoryStorage.get_category_by_id(category_id).project_id)
-                CategoryController.edit_name_by_id(request.user.username, request.user.password, project.id,
-                                                   category_id,
-                                                   request.POST['name'])
-                CategoryController.edit_desc_by_id(request.user.username, request.user.password, project.id,
-                                                   category_id,
-                                                   request.POST['description'])
-                return redirect("tracker:column_list")
-            else:
-                return render(request, '501.html')
+        if request.user.is_authenticated:
+            project = ProjectStorage.get_project_by_id(CategoryStorage.get_category_by_id(category_id).project_id)
+            CategoryController.edit_name_by_id(request.user.username, request.user.password, project.id,
+                                               category_id,
+                                               request.POST['name'])
+            CategoryController.edit_desc_by_id(request.user.username, request.user.password, project.id,
+                                               category_id,
+                                               request.POST['description'])
+            return redirect("tracker:column_info", category_id=category_id)
+        else:
+            return render(request, '501.html')
 
 
 class TaskList(View):
     def get(self, request):
         if request.user.is_authenticated:
             task_list = TaskController.get_all_users_task(request.user.username, request.user.password)
-
             available_tasks = []
             canceled_tasks = []
             for task in task_list:
@@ -254,7 +249,7 @@ class SampleView(FormView):
         projects = ProjectStorage.show_all_for_user(request.user.username, request.user.password)
         categories_to_send = []
         for project in projects:
-            categories = CategoryController.show_all(request.user.username, request.user.password, project.id)
+            categories = CategoryController.show_all(request.user.username, request.user.password, project)
             categories_to_send += categories
         return render(request, 'tasks/create.html', {'form': f, 'projects': projects, 'categories': categories_to_send})
 
@@ -314,7 +309,6 @@ class TaskInfo(View):
                         pass
                     else:
                         new_list.append(tsk)
-                print("task_list - ", task_list)
                 a_task = TaskController.get_assosiated_task(task)
                 parent_task = TaskController.get_parent_task(task)
                 subtasks = None
@@ -357,7 +351,7 @@ class TaskDelete(View):
             task = TaskStorage.get_task_by_id(task_id)
             project = ProjectStorage.get_project_by_id(task.project_id)
             category = CategoryStorage.get_category_by_id(task.category_id)
-            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
+            if ProjectController.check_permission(UserStorage.get_user_by_name(request.user.username), project):
                 return render(request, 'tasks/delete.html', {'project': project, 'category': category, 'task': task})
             else:
                 return render(request, '501.html')
@@ -369,7 +363,7 @@ class TaskDelete(View):
             if request.user.is_authenticated:
                 task = TaskStorage.get_task_by_id(task_id)
                 TaskController.delete_task(task.id)
-                return redirect('tracker:task_list')
+                return redirect('tracker:task_info', task_id=task_id)
             else:
                 return render(request, '501.html')
 
