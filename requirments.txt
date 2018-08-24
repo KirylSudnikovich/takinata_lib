@@ -1,0 +1,10 @@
+dj-config-url==0.1.1
+Django==2.0.7
+django-adminlte==1.2
+django-adminlte2==0.4.1
+django-bootstrap-datepicker-plus==3.0.4
+psycopg2==2.7.5
+pytz==2018.5
+SQLAlchemy==1.2.10
+takinata-lib==0.1
+whitenoise==3.2
