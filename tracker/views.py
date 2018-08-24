@@ -193,7 +193,11 @@ class ColumnInfo(View):
             category = CategoryStorage.get_category_by_id(category_id)
             project = ProjectStorage.get_project_by_id(category.project_id)
             tasks = TaskStorage.get_all_tasks(category.id)
-            return render(request, 'categories/info.html', {'project': project, 'category': category, 'tasks': tasks})
+            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
+                return render(request, 'categories/info.html',
+                              {'project': project, 'category': category, 'tasks': tasks})
+            else:
+                return render(request, '501.html')
         else:
             return render(request, '501.html')
 
@@ -203,7 +207,10 @@ class ColumnDelete(View):
         if request.user.is_authenticated:
             category = CategoryStorage.get_category_by_id(category_id)
             project = ProjectStorage.get_project_by_id(category.project_id)
-            return render(request, 'categories/delete.html', {'project': project, 'category': category})
+            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
+                return render(request, 'categories/delete.html', {'project': project, 'category': category})
+            else:
+                return render(request, '501.html')
         else:
             return render(request, '501.html')
 
@@ -222,7 +229,10 @@ class ColumnEdit(View):
         if request.user.is_authenticated:
             category = CategoryStorage.get_category_by_id(category_id)
             project = ProjectStorage.get_project_by_id(category.project_id)
-            return render(request, 'categories/edit.html', {'project': project, 'category': category})
+            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
+                return render(request, 'categories/edit.html', {'project': project, 'category': category})
+            else:
+                return render(request, '501.html')
         else:
             return render(request, '501.html')
 
@@ -296,44 +306,48 @@ class TaskInfo(View):
         if request.user.is_authenticated:
             task = TaskStorage.get_task_by_id(task_id)
             project = ProjectStorage.get_project_by_id(task.project_id)
-            category = CategoryStorage.get_category_by_id(task.category_id)
-            badge = None
-            status_badge = None
-            if task.priority == "max":
-                badge = "label label-danger"
-            elif task.priority == "medium":
-                badge = "label label-primary"
-            elif task.priority == "low":
-                badge = "label label-success"
-            status = None
-            archive = None
-            if task.is_archive == 0:
-                status_badge = "label label-danger"
-                status = "In progress"
-            elif task.is_archive == 1:
-                status_badge = "label label-success"
-                status = "Done"
-                archive = 1
-            task_list = TaskStorage.get_all_tasks(task.category_id)
-            new_list = []
-            for tsk in task_list:
-                if tsk.id == task_id:
-                    task_list.remove(tsk)
-            for tsk in task_list:
-                if tsk.is_archive == 1 or tsk.assosiated_task_id is not None or tsk.type == 2:
-                    pass
-                else:
-                    new_list.append(tsk)
-            print("task_list - ", task_list)
-            a_task = TaskController.get_assosiated_task(task)
-            parent_task = TaskController.get_parent_task(task)
-            subtasks = None
-            if task.is_parent == 1:
-                subtasks = TaskController.get_all_subtask(task)
-            return render(request, 'tasks/info.html',
-                          {'project': project, 'category': category, 'task': task, 'badge': badge, 'status': status,
-                           'status_badge': status_badge, 'archive': archive, 'task_list': new_list, 'a_task': a_task,
-                           'parent': parent_task, 'subtasks': subtasks})
+            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
+                category = CategoryStorage.get_category_by_id(task.category_id)
+                badge = None
+                status_badge = None
+                if task.priority == "max":
+                    badge = "label label-danger"
+                elif task.priority == "medium":
+                    badge = "label label-primary"
+                elif task.priority == "low":
+                    badge = "label label-success"
+                status = None
+                archive = None
+                if task.is_archive == 0:
+                    status_badge = "label label-danger"
+                    status = "In progress"
+                elif task.is_archive == 1:
+                    status_badge = "label label-success"
+                    status = "Done"
+                    archive = 1
+                task_list = TaskStorage.get_all_tasks(task.category_id)
+                new_list = []
+                for tsk in task_list:
+                    if tsk.id == task_id:
+                        task_list.remove(tsk)
+                for tsk in task_list:
+                    if tsk.is_archive == 1 or tsk.assosiated_task_id is not None or tsk.type == 2:
+                        pass
+                    else:
+                        new_list.append(tsk)
+                print("task_list - ", task_list)
+                a_task = TaskController.get_assosiated_task(task)
+                parent_task = TaskController.get_parent_task(task)
+                subtasks = None
+                if task.is_parent == 1:
+                    subtasks = TaskController.get_all_subtask(task)
+                return render(request, 'tasks/info.html',
+                              {'project': project, 'category': category, 'task': task, 'badge': badge, 'status': status,
+                               'status_badge': status_badge, 'archive': archive, 'task_list': new_list,
+                               'a_task': a_task,
+                               'parent': parent_task, 'subtasks': subtasks})
+            else:
+                return render(request, '501.html')
         else:
             return render(request, '501.html')
 
@@ -364,7 +378,10 @@ class TaskDelete(View):
             task = TaskStorage.get_task_by_id(task_id)
             project = ProjectStorage.get_project_by_id(task.project_id)
             category = CategoryStorage.get_category_by_id(task.category_id)
-            return render(request, 'tasks/delete.html', {'project': project, 'category': category, 'task': task})
+            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
+                return render(request, 'tasks/delete.html', {'project': project, 'category': category, 'task': task})
+            else:
+                return render(request, '501.html')
         else:
             return render(request, '501.html')
 
