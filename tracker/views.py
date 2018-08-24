@@ -61,7 +61,7 @@ class ProjectInfo(View):
             categories = CategoryController.show_all(request.user.username, request.user.password, project.id)
             task_list = []
             for category in categories:
-                tasks = TaskStorage.get_all_tasks(project.id, category.id)
+                tasks = TaskStorage.get_all_tasks(category.id)
                 task_list = task_list + tasks
             available_tasks = []
             canceled_tasks = []
@@ -196,7 +196,7 @@ class ColumnInfo(View):
         if request.user.is_authenticated:
             category = CategoryStorage.get_category_by_id(category_id)
             project = ProjectStorage.get_project_by_id(category.project_id)
-            tasks = TaskStorage.get_all_tasks(project.id, category.id)
+            tasks = TaskStorage.get_all_tasks(category.id)
             return render(request, 'categories/info.html', {'project': project, 'category': category, 'tasks': tasks})
         else:
             return render(request, '501.html')
@@ -318,7 +318,7 @@ class TaskInfo(View):
                 status_badge = "label label-success"
                 status = "Done"
                 archive = 1
-            task_list = TaskStorage.get_all_tasks(task.project_id, task.category_id)
+            task_list = TaskStorage.get_all_tasks(task.category_id)
             new_list = []
             for tsk in task_list:
                 if tsk.id == task_id:
