@@ -18,8 +18,12 @@
                             <p style="font-size: medium"><b>Title: </b>{{ task.name }}</p>
                             <p style="font-size: medium"><b>Description: </b>{{ task.desc }}</p>
                             {% if project %}
-                                <p style="font-size: medium"><b>Project : </b>{{ project.name }}</p>
-                                <p style="font-size: medium"><b>Category : </b>{{ category.name }}</p>
+                                <p style="font-size: medium"><b>Project : </b>
+                                    <a href="{% url 'tracker:project_info' task.project_id %}">{{ project.name }}</a>
+                                </p>
+                                <p style="font-size: medium"><b>Category : </b>
+                                    <a href="{% url 'tracker:column_info' task.category_id %}">{{ category.name }}</a>
+                                </p>
                             {% endif %}
                             <p style="font-size: medium"><b>Type: </b>
                                 {% if task.type == 1 %}
@@ -97,7 +101,6 @@
                     <div class="box-body">
                         <form action="" method="post">
                             {% csrf_token %}
-                            <a href="#" class="btn btn-block btn-primary">Edit</a>
                             {% if not archive and task.type == 2 %}
                                 <button type="submit" class="btn btn-block btn-primary" name="start_again">Start again
                                 </button>

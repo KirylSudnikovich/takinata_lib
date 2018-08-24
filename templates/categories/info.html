@@ -16,7 +16,8 @@
                     <div class="box-body">
                         <p><b>Title: </b>{{ category.name }}</p>
                         <p><b>Description: </b>{{ category.desc }}</p>
-                        <p><b>Project : </b>{{ project.name }}</p>
+                        <p><b>Project : </b>
+                            <a href="{% url 'tracker:project_info' project.id %}">{{ project.name }}</a></p>
                     </div>
                 </div>
             </div>
