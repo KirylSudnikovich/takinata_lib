@@ -1,6 +1,7 @@
 import sys
 
 from django.contrib.auth import logout
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, render_to_response
 from django.template import RequestContext
 from django.views import View
@@ -38,10 +39,7 @@ def index(request):
 class ProjectsList(View):
     def get(self, request):
         if request.user.is_authenticated:
-            username = request.user.username
-            password = request.user.password
-            project_list = ProjectStorage.show_all_for_user(username, password)
-            print(project_list)
+            project_list = ProjectStorage.show_all_for_user(request.user.username, request.user.password)
             return render(request, 'projects/list.html', {'project_list': project_list})
         else:
             return render(request, '501.html')
@@ -50,14 +48,9 @@ class ProjectsList(View):
 class ProjectNew(TemplateView):
     def post(self, request):
         if request.user.is_authenticated:
-            if request.method == 'POST':
-                name = request.POST['name']
-                description = request.POST['description']
-                if request.user.is_authenticated:
-                    username = request.user.username
-                    password = request.user.password
-                    ProjectController.create(username, password, name, description)
-                    return redirect('tracker:projects')
+            ProjectController.create(request.user.username, request.user.password, request.POST['name'],
+                                     request.POST['description'])
+            return redirect('tracker:projects')
         else:
             return render(request, '501.html')
 
@@ -66,30 +59,9 @@ class ProjectInfo(View):
     def get(self, request, project_id):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
-            categories = CategoryController.show_all(request.user.username, request.user.password, project.id)
-            task_list = []
-            for category in categories:
-                tasks = TaskStorage.get_all_tasks(category.id)
-                task_list = task_list + tasks
-            available_tasks = []
-            canceled_tasks = []
-            for task in task_list:
-                if task.is_archive == 0:
-                    available_tasks.append(task)
-                else:
-                    canceled_tasks.append(task)
-            task_list = available_tasks + canceled_tasks
-            all_users = UserStorage.get_all_users()
-            guys = ProjectStorage.get_all_persons_in_project_by_id(project)
-            all_guys = []
-            guys_names = []
-            for i in guys:
-                guys_names.append(i.username)
-            for i in all_users:
-                if i.username not in guys_names:
-                    all_guys.append(i)
-            creator = guys[0]
-            guys = guys[1:]
+            categories = CategoryStorage.get_all_categories(project)
+            task_list = ProjectController.get_project_tasks(request.user.username, request.user.password, project)
+            creator, guys, all_guys = ProjectController.get_users_not_in_project(project_id)
             return render(request, 'projects/info.html',
                           {'project': project, 'categories': categories, 'tasks': task_list, 'guys': guys,
                            'creator': creator, 'all_guys': all_guys})
@@ -125,12 +97,11 @@ class ProjectDelete(View):
             return render(request, '501.html')
 
     def post(self, request, project_id):
-        if request.method == 'POST':
-            if request.user.is_authenticated:
-                ProjectController.delete_by_id(request.user.username, request.user.password, project_id)
-                return redirect('tracker:projects')
-            else:
-                return render(request, '501.html')
+        if request.user.is_authenticated:
+            ProjectController.delete_by_id(request.user.username, request.user.password, project_id)
+            return redirect('tracker:projects')
+        else:
+            return render(request, '501.html')
 
 
 class ProjectEdit(View):
@@ -145,16 +116,15 @@ class ProjectEdit(View):
             return render(request, '501.html')
 
     def post(self, request, project_id):
-        if request.method == 'POST':
-            if request.user.is_authenticated:
-                project = ProjectStorage.get_project_by_id(project_id)
-                ProjectController.edit_name_by_id(request.user.username, request.user.password, project.id,
-                                                  request.POST['name'])
-                ProjectController.edit_description_by_id(request.user.username, request.user.password, project.id,
-                                                         request.POST['description'])
-                return redirect('tracker:projects')
-            else:
-                return render(request, '501.html')
+        if request.user.is_authenticated:
+            project = ProjectStorage.get_project_by_id(project_id)
+            ProjectController.edit_name_by_id(request.user.username, request.user.password, project.id,
+                                              request.POST['name'])
+            ProjectController.edit_description_by_id(request.user.username, request.user.password, project.id,
+                                                     request.POST['description'])
+            return redirect('tracker:project_info', project_id=project_id)
+        else:
+            return render(request, '501.html')
 
 
 class CategoryList(View):
@@ -438,7 +408,6 @@ def handler404(request, exception):
 
 def handler500(request):
     type_, value, traceback = sys.exc_info()
-    print(type_)
     response = render_to_response('500.html', {'type': type_, 'value': value})
     response.status_code = 500
     return response
