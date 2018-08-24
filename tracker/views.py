@@ -109,7 +109,10 @@ class ProjectDelete(View):
     def get(self, request, project_id):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
-            return render(request, 'projects/delete.html', {'project': project})
+            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
+                return render(request, 'projects/delete.html', {'project': project})
+            else:
+                return render(request, '501.html')
         else:
             return render(request, '501.html')
 
@@ -126,7 +129,10 @@ class ProjectEdit(View):
     def get(self, request, project_id):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
-            return render(request, 'projects/edit.html', {'project': project})
+            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
+                return render(request, 'projects/edit.html', {'project': project})
+            else:
+                return render(request, '501.html')
         else:
             return render(request, '501.html')
 
