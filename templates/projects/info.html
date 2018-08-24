@@ -36,15 +36,8 @@
             <div class="col-md-4">
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                            <form role="form" method="post">
-                                <div class="col-md-12">
-                                {% csrf_token %}
-                                <h3 class="box-title" style="vertical-align: middle; display: inline-block; margin: 10px"> Categories</h3>
-                                <button type="submit" name="add_column" class="btn btn-primary pull-right col-md-4">
-                                    Create
-                                </button>
-                                </div>
-                            </form>
+                        <h3 class="box-title"
+                            style="vertical-align: middle; display: inline-block; margin: 10px"> Categories</h3>
                     </div>
                     <div class="box-body">
                         {% for category in categories %}
@@ -61,26 +54,19 @@
             <div class="col-md-4">
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                            <form role="form" method="post">
-                                <div class="col-md-12">
-                                {% csrf_token %}
-                                    <h3 class="box-title" style="vertical-align: middle; display: inline-block; margin: 10px"> Tasks</h3>
-                                    <button type="submit" name="add_task" class="btn btn-primary pull-right col-md-4">
-                                        Create
-                                    </button>
-                                </div>
-                            </form>
+                        <h3 class="box-title" style="vertical-align: middle; display: inline-block; margin: 10px">
+                            Tasks</h3>
                     </div>
                     <div class="box-body">
                         {% for task in tasks %}
                             {% if task.is_archive != 1 %}
-                            <a style="color: #000000" class="text"
-                                href="{% url 'tracker:task_info' task.id %}">
-                                <h4>{{ task.name }}</h4>
-                            </a>
+                                <a style="color: #000000" class="text"
+                                   href="{% url 'tracker:task_info' task.id %}">
+                                    <h4>{{ task.name }}</h4>
+                                </a>
                             {% else %}
                                 <a style="color: #000000" class="text"
-                                href="{% url 'tracker:task_info' task.id %}">
+                                   href="{% url 'tracker:task_info' task.id %}">
                                     <h4><s>{{ task.name }}</s></h4>
                                 </a>
                             {% endif %}
@@ -124,7 +110,8 @@
                                         <row>
                                             <div class="col-md-5">
                                                 <label>
-                                                    <select style="display: inline-block" class="form-control js-example-basic-single"
+                                                    <select style="display: inline-block"
+                                                            class="form-control js-example-basic-single"
                                                             name="remove_select" id="remove_select">
                                                         {% for user in guys %}
                                                             <option>{{ user.username }}</option>
@@ -152,11 +139,13 @@
                                         <row>
                                             <div class="col-md-5">
                                                 <label>
-                                                    <input name="add_select" class="form-control" placeholder="username">
+                                                    <input name="add_select" class="form-control"
+                                                           placeholder="username">
                                                 </label>
                                             </div>
                                             <div class="col-md-5 pull-right">
-                                                <button type="submit" name="add_to_project" class="btn btn-primary btn-block">Add
+                                                <button type="submit" name="add_to_project"
+                                                        class="btn btn-primary btn-block">Add
                                                 </button>
                                             </div>
                                         </row>
@@ -170,8 +159,8 @@
         </div>
     </section>
     <script>
-    $(document).ready(function() {
-        $("#remove_select").select2({ width: 'resolve' });
-    });
+        $(document).ready(function () {
+            $("#remove_select").select2({width: 'resolve'});
+        });
     </script>
 {% endblock %}

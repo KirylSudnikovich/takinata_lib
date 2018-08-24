@@ -103,16 +103,6 @@ class ProjectInfo(View):
                 ProjectController.delete_person_from_project(request.user.username, request.user.password, project,
                                                              user)
                 return redirect('tracker:project_info', project_id)
-            elif 'add_column' in request.POST:
-                project = ProjectStorage.get_project_by_id(project_id)
-                return render(request, 'categories/create.html', {'project': project})
-            elif 'add_task' in request.POST:
-                project = ProjectStorage.get_project_by_id(project_id)
-                categories_to_send = CategoryStorage.get_all_categories(project.id)
-                projects = [project, ]
-                f = ToDoForm
-                return render(request, 'tasks/create.html',
-                              {'form': f, 'projects': projects, 'categories': categories_to_send})
 
 
 class ProjectDelete(View):
@@ -248,8 +238,8 @@ class ColumnEdit(View):
 class TaskList(View):
     def get(self, request):
         if request.user.is_authenticated:
-            username = request.user.username
-            task_list = TaskStorage.get_all_user_task(UserStorage.get_user_by_name(username))
+            task_list = TaskController.get_all_users_task(request.user.username, request.user.password)
+
             available_tasks = []
             canceled_tasks = []
             for task in task_list:
@@ -285,12 +275,12 @@ class SampleView(FormView):
             end_time = f['end_time'].value()
             priority = request.POST['priority']
             project_id = int(request.POST.get('select_project', False))
-            column_id = int(request.POST.get('select_column', False))
+            category_id = int(request.POST.get('select_column', False))
             task_type = int(request.POST.get('select_type', False))
-            if project_id == False or column_id == False:
+            if project_id == False or category_id == False:
                 TaskController.add_task(request.user.username, request.user.password, None, None, name, desc, task_type,
                                         start_date, start_time, end_date, end_time, priority)
-            TaskController.add_task(request.user.username, request.user.password, project_id, column_id, name, desc,
+            TaskController.add_task(request.user.username, request.user.password, project_id, category_id, name, desc,
                                     task_type, start_date, start_time, end_date, end_time, priority)
             return redirect('tracker:task_list')
 
@@ -300,7 +290,7 @@ class TaskInfo(View):
         if request.user.is_authenticated:
             task = TaskStorage.get_task_by_id(task_id)
             project = ProjectStorage.get_project_by_id(task.project_id)
-            category = CategoryStorage.get_column_by_id(task.category_id)
+            category = CategoryStorage.get_category_by_id(task.category_id)
             badge = None
             status_badge = None
             if task.priority == "max":

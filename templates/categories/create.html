@@ -29,7 +29,7 @@
                                 {% if projects %}
                                     <select class="form-control js-example-basic-single" name="select_project">
                                         {% for project in projects %}
-                                            <option>{{ project.name }}</option>
+                                            <option value="{{ project.id }}">{{ project.name }}</option>
                                         {% endfor %}
                                     </select>
                                 {% elif project %}
