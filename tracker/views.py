@@ -156,7 +156,7 @@ class ColumnInfo(View):
             project = ProjectController.get_project_by_id(request.user.username, request.user.password,
                                                           category.project_id)
             tasks = TaskStorage.get_all_tasks(category.id)
-            if ProjectController.check_permission(request.user.username, project.id):
+            if ProjectController.check_permission(request.user.username, request.user.password, project.id):
                 return render(request, 'categories/info.html',
                               {'project': project, 'category': category, 'tasks': tasks})
             else:
@@ -263,9 +263,9 @@ class TaskInfo(View):
     def get(self, request, task_id):
         if request.user.is_authenticated:
             task = TaskStorage.get_task_by_id(task_id)
-            project = ProjectStorage.get_project_by_id(task.project_id)
-            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
-                category = CategoryStorage.get_category_by_id(task.category_id)
+            project = ProjectController.get_project_by_id(request.user.username, request.user.password, task.project_id)
+            if ProjectController.check_permission(request.user.username, request.user.password, project.id):
+                category = CategoryController.get_category_by_id(task.category_id)
                 badge = None
                 status_badge = None
                 if task.priority == "max":
@@ -333,9 +333,9 @@ class TaskDelete(View):
     def get(self, request, task_id):
         if request.user.is_authenticated:
             task = TaskStorage.get_task_by_id(task_id)
-            project = ProjectStorage.get_project_by_id(task.project_id)
-            category = CategoryStorage.get_category_by_id(task.category_id)
-            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
+            project = ProjectController.get_project_by_id(request.user.username, request.user.password, task.project_id)
+            category = CategoryController.get_category_by_id(task.category_id)
+            if ProjectController.check_permission(request.user.username, request.user.password, project.id):
                 return render(request, 'tasks/delete.html', {'project': project, 'category': category, 'task': task})
             else:
                 return render(request, '501.html')
@@ -347,7 +347,7 @@ class TaskDelete(View):
             if request.user.is_authenticated:
                 task = TaskStorage.get_task_by_id(task_id)
                 TaskController.delete_task(task.id)
-                return redirect('tracker:task_info', task_id=task_id)
+                return redirect('tracker:task_list')
             else:
                 return render(request, '501.html')
 
