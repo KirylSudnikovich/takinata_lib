@@ -140,7 +140,8 @@ class ColumnNew(View):
             if request.method == 'POST':
                 name = request.POST['name']
                 description = request.POST['description']
-                project = ProjectStorage.get_project_by_id(request.POST['select_project'])
+                project = ProjectController.get_project_by_id(request.user.username, request.user.password,
+                                                              request.POST['select_project'])
                 CategoryController.create_category(username=request.user.username, password=request.user.password,
                                                    project_id=project.id, name=name, description=description)
                 return redirect('tracker:column_list')
@@ -151,10 +152,11 @@ class ColumnNew(View):
 class ColumnInfo(View):
     def get(self, request, category_id):
         if request.user.is_authenticated:
-            category = CategoryStorage.get_category_by_id(category_id)
-            project = ProjectStorage.get_project_by_id(category.project_id)
+            category = CategoryController.get_category_by_id(category_id)
+            project = ProjectController.get_project_by_id(request.user.username, request.user.password,
+                                                          category.project_id)
             tasks = TaskStorage.get_all_tasks(category.id)
-            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
+            if ProjectController.check_permission(request.user.username, project.id):
                 return render(request, 'categories/info.html',
                               {'project': project, 'category': category, 'tasks': tasks})
             else:
@@ -166,9 +168,10 @@ class ColumnInfo(View):
 class ColumnDelete(View):
     def get(self, request, category_id):
         if request.user.is_authenticated:
-            category = CategoryStorage.get_category_by_id(category_id)
-            project = ProjectStorage.get_project_by_id(category.project_id)
-            if ProjectStorage.is_admin(UserStorage.get_user_by_name(request.user.username), project):
+            category = CategoryController.get_category_by_id(category_id)
+            project = ProjectController.get_project_by_id(request.user.username, request.user.password,
+                                                          category.project_id)
+            if ProjectController.is_admin(request.user.username, project.id):
                 return render(request, 'categories/delete.html', {'project': project, 'category': category})
             else:
                 return render(request, '501.html')
@@ -176,7 +179,7 @@ class ColumnDelete(View):
             return render(request, '501.html')
 
     def post(self, request, category_id):
-        category = CategoryStorage.get_category_by_id(category_id)
+        category = CategoryController.get_category_by_id(category_id)
         CategoryController.delete_category(request.user.username, request.user.password, category.project_id,
                                            category.name)
         return redirect('tracker:column_list')
@@ -185,9 +188,10 @@ class ColumnDelete(View):
 class ColumnEdit(View):
     def get(self, request, category_id):
         if request.user.is_authenticated:
-            category = CategoryStorage.get_category_by_id(category_id)
-            project = ProjectStorage.get_project_by_id(category.project_id)
-            if ProjectStorage.is_admin(UserStorage.get_user_by_name(request.user.username), project):
+            category = CategoryController.get_category_by_id(category_id)
+            project = ProjectController.get_project_by_id(request.user.username, request.user.password,
+                                                          category.project_id)
+            if ProjectController.is_admin(request.user.username, project.id):
                 return render(request, 'categories/edit.html', {'project': project, 'category': category})
             else:
                 return render(request, '501.html')
@@ -195,7 +199,8 @@ class ColumnEdit(View):
             return render(request, '501.html')
 
     def post(self, request, category_id):
-        project = ProjectStorage.get_project_by_id(CategoryStorage.get_category_by_id(category_id).project_id)
+        project = ProjectController.get_project_by_id(request.user.username, request.user.password,
+                                                      CategoryController.get_category_by_id(category_id).project_id)
         CategoryController.edit_name_by_id(request.user.username, request.user.password, project.id,
                                            category_id,
                                            request.POST['name'])
