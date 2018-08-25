@@ -7,10 +7,8 @@ from django.views import View
 from django.views.generic import TemplateView, FormView
 from lib.controllers.category import CategoryController
 from lib.controllers.project import ProjectController
-from lib.storage.category import CategoryStorage
-from lib.storage.project import ProjectStorage
-from lib.storage.user import UserStorage
 from lib.controllers.task import TaskController
+from lib.controllers.user import UserController
 from lib.storage.task import TaskStorage
 from .controllers.tracker_controller import BugController, all_users, all_projects, all_categories, all_tasks
 from .forms import ToDoForm
@@ -38,7 +36,7 @@ def index(request):
 class ProjectsList(View):
     def get(self, request):
         if request.user.is_authenticated:
-            project_list = ProjectStorage.show_all_for_user(request.user.username, request.user.password)
+            project_list = ProjectController.show_all(request.user.username, request.user.password)
             return render(request, 'projects/list.html', {'project_list': project_list})
         else:
             return render(request, '501.html')
@@ -57,13 +55,8 @@ class ProjectNew(TemplateView):
 class ProjectInfo(View):
     def get(self, request, project_id):
         if request.user.is_authenticated:
-            project = ProjectStorage.get_project_by_id(project_id)
-            categories = CategoryStorage.get_all_categories(project)
-            task_list = ProjectController.get_project_tasks(request.user.username, request.user.password, project)
-            creator, guys, all_guys = ProjectController.get_users_not_in_project(project_id)
-            return render(request, 'projects/info.html',
-                          {'project': project, 'categories': categories, 'tasks': task_list, 'guys': guys,
-                           'creator': creator, 'all_guys': all_guys})
+            dict_to_render = ProjectController.show(request.user.username, request.user.password, project_id)
+            return render(request, 'projects/info.html', dict_to_render)
         else:
             return render(request, '501.html')
 
@@ -71,14 +64,13 @@ class ProjectInfo(View):
         if request.method == 'POST':
             if 'add_to_project' in request.POST:
                 username = request.POST['add_select']
-                project = ProjectStorage.get_project_by_id(project_id)
-                user = UserStorage.get_user_by_name(username)
-                ProjectController.add_person_to_project(request.user.username, request.user.password, project, user)
+                user = UserController.get_user_by_name(username)
+                ProjectController.add_person_to_project(request.user.username, request.user.password, project_id, user)
                 return redirect('tracker:project_info', project_id)
             elif 'remove_from_project' in request.POST:
                 username = request.POST['remove_select']
-                project = ProjectStorage.get_project_by_id(project_id)
-                user = UserStorage.get_user_by_name(username)
+                project = ProjectController.get_project_by_id(request.user.username, request.user.password, project_id)
+                user = UserController.get_user_by_name(username)
                 ProjectController.delete_person_from_project(request.user.username, request.user.password, project,
                                                              user)
                 return redirect('tracker:project_info', project_id)
@@ -87,9 +79,11 @@ class ProjectInfo(View):
 class ProjectDelete(View):
     def get(self, request, project_id):
         if request.user.is_authenticated:
-            project = ProjectStorage.get_project_by_id(project_id)
-            ProjectStorage.is_admin(UserStorage.get_user_by_name(request.user.username), project)
-            return render(request, 'projects/delete.html', {'project': project})
+            if ProjectController.is_admin(request.user.username, project_id):
+                project = ProjectController.get_project_by_id(request.user.username, request.user.password, project_id)
+                return render(request, 'projects/delete.html', {'project': project})
+            else:
+                return render(request, '501.html')
         else:
             return render(request, '501.html')
 
@@ -101,15 +95,17 @@ class ProjectDelete(View):
 class ProjectEdit(View):
     def get(self, request, project_id):
         if request.user.is_authenticated:
-            project = ProjectStorage.get_project_by_id(project_id)
-            if ProjectStorage.is_admin(UserStorage.get_user_by_name(request.user.username), project):
+            if ProjectController.is_admin(request.user.username, project_id):
+                project = ProjectController.get_project_by_id(request.user.username, request.user.password, project_id)
                 return render(request, 'projects/edit.html', {'project': project})
+            else:
+                return render(request, '501.html')
         else:
             return render(request, '501.html')
 
     def post(self, request, project_id):
         if request.user.is_authenticated:
-            project = ProjectStorage.get_project_by_id(project_id)
+            project = ProjectController.get_project_by_id(request.user.username, request.user.password, project_id)
             ProjectController.edit_name_by_id(request.user.username, request.user.password, project.id,
                                               request.POST['name'])
             ProjectController.edit_description_by_id(request.user.username, request.user.password, project.id,
@@ -124,7 +120,7 @@ class CategoryList(View):
         if request.user.is_authenticated:
             username = request.user.username
             password = request.user.password
-            projects = ProjectStorage.show_all_for_user(username, password)
+            projects = ProjectController.show_all(username, password)
             category_list = []
             for project in projects:
                 categories = CategoryController.show_all(username, password, project)
@@ -136,7 +132,7 @@ class CategoryList(View):
 
 class ColumnNew(View):
     def get(self, request):
-        projects = ProjectStorage.show_all_for_user(request.user.username, request.user.password)
+        projects = ProjectController.show_all(request.user.username, request.user.password)
         return render(request, 'categories/create.html', {'projects': projects})
 
     def post(self, request):
@@ -172,7 +168,7 @@ class ColumnDelete(View):
         if request.user.is_authenticated:
             category = CategoryStorage.get_category_by_id(category_id)
             project = ProjectStorage.get_project_by_id(category.project_id)
-            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
+            if ProjectStorage.is_admin(UserStorage.get_user_by_name(request.user.username), project):
                 return render(request, 'categories/delete.html', {'project': project, 'category': category})
             else:
                 return render(request, '501.html')
@@ -180,13 +176,10 @@ class ColumnDelete(View):
             return render(request, '501.html')
 
     def post(self, request, category_id):
-        if request.method == 'POST':
-            if request.user.is_authenticated:
-                category = CategoryStorage.get_category_by_id(category_id)
-                CategoryStorage.delete_category_from_db(category)
-                return redirect('tracker:column_list')
-            else:
-                return render(request, '501.html')
+        category = CategoryStorage.get_category_by_id(category_id)
+        CategoryController.delete_category(request.user.username, request.user.password, category.project_id,
+                                           category.name)
+        return redirect('tracker:column_list')
 
 
 class ColumnEdit(View):
@@ -194,7 +187,7 @@ class ColumnEdit(View):
         if request.user.is_authenticated:
             category = CategoryStorage.get_category_by_id(category_id)
             project = ProjectStorage.get_project_by_id(category.project_id)
-            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
+            if ProjectStorage.is_admin(UserStorage.get_user_by_name(request.user.username), project):
                 return render(request, 'categories/edit.html', {'project': project, 'category': category})
             else:
                 return render(request, '501.html')
@@ -202,17 +195,14 @@ class ColumnEdit(View):
             return render(request, '501.html')
 
     def post(self, request, category_id):
-        if request.user.is_authenticated:
-            project = ProjectStorage.get_project_by_id(CategoryStorage.get_category_by_id(category_id).project_id)
-            CategoryController.edit_name_by_id(request.user.username, request.user.password, project.id,
-                                               category_id,
-                                               request.POST['name'])
-            CategoryController.edit_desc_by_id(request.user.username, request.user.password, project.id,
-                                               category_id,
-                                               request.POST['description'])
-            return redirect("tracker:column_info", category_id=category_id)
-        else:
-            return render(request, '501.html')
+        project = ProjectStorage.get_project_by_id(CategoryStorage.get_category_by_id(category_id).project_id)
+        CategoryController.edit_name_by_id(request.user.username, request.user.password, project.id,
+                                           category_id,
+                                           request.POST['name'])
+        CategoryController.edit_desc_by_id(request.user.username, request.user.password, project.id,
+                                           category_id,
+                                           request.POST['description'])
+        return redirect("tracker:column_info", category_id=category_id)
 
 
 class TaskList(View):
@@ -235,7 +225,7 @@ class TaskList(View):
 class SampleView(FormView):
     def get(self, request, **kwargs):
         f = ToDoForm
-        projects = ProjectStorage.show_all_for_user(request.user.username, request.user.password)
+        projects = ProjectController.show_all(request.user.username, request.user.password)
         categories_to_send = []
         for project in projects:
             categories = CategoryController.show_all(request.user.username, request.user.password, project)
@@ -340,7 +330,7 @@ class TaskDelete(View):
             task = TaskStorage.get_task_by_id(task_id)
             project = ProjectStorage.get_project_by_id(task.project_id)
             category = CategoryStorage.get_category_by_id(task.category_id)
-            if ProjectController.check_permission(UserStorage.get_user_by_name(request.user.username), project):
+            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
                 return render(request, 'tasks/delete.html', {'project': project, 'category': category, 'task': task})
             else:
                 return render(request, '501.html')
