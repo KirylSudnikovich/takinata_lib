@@ -88,29 +88,22 @@ class ProjectDelete(View):
     def get(self, request, project_id):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
-            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
-                return render(request, 'projects/delete.html', {'project': project})
-            else:
-                return render(request, '501.html')
+            ProjectStorage.is_admin(UserStorage.get_user_by_name(request.user.username), project)
+            return render(request, 'projects/delete.html', {'project': project})
         else:
             return render(request, '501.html')
 
     def post(self, request, project_id):
-        if request.user.is_authenticated:
-            ProjectController.delete_by_id(request.user.username, request.user.password, project_id)
-            return redirect('tracker:projects')
-        else:
-            return render(request, '501.html')
+        ProjectController.delete_by_id(request.user.username, request.user.password, project_id)
+        return redirect('tracker:projects')
 
 
 class ProjectEdit(View):
     def get(self, request, project_id):
         if request.user.is_authenticated:
             project = ProjectStorage.get_project_by_id(project_id)
-            if ProjectStorage.check_permission(UserStorage.get_user_by_name(request.user.username), project):
+            if ProjectStorage.is_admin(UserStorage.get_user_by_name(request.user.username), project):
                 return render(request, 'projects/edit.html', {'project': project})
-            else:
-                return render(request, '501.html')
         else:
             return render(request, '501.html')
 
@@ -152,10 +145,6 @@ class ColumnNew(View):
                 name = request.POST['name']
                 description = request.POST['description']
                 project = ProjectStorage.get_project_by_id(request.POST['select_project'])
-                projects = ProjectStorage.show_all_for_user(request.user.username, request.user.password)
-                for i in projects:
-                    if project.name == i.name:
-                        project = i
                 CategoryController.create_category(username=request.user.username, password=request.user.password,
                                                    project_id=project.id, name=name, description=description)
                 return redirect('tracker:column_list')
