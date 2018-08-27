@@ -1,3 +1,6 @@
+from django.conf.urls.static import static
+
+from VersionTwo import settings
 from tracker.views import ProjectNew, ProjectsList, ProjectInfo, ProjectDelete, ProjectEdit, ColumnNew, ColumnInfo, \
     ColumnDelete, ColumnEdit, BugReport, BugReportList, CategoryList, TaskList, SampleView, TaskInfo, TaskDelete
 from . import views
@@ -23,6 +26,6 @@ urlpatterns = [
     path('tasks/<int:task_id>/', TaskInfo.as_view(), name='task_info'),
     path('tasks/create', SampleView.as_view(), name='task_create'),
     path('tasks/<int:task_id>/delete', TaskDelete.as_view(), name='task_delete'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'views.handler404'

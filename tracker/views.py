@@ -27,6 +27,8 @@ def index(request):
                                 'tasks': all_tasks(), 'red_list': red_list, 'yellow_list': yellow_list,
                                 'green_list': green_list}
             response = render(request, 'index.html', dict_to_template)
+        else:
+            response = render(request, 'welcome.html')
     else:
         response = redirect('accounts:registration')
         response.set_cookie(key='been_before', value='1')
@@ -106,8 +108,9 @@ class ProjectEdit(View):
     def post(self, request, project_id):
         if request.user.is_authenticated:
             project = ProjectController.get_project_by_id(request.user.username, request.user.password, project_id)
-            ProjectController.edit_name_by_id(request.user.username, request.user.password, project.id,
-                                              request.POST['name'])
+            if project.name != request.POST['name']:
+                ProjectController.edit_name_by_id(request.user.username, request.user.password, project.id,
+                                                  request.POST['name'])
             ProjectController.edit_description_by_id(request.user.username, request.user.password, project.id,
                                                      request.POST['description'])
             return redirect('tracker:project_info', project_id=project_id)
@@ -293,8 +296,12 @@ class TaskInfo(View):
                         pass
                     else:
                         new_list.append(tsk)
-                a_task = TaskController.get_assosiated_task(task)
-                parent_task = TaskController.get_parent_task(task)
+                a_task = None
+                parent_task = None
+                if task.assosiated_task_id is not None:
+                    a_task = TaskController.get_assosiated_task(request.user.username, request.user.password, task)
+                if task.parent_task_id is not None:
+                    parent_task = TaskController.get_parent_task(request.user.username, request.user.password, task)
                 subtasks = None
                 if task.is_parent == 1:
                     subtasks = TaskController.get_all_subtask(task)
