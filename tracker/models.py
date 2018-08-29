@@ -1,10 +1,10 @@
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from lib.conf import conf
+from lib.conf import get_path_to_db
 
 Base = declarative_base()
 
-engine = create_engine(conf.get_path_to_db())
+engine = create_engine(get_path_to_db())
 
 
 class BugReport(Base):

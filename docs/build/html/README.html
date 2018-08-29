@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Takinata tracker &mdash; Takinata Lib 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to Takinata Lib’s documentation!" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Takinata Lib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Takinata tracker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-install">How to install?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use-takinata">How to use Takinata?</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Takinata Lib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Takinata tracker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/README.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="takinata-tracker">
+<span id="takinata-tracker"></span><h1>Takinata tracker<a class="headerlink" href="#takinata-tracker" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Add, edit, and delete users</li>
+<li>Add, edit, delete a project. Add and remove artists to a project</li>
+<li>Create, delete, edit a column</li>
+<li>Create, delete, and modify tasks</li>
+<li>Demonstrating trash bin’s files</li>
+<li>Adding/Removing new trash bins</li>
+<li>Showing all projects of user</li>
+<li>Showing all columns of user</li>
+<li>Showing all tasks of user</li>
+<li>Ability to create subtasks</li>
+</ul>
+<div class="section" id="how-to-install">
+<span id="how-to-install"></span><h2>How to install?<a class="headerlink" href="#how-to-install" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ virtualenv env
+$ ./env/bin/python setupconsole.py install
+$ ./env/bin/python setuplib.py install
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-use-takinata">
+<span id="how-to-use-takinata"></span><h2>How to use Takinata?<a class="headerlink" href="#how-to-use-takinata" title="Permalink to this headline">¶</a></h2>
+<p><strong>User</strong></p>
+<ul class="simple">
+<li>$ user register &gt; Register new user</li>
+<li>$ user delete &gt; Remove user</li>
+<li>$ user edit &gt; Edit user</li>
+</ul>
+<p><strong>Project</strong></p>
+<ul class="simple">
+<li>$ project add &gt; Create new project</li>
+<li>$ project delete &gt; Delete project</li>
+<li>$ project edit &gt; Edit project</li>
+<li>$ project show all &gt; Show list of projects for current user</li>
+<li>$ project members add &gt; Add new artist to project</li>
+<li>$ project members delete &gt; Delete artist from project</li>
+</ul>
+<p><strong>Column</strong></p>
+<ul class="simple">
+<li>$ column add &gt; Create column to project</li>
+<li>$ column delete &gt; Remove column from project</li>
+<li>$ column edit &gt; Edit column</li>
+<li>$ column show all &gt; Show all columns of the project</li>
+</ul>
+<p><strong>Task</strong></p>
+<ul class="simple">
+<li>$ task add &gt; Create new task</li>
+<li>$ task delete &gt; Remove task</li>
+<li>$ task edit &gt; Edit task</li>
+<li>$ task show all &gt; Show all tasks of the column</li>
+<li>$ task set_subtask &gt; Set task1 as a subtask of task2</li>
+</ul>
+<p>Sudnikovich Kirill
+Group 653502</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to Takinata Lib’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, 0311snitch.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
