@@ -39,6 +39,7 @@ Content:
 
     $ python setuplib.py install
     $ python setupconsole.py install
+  
     
 or
 
@@ -53,7 +54,8 @@ if you want to install web application
 To test the application, write 
 
     $ takinata -h
-    to the console. This is a keyword that you can use to print to the console to 
+    
+to the console. This is a keyword that you can use to print to the console to 
 interact with the library. The console parser provides communication with 
 the library and thus forms a single application.
 For start web application write:
@@ -70,6 +72,7 @@ and open andress localhost:8000 in your browser
 
     $ cd tests
     $ python -m unittest
+    
 or
 
     $ cd tests
