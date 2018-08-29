@@ -1,5 +1,6 @@
-# Takinata tracker #
+# Takinata Lib #
 
+## About ##
 * Add, edit, and delete users
 * Add, edit, delete a project. Add and remove artists to a project
 * Create, delete, edit a column
@@ -11,13 +12,13 @@
 * Showing all tasks of user
 * Ability to create subtasks
   
-### How to install? ###
+## How to install? ##
 
     $ virtualenv env
     $ ./env/bin/python setupconsole.py install
     $ ./env/bin/python setuplib.py install
 
-### How to use Takinata? ###
+## How to use Takinata? ###
 
 **User**
 
