@@ -36,15 +36,15 @@ Content:
 1. Swap to your virtual enviroment
 2. Write the following command in terminal
 
-
+```bash
     $ python setuplib.py install
     $ python setupconsole.py install
-  
+```  
     
 or
-
+```bash
     $ pip install -r requirements.txt
-    
+```  
 if you want to install web application
 
  During the installation of the library all the necessary dependencies are 
@@ -52,16 +52,17 @@ if you want to install web application
  
 ## The use of the application ##
 To test the application, write 
-
+```bash
     $ takinata -h
-    
+``` 
 to the console. This is a keyword that you can use to print to the console to 
 interact with the library. The console parser provides communication with 
 the library and thus forms a single application.
 For start web application write:
 
+```bash
     $ python manage.py runserver
-
+```
 and open andress localhost:8000 in your browser
    
     
@@ -69,15 +70,15 @@ and open andress localhost:8000 in your browser
 1. Go to the library directory
 2. Write
 
-
+```bash
     $ cd tests
     $ python -m unittest
-    
-or
 
+```
+```bash
     $ cd tests
     $ python run_tests.py
-
+```
 ## Author ##
 
 > Sudnikovich Kirill
