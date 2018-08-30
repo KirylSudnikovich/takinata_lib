@@ -83,13 +83,30 @@
 <li class="toctree-l1"><a class="reference internal" href="README.html">Start work with Takinata</a></li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Repository structure</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Classes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#about">About</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#library-features">Library features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-contents-of-the-repository">The contents of the repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#how-to-install">How to install?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-use-of-the-application">The use of the application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#running-tests">Running tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#author">Author</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#takinata-lib">Takinata lib</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#models-folder">models folder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#user">User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project">Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#category">Category</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#task">Task</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#controllers-folder">controllers folder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#usercontoller">UserContoller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#projectcontroller">ProjectController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#category">Category</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#taskcontroller">TaskController</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#storage-folder">storage folder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#userstorage">UserStorage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#projectstorage">ProjectStorage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#categorystorage">CategoryStorage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#taskstorage">TaskStorage</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a></li>
@@ -159,93 +176,87 @@
             
   <div class="section" id="classes">
 <span id="classes"></span><h1>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="about">
-<span id="about"></span><h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
-<p>Takinata lib is a library written in Python, which is a task tracker
-application that can help you manage your personal time or, if you are a
-team leader, set tasks correctly and share time within the team.
-You can use this library both to develop your console application and to
-develop a complete web application based on this library.</p>
-</div>
-<div class="section" id="library-features">
-<span id="library-features"></span><h2>Library features<a class="headerlink" href="#library-features" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="takinata-lib">
+<span id="takinata-lib"></span><h2>Takinata lib<a class="headerlink" href="#takinata-lib" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="models-folder">
+<span id="models-folder"></span><h3>models folder<a class="headerlink" href="#models-folder" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="user">
+<span id="user"></span><h4>User<a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h4>
+<p>User - user model, that consists all User fields:</p>
 <ul class="simple">
-<li>User registration system. Log in/out system in web application</li>
-<li>Add, edit, delete a project. Add/Remove executors to/from a project</li>
-<li>Create, delete, edit a category for tasks</li>
-<li>Create, delete, and modify tasks</li>
-<li>Showing all projects of user</li>
-<li>Showing all columns of user</li>
-<li>Showing all tasks of user</li>
-<li>Ability to create subtasks</li>
-<li>Ability to create assosiation between to tasks</li>
-<li>Pretty presentation page in web application</li>
+<li>username - user name, can use as login</li>
+<li>password - user password</li>
+<li>email - user email (no email activation)</li>
 </ul>
 </div>
-<div class="section" id="the-contents-of-the-repository">
-<span id="the-contents-of-the-repository"></span><h2>The contents of the repository<a class="headerlink" href="#the-contents-of-the-repository" title="Permalink to this headline">¶</a></h2>
-<p>In addition to the library itself, the content of the repository includes a command-line parser that allows you to
-interact with the library.</p>
-<p>Content:</p>
+<div class="section" id="project">
+<span id="project"></span><h4>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li>takinata lib</li>
-<li>console parser for lib</li>
-<li>web application</li>
+<li>name - the name of the project to be displayed in the project list. The name must be unique for each user. That is, two projects for one user will not be created, and for different projects will be created</li>
+<li>description - the description of the project, which should reflect its essence. Can be empty</li>
+<li>user_id - id of the user who created the project</li>
+<li>users - list (array) of all users participating in this project</li>
 </ul>
 </div>
-<div class="section" id="how-to-install">
-<span id="how-to-install"></span><h2>How to install?<a class="headerlink" href="#how-to-install" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li>Swap to your virtual enviroment</li>
-<li>Write the following command in terminal</li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    $ python setuplib.py install
-    $ python setupconsole.py install
-</pre></div>
+<div class="section" id="category">
+<span id="category"></span><h4>Category<a class="headerlink" href="#category" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>name - name of category. It must be unique within one project</li>
+<li>desc - a description that should reflect the essence of what the category contains. Can be empty</li>
+<li>project_id - project id to which this category belongs</li>
+</ul>
 </div>
-<p>or</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    $ pip install -r requirements.txt
-</pre></div>
-</div>
-<p>if you want to install web application</p>
-<p>During the installation of the library all the necessary dependencies are
-installed automatically and you can start using the application immediately</p>
-</div>
-<div class="section" id="the-use-of-the-application">
-<span id="the-use-of-the-application"></span><h2>The use of the application<a class="headerlink" href="#the-use-of-the-application" title="Permalink to this headline">¶</a></h2>
-<p>To test the application, write</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    $ takinata -h
-</pre></div>
-</div>
-<p>to the console. This is a keyword that you can use to print to the console to
-interact with the library. The console parser provides communication with
-the library and thus forms a single application.
-For start web application write:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    $ python manage.py runserver
-</pre></div>
-</div>
-<p>and open andress localhost:8000 in your browser</p>
-</div>
-<div class="section" id="running-tests">
-<span id="running-tests"></span><h2>Running tests<a class="headerlink" href="#running-tests" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li>Go to the library directory</li>
-<li>Write</li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    $ <span class="nb">cd</span> tests
-    $ python -m unittest
-</pre></div>
-</div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    $ <span class="nb">cd</span> tests
-    $ python run_tests.py
-</pre></div>
+<div class="section" id="task">
+<span id="task"></span><h4>Task<a class="headerlink" href="#task" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>name - name of task. It must be unique within on category</li>
+<li>desc - a description that should reflect the essence of that the task need to done. Can be empty</li>
+<li>start_date - the date the task was started. It can not be earlier than 01/01/2018. Optional field</li>
+<li>start_time - the time the task was started. Optional field</li>
+<li>end_date - the date that task will be done. Optional field</li>
+<li>end_time - the time the task will be done. Optional field</li>
+<li>priority - priority of the task. There may be [max, medium, min]</li>
+<li>is_archive - shows the status of the task at this time. 0 - in progress, 1 - complete</li>
+<li>is_subtask - whether this task is a subtask. 1 - is. If the task is a subtask, the id of the parent task will be specified in the parent_task_id field</li>
+<li>parent_task_id - id of the parent task. It is important if the task is a subtask</li>
+<li>assosiated_task_id - if the task is associated with another task, the field contains the idi of the task with which the task is associated</li>
+<li>type - type of task. 1 - one time, 2 - regular</li>
+<li>period - if the task is periodic, this field contains the period of this task in days</li>
+<li>user_id - the user who created the task</li>
+<li>category_id - category to which the given task belongs</li>
+<li>project_id - the project to which this task belongs</li>
+</ul>
 </div>
 </div>
-<div class="section" id="author">
-<span id="author"></span><h2>Author<a class="headerlink" href="#author" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Sudnikovich</span> <span class="n">Kirill</span>
-<span class="n">Group</span> <span class="mi">653502</span>
-</pre></div>
+<div class="section" id="controllers-folder">
+<span id="controllers-folder"></span><h3>controllers folder<a class="headerlink" href="#controllers-folder" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="usercontoller">
+<span id="usercontoller"></span><h4>UserContoller<a class="headerlink" href="#usercontoller" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="projectcontroller">
+<span id="projectcontroller"></span><h4>ProjectController<a class="headerlink" href="#projectcontroller" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="category">
+<span id="id1"></span><h4>Category<a class="headerlink" href="#category" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="taskcontroller">
+<span id="taskcontroller"></span><h4>TaskController<a class="headerlink" href="#taskcontroller" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="storage-folder">
+<span id="storage-folder"></span><h3>storage folder<a class="headerlink" href="#storage-folder" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="userstorage">
+<span id="userstorage"></span><h4>UserStorage<a class="headerlink" href="#userstorage" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="projectstorage">
+<span id="projectstorage"></span><h4>ProjectStorage<a class="headerlink" href="#projectstorage" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="categorystorage">
+<span id="categorystorage"></span><h4>CategoryStorage<a class="headerlink" href="#categorystorage" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="taskstorage">
+<span id="taskstorage"></span><h4>TaskStorage<a class="headerlink" href="#taskstorage" title="Permalink to this headline">¶</a></h4>
+</div>
 </div>
 </div>
 </div>

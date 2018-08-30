@@ -28,9 +28,6 @@ input, which, in turn, are loaded or, conversely, unloaded from the database
 folder - console
 ```    
 The console parser is a tool for interacting with the library. Allows the end user to use the library and interact with it using the terminal interface. To get started, write:
-```
-takinata - h
-```
 
 - parse_api - a folder containing the parser for interaction between libraries and user
 - presentation - a package that defines the views for all entities
@@ -41,3 +38,11 @@ takinata - h
 folder - current directory
 ```
 A web application that uses the Takinata Lib library. Demonstrates to the user how to use the library when developing a web application using the Django framework
+
+
+Basic structure of a Django application
+- manage.py - file to manage the application
+- requirements.txt - file with library requirements. All libraries specified in the file must be installed for the application to work correctly
+- templates - a folder containing the template to display the content of web pages
+- tracker - the main directory of the tracker application. Contains a description of forms, models, handlers, and a list of URLs
+- VersionTwo - service folder containing application settings

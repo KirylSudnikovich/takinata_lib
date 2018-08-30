@@ -1,86 +1,61 @@
 # Classes #
 
-## About ##
+## Takinata lib ##
 
-Takinata lib is a library written in Python, which is a task tracker 
-application that can help you manage your personal time or, if you are a 
-team leader, set tasks correctly and share time within the team. 
-You can use this library both to develop your console application and to 
-develop a complete web application based on this library.
+### models folder ###
 
-## Library features ##
+#### User ####
+User - user model, that consists all User fields:
+- username - user name, can use as login
+- password - user password
+- email - user email (no email activation)
 
-    
+#### Project ####
+- name - the name of the project to be displayed in the project list. The name must be unique for each user. That is, two projects for one user will not be created, and for different projects will be created
+- description - the description of the project, which should reflect its essence. Can be empty
+- user_id - id of the user who created the project
+- users - list (array) of all users participating in this project
 
-* User registration system. Log in/out system in web application
-* Add, edit, delete a project. Add/Remove executors to/from a project
-* Create, delete, edit a category for tasks
-* Create, delete, and modify tasks
-* Showing all projects of user
-* Showing all columns of user
-* Showing all tasks of user
-* Ability to create subtasks
-* Ability to create assosiation between to tasks
-* Pretty presentation page in web application
+#### Category ####
+- name - name of category. It must be unique within one project
+- desc - a description that should reflect the essence of what the category contains. Can be empty
+- project_id - project id to which this category belongs 
 
-## The contents of the repository ##
-In addition to the library itself, the content of the repository includes a command-line parser that allows you to 
-interact with the library.
+#### Task ####
 
-Content:
-- takinata lib
-- console parser for lib
-- web application
+- name - name of task. It must be unique within on category
+- desc - a description that should reflect the essence of that the task need to done. Can be empty
+- start_date - the date the task was started. It can not be earlier than 01/01/2018. Optional field
+- start_time - the time the task was started. Optional field
+- end_date - the date that task will be done. Optional field
+- end_time - the time the task will be done. Optional field
+- priority - priority of the task. There may be [max, medium, min]
+- is_archive - shows the status of the task at this time. 0 - in progress, 1 - complete
+- is_subtask - whether this task is a subtask. 1 - is. If the task is a subtask, the id of the parent task will be specified in the parent_task_id field
+- parent_task_id - id of the parent task. It is important if the task is a subtask
+- assosiated_task_id - if the task is associated with another task, the field contains the idi of the task with which the task is associated
+- type - type of task. 1 - one time, 2 - regular
+- period - if the task is periodic, this field contains the period of this task in days
+- user_id - the user who created the task
+- category_id - category to which the given task belongs 
+- project_id - the project to which this task belongs
 
-## How to install? ##
-1. Swap to your virtual enviroment
-2. Write the following command in terminal
+### controllers folder ###
 
-```bash
-    $ python setuplib.py install
-    $ python setupconsole.py install
-```  
-    
-or
-```bash
-    $ pip install -r requirements.txt
-```  
-if you want to install web application
+#### UserContoller ####
 
- During the installation of the library all the necessary dependencies are 
- installed automatically and you can start using the application immediately
- 
-## The use of the application ##
-To test the application, write 
-```bash
-    $ takinata -h
-``` 
-to the console. This is a keyword that you can use to print to the console to 
-interact with the library. The console parser provides communication with 
-the library and thus forms a single application.
-For start web application write:
+#### ProjectController ####
 
-```bash
-    $ python manage.py runserver
-```
-and open andress localhost:8000 in your browser
-   
-    
-## Running tests ##
-1. Go to the library directory
-2. Write
+#### Category ####
 
-```bash
-    $ cd tests
-    $ python -m unittest
+#### TaskController ####
 
-```
-```bash
-    $ cd tests
-    $ python run_tests.py
-```
-## Author ##
-```python
-Sudnikovich Kirill
-Group 653502
-```
+### storage folder ###
+
+#### UserStorage ####
+
+#### ProjectStorage ####
+
+#### CategoryStorage ####
+
+#### TaskStorage ####
