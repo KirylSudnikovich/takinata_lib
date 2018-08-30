@@ -1,6 +1,10 @@
 
 # Takinata Lib #
 
+## Docs ##
+https://takinata-docs.readthedocs.io/en/latest/
+
+
 ## About ##
 
 Takinata lib is a library written in Python, which is a task tracker 
