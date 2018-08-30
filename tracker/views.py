@@ -359,7 +359,7 @@ class TaskInfo(View):
                         badge = "label label-danger"
                     elif task.priority == "medium":
                         badge = "label label-primary"
-                    elif task.priority == "low":
+                    elif task.priority == "min":
                         badge = "label label-success"
                     status = None
                     archive = None
@@ -410,17 +410,18 @@ class TaskInfo(View):
                 return redirect('tracker:task_list')
             if 'start_again' in request.POST:
                 task = TaskStorage.get_task_by_id(task_id)
-                TaskController.start_again(task)
+                TaskController.start_again(request.user.username, request.user.password, task)
                 return self.get(request, task_id)
             if 'add_assosiate' in request.POST:
                 task = TaskStorage.get_task_by_id(task_id)
                 task_with_id = int(request.POST.get('add_assosiate', False))
-                TaskController.set_assosiated_task(task, task_with_id)
+                TaskController.set_assosiated_task(request.user.username, request.user.password, task, task_with_id)
                 return self.get(request, task_id)
             if 'add_subtask' in request.POST:
                 task = TaskStorage.get_task_by_id(task_id)
                 task_with_id = int(request.POST.get('add_subtask', False))
-                TaskController.new_set_subtask(task, TaskStorage.get_task_by_id(task_with_id))
+                TaskController.new_set_subtask(request.user.username, request.user.password, task,
+                                               TaskStorage.get_task_by_id(task_with_id))
                 return self.get(request, task_id)
         except MainException as e:
             return render(request, '500.html', {'value': e})

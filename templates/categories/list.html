@@ -13,7 +13,9 @@
             </div>
             <div class="row">
                 <div class="col-md-3">
-                <a href="{% url 'tracker:column_new' %}"><button class="btn btn-primary btn-block">Create category</button></a>
+                    <a href="{% url 'tracker:column_new' %}">
+                        <button class="btn btn-primary btn-block">Create category</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -29,19 +31,23 @@
                         <div class="project" id="project.id">
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title"><a href="{% url 'tracker:column_info' category_id=category.id %}">{{ category.name }}</a></h3>
+                                    <h3 class="box-title"><a
+                                            href="{% url 'tracker:column_info' category_id=category.id %}">{{ category.name }}</a>
+                                    </h3>
                                 </div>
-                                <div class="box-body">
-                                    <p class="info">{{ category.desc }}</p>
-                                </div>
+                                {% if category.desc %}
+                                    <div class="box-body">
+                                        <p class="info">{{ category.desc }}</p>
+                                    </div>
+                                {% endif %}
                                 <div class="box-footer">
-                                     <div class="row">
-                                            <div class="col-md-4 pull-right">
-                                                <a href="{% url 'tracker:column_info' category_id=category.id %}">
-                                                    <button class="btn btn-primary btn-block">More Info</button>
-                                                </a>
-                                            </div>
-                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-4 pull-right">
+                                            <a href="{% url 'tracker:column_info' category_id=category.id %}">
+                                                <button class="btn btn-primary btn-block">More Info</button>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
