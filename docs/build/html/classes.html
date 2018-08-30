@@ -94,7 +94,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#controllers-folder">controllers folder</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#usercontoller">UserContoller</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#projectcontroller">ProjectController</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#category">Category</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#categorycontroller">CategoryController</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#taskcontroller">TaskController</a></li>
 </ul>
 </li>
@@ -180,9 +180,10 @@
 <span id="takinata-lib"></span><h2>Takinata lib<a class="headerlink" href="#takinata-lib" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="models-folder">
 <span id="models-folder"></span><h3>models folder<a class="headerlink" href="#models-folder" title="Permalink to this headline">¶</a></h3>
+<p>Contains the definition of all library models</p>
 <div class="section" id="user">
 <span id="user"></span><h4>User<a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h4>
-<p>User - user model, that consists all User fields:</p>
+<p>User - user of the library. It’s impossible to interact with the library without the user</p>
 <ul class="simple">
 <li>username - user name, can use as login</li>
 <li>password - user password</li>
@@ -191,6 +192,7 @@
 </div>
 <div class="section" id="project">
 <span id="project"></span><h4>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h4>
+<p>A project is an abstraction that will contain categories that in turn contain your tasks.</p>
 <ul class="simple">
 <li>name - the name of the project to be displayed in the project list. The name must be unique for each user. That is, two projects for one user will not be created, and for different projects will be created</li>
 <li>description - the description of the project, which should reflect its essence. Can be empty</li>
@@ -200,6 +202,7 @@
 </div>
 <div class="section" id="category">
 <span id="category"></span><h4>Category<a class="headerlink" href="#category" title="Permalink to this headline">¶</a></h4>
+<p>A category is a set of tasks grouped by one topic or area.</p>
 <ul class="simple">
 <li>name - name of category. It must be unique within one project</li>
 <li>desc - a description that should reflect the essence of what the category contains. Can be empty</li>
@@ -208,6 +211,7 @@
 </div>
 <div class="section" id="task">
 <span id="task"></span><h4>Task<a class="headerlink" href="#task" title="Permalink to this headline">¶</a></h4>
+<p>A task is some action that you want to do in the future.</p>
 <ul class="simple">
 <li>name - name of task. It must be unique within on category</li>
 <li>desc - a description that should reflect the essence of that the task need to done. Can be empty</li>
@@ -230,32 +234,44 @@
 </div>
 <div class="section" id="controllers-folder">
 <span id="controllers-folder"></span><h3>controllers folder<a class="headerlink" href="#controllers-folder" title="Permalink to this headline">¶</a></h3>
+<p>Contains the logic of processing incoming data and the subsequent transfer of this data to the
+database or, conversely, return data from the database to the user</p>
 <div class="section" id="usercontoller">
 <span id="usercontoller"></span><h4>UserContoller<a class="headerlink" href="#usercontoller" title="Permalink to this headline">¶</a></h4>
+<p>The data handler for user. Allows to reg/delete or get user(s) or they information.</p>
 </div>
 <div class="section" id="projectcontroller">
 <span id="projectcontroller"></span><h4>ProjectController<a class="headerlink" href="#projectcontroller" title="Permalink to this headline">¶</a></h4>
+<p>The data handler for project. Allows to create/delete, edit name/description of project, add/remove users to/from project, return projects tasks of project users.</p>
 </div>
-<div class="section" id="category">
-<span id="id1"></span><h4>Category<a class="headerlink" href="#category" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="categorycontroller">
+<span id="categorycontroller"></span><h4>CategoryController<a class="headerlink" href="#categorycontroller" title="Permalink to this headline">¶</a></h4>
+<p>The data handler for the category. Allows you to create, modify, show or return all prject categories and delete categories.</p>
 </div>
 <div class="section" id="taskcontroller">
 <span id="taskcontroller"></span><h4>TaskController<a class="headerlink" href="#taskcontroller" title="Permalink to this headline">¶</a></h4>
+<p>The data handler for the Task. Allows to add/delete task, edit, assosiate with other task, set subtask.</p>
 </div>
 </div>
 <div class="section" id="storage-folder">
 <span id="storage-folder"></span><h3>storage folder<a class="headerlink" href="#storage-folder" title="Permalink to this headline">¶</a></h3>
+<p>Contains the logic for interacting with a database. The input receives data from the controller,
+and the result of the interaction is returned</p>
 <div class="section" id="userstorage">
 <span id="userstorage"></span><h4>UserStorage<a class="headerlink" href="#userstorage" title="Permalink to this headline">¶</a></h4>
+<p>This class provides the interaction of objects of class User with a database (write / read / modify).</p>
 </div>
 <div class="section" id="projectstorage">
 <span id="projectstorage"></span><h4>ProjectStorage<a class="headerlink" href="#projectstorage" title="Permalink to this headline">¶</a></h4>
+<p>This class provides the interaction of objects of class Project with a database (write / read / modify).</p>
 </div>
 <div class="section" id="categorystorage">
 <span id="categorystorage"></span><h4>CategoryStorage<a class="headerlink" href="#categorystorage" title="Permalink to this headline">¶</a></h4>
+<p>This class provides the interaction of objects of class Category with a database (write / read / modify).</p>
 </div>
 <div class="section" id="taskstorage">
 <span id="taskstorage"></span><h4>TaskStorage<a class="headerlink" href="#taskstorage" title="Permalink to this headline">¶</a></h4>
+<p>This class provides the interaction of objects of class Task with a database (write / read / modify).</p>
 </div>
 </div>
 </div>
