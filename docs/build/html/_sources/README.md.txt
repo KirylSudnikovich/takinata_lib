@@ -1,54 +1,85 @@
-# Takinata Lib #
+# Start work with Takinata #
 
 ## About ##
-* Add, edit, and delete users
-* Add, edit, delete a project. Add and remove artists to a project
-* Create, delete, edit a column
+
+Takinata lib is a library written in Python, which is a task tracker 
+application that can help you manage your personal time or, if you are a 
+team leader, set tasks correctly and share time within the team. 
+You can use this library both to develop your console application and to 
+develop a complete web application based on this library.
+
+## Library features ##
+
+    
+
+* User registration system. Log in/out system in web application
+* Add, edit, delete a project. Add/Remove executors to/from a project
+* Create, delete, edit a category for tasks
 * Create, delete, and modify tasks
-* Demonstrating trash bin's files
-* Adding/Removing new trash bins
 * Showing all projects of user
 * Showing all columns of user
 * Showing all tasks of user
 * Ability to create subtasks
-  
+* Ability to create assosiation between to tasks
+* Pretty presentation page in web application
+
+## The contents of the repository ##
+In addition to the library itself, the content of the repository includes a command-line parser that allows you to 
+interact with the library.
+
+Content:
+- takinata lib
+- console parser for lib
+- web application
+
 ## How to install? ##
+1. Swap to your virtual enviroment
+2. Write the following command in terminal
 
-    $ virtualenv env
-    $ ./env/bin/python setupconsole.py install
-    $ ./env/bin/python setuplib.py install
+```bash
+    $ python setuplib.py install
+    $ python setupconsole.py install
+```  
+    
+or
+```bash
+    $ pip install -r requirements.txt
+```  
+if you want to install web application
 
-## How to use Takinata? ###
+ During the installation of the library all the necessary dependencies are 
+ installed automatically and you can start using the application immediately
+ 
+## The use of the application ##
+To test the application, write 
+```bash
+    $ takinata -h
+``` 
+to the console. This is a keyword that you can use to print to the console to 
+interact with the library. The console parser provides communication with 
+the library and thus forms a single application.
+For start web application write:
 
-**User**
+```bash
+    $ python manage.py runserver
+```
+and open andress localhost:8000 in your browser
+   
+    
+## Running tests ##
+1. Go to the library directory
+2. Write
 
-* $ user register > Register new user
-* $ user delete > Remove user
-* $ user edit > Edit user
+```bash
+    $ cd tests
+    $ python -m unittest
 
-**Project**
+```
+```bash
+    $ cd tests
+    $ python run_tests.py
+```
+## Author ##
 
-* $ project add > Create new project
-* $ project delete > Delete project
-* $ project edit > Edit project
-* $ project show all > Show list of projects for current user
-* $ project members add > Add new artist to project
-* $ project members delete > Delete artist from project
-
-**Column** 
-
-* $ column add > Create column to project
-* $ column delete > Remove column from project
-* $ column edit > Edit column
-* $ column show all > Show all columns of the project
-
-**Task**
-
-* $ task add > Create new task
-* $ task delete > Remove task
-* $ task edit > Edit task
-* $ task show all > Show all tasks of the column
-* $ task set_subtask > Set task1 as a subtask of task2
-
-Sudnikovich Kirill
+> Sudnikovich Kirill
 Group 653502

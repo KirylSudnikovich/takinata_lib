@@ -12,6 +12,9 @@ Welcome to Takinata Lib's documentation!
 
 
    README
+   structure
+   classes
+   methods
 
 
 Indices and tables

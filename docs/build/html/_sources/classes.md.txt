@@ -1,5 +1,4 @@
-
-# Takinata Lib #
+# Classes #
 
 ## About ##
 
@@ -11,7 +10,8 @@ develop a complete web application based on this library.
 
 ## Library features ##
 
-   
+    
+
 * User registration system. Log in/out system in web application
 * Add, edit, delete a project. Add/Remove executors to/from a project
 * Create, delete, edit a category for tasks
@@ -80,6 +80,7 @@ and open andress localhost:8000 in your browser
     $ python run_tests.py
 ```
 ## Author ##
-
-> Sudnikovich Kirill
+```python
+Sudnikovich Kirill
 Group 653502
+```
