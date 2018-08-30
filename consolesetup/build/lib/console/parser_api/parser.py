@@ -169,7 +169,7 @@ def proccess_delete_project(parsed):
     password = getattr(parsed, 'password', None)
     id = getattr(parsed, 'id', None)
 
-    ProjectController.delete(username, password, id)
+    ProjectController.delete_by_id(username, password, id)
     pr_pres.success_delete()
 
 

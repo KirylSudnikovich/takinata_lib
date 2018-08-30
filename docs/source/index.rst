@@ -15,11 +15,3 @@ Welcome to Takinata Lib's documentation!
    structure
    classes
    methods
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
