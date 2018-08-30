@@ -54,7 +54,9 @@ class SignIn(generic.FormView):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('tracker:home')
+                response = redirect('tracker:home')
+                response.set_cookie(key='have_account', value='1')
+                return response
             else:
                 if user is None:
                     error = "Incorrect username"
