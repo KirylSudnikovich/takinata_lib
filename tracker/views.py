@@ -485,8 +485,6 @@ class BugReportList(View):
 def logout_view(request):
     logout(request)
     return redirect('tracker:login')
-    # Redirect to a success page.
-
 
 def handler404(request, exception):
     context = RequestContext(request)
