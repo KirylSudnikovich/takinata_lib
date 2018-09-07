@@ -12,7 +12,6 @@ from lib.controllers.project import ProjectController
 from lib.controllers.task import TaskController
 from lib.controllers.user import UserController
 from lib.storage.task import TaskStorage
-from lib.exception import MainException
 from .controllers.tracker_controller import BugController, all_users, all_projects, all_categories, all_tasks
 from .forms import ToDoForm
 
@@ -221,7 +220,7 @@ class TaskList(View):
         return render(request, 'tasks/list.html', {'task_list': task_list})
 
 
-class SampleView(FormView):
+class TaskCreate(FormView):
     @method_decorator(login_required)
     def get(self, request, **kwargs):
         f = ToDoForm

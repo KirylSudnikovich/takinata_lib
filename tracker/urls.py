@@ -2,7 +2,7 @@ from django.conf.urls.static import static
 
 from VersionTwo import settings
 from tracker.views import ProjectNew, ProjectsList, ProjectInfo, ProjectDelete, ProjectEdit, ColumnNew, ColumnInfo, \
-    ColumnDelete, ColumnEdit, BugReport, BugReportList, CategoryList, TaskList, SampleView, TaskInfo, TaskDelete
+    ColumnDelete, ColumnEdit, BugReport, BugReportList, CategoryList, TaskList, TaskCreate, TaskInfo, TaskDelete
 from . import views
 from django.urls import path
 
@@ -24,7 +24,7 @@ urlpatterns = [
     path('bug_list/', BugReportList.as_view(), name='bug_report_list'),
     path('tasks/', TaskList.as_view(), name='task_list'),
     path('tasks/<int:task_id>/', TaskInfo.as_view(), name='task_info'),
-    path('tasks/create', SampleView.as_view(), name='task_create'),
+    path('tasks/create', TaskCreate.as_view(), name='task_create'),
     path('tasks/<int:task_id>/delete', TaskDelete.as_view(), name='task_delete'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
