@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'VersionTwo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'takinata-lib',
+        'NAME': 'takinata_lib',
         'USER': 'postgres',
         'PASSWORD': '1337228',
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': '5433',
     }
 }
 

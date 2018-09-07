@@ -1,4 +1,4 @@
-#!/home/snitch/PycharmProjects/VersionTwo/venv/bin/python
+#!/home/snitch/Projects/Python/takinata_lib/takinata_lib/venv/bin/python
 from django.core import management
 
 if __name__ == "__main__":

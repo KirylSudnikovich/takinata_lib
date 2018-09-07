@@ -1,4 +1,4 @@
-#!/home/snitch/PycharmProjects/VersionTwo/venv/bin/python
+#!/home/snitch/Projects/Python/takinata_lib/takinata_lib/venv/bin/python
 import argparse, sys
 import CommonMark
 parser = argparse.ArgumentParser(description="Process Markdown according to the CommonMark specification.")
