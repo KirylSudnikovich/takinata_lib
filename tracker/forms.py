@@ -17,7 +17,9 @@ class ToDoForm(forms.Form):
         widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "Task name"})
     )
     desc = forms.CharField(
-        widget=forms.Textarea(attrs={"class": "form-control", "placeholder": "Task description", "rows": 3, 'style':'resize:none;'}), required=False
+        widget=forms.Textarea(
+            attrs={"class": "form-control", "placeholder": "Task description", "rows": 3, 'style': 'resize:none;'}),
+        required=False
     )
     start_date = forms.DateField(
         widget=DatePickerInput(format='%m/%d/%Y', attrs={"placeholder": "Task start date"}), required=False

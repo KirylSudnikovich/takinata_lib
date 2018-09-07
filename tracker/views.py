@@ -6,7 +6,7 @@ from django.contrib.auth import logout
 from django.shortcuts import render, redirect, render_to_response
 from django.template import RequestContext
 from django.views import View
-from django.views.generic import TemplateView, FormView
+from django.views.generic import FormView
 from lib.controllers.category import CategoryController
 from lib.controllers.project import ProjectController
 from lib.controllers.task import TaskController
