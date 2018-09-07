@@ -1,6 +1,5 @@
 import os
 import configparser
-import sys
 
 DEFAULT_NAME = 'config'
 
@@ -8,8 +7,9 @@ DEFAULT_NAME = 'config'
 def create_config(db_path='None', log_path='None', logging_level='1'):
     """
     Creates a configuration file that describes the logger and database paths
-    :param db_path: - path to database. If the argument was not passed, it takes the value 0
-    :param log_path: - path to log file. If the argument was not passed, it takes the value 0
+    :param logging_level: the logging level. 1- write all, 0- write errors only. Default - 1
+    :param db_path: - path to database. If the argument was not passed, it takes the value None
+    :param log_path: - path to log file. If the argument was not passed, it takes the value None
     :return - create config file:
 
     """
@@ -55,6 +55,7 @@ def get_path_to_db():
     path_to_db = config.get('settings', 'path_to_db')
     if path_to_db == 'None':
         path_to_db = "postgresql://postgres:1337228@localhost:5433/takinata_lib"
+        # path_to_db = "test"
     return path_to_db
 
 
@@ -80,7 +81,7 @@ def get_path_to_logger():
     if path_to_log == 'None':
         path = os.path.dirname(os.path.abspath(__file__))
         path = os.path.split(path)[0]
-        print("PATH - ",path)
+        print("PATH - ", path)
     return path
 
 
