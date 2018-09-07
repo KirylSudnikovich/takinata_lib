@@ -50,7 +50,6 @@ class SignIn(generic.FormView):
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
-            user = UserStorage.get_user_by_name(username)
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)

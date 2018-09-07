@@ -12,5 +12,4 @@ urlpatterns = [
     path('login/', RedirectView.as_view(pattern_name='accounts:signin'), name='login'),
     path('logout/', RedirectView.as_view(pattern_name='accounts:signout'), name='logout'),
     path('registration/', RedirectView.as_view(pattern_name='accounts:signup'), name='registration'),
-    path('profile/', RedirectView.as_view(pattern_name='accounts:profile'), name='profile'),
 ]
