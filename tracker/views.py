@@ -209,6 +209,7 @@ class TaskList(View):
     @method_decorator(login_required)
     def get(self, request):
         task_list = TaskController.get_all_users_task(request.user.username, request.user.password)
+        print(task_list)
         available_tasks = []
         canceled_tasks = []
         for task in task_list:
@@ -249,9 +250,10 @@ class TaskCreate(FormView):
                 TaskController.add_task(request.user.username, request.user.password, None, None, name, desc,
                                         task_type,
                                         start_date, start_time, end_date, end_time, priority)
-            TaskController.add_task(request.user.username, request.user.password, project_id, category_id, name,
-                                    desc,
-                                    task_type, start_date, start_time, end_date, end_time, priority)
+            else:
+                TaskController.add_task(request.user.username, request.user.password, project_id, category_id, name,
+                                        desc,
+                                        task_type, start_date, start_time, end_date, end_time, priority)
             return redirect('tracker:task_list')
 
 
@@ -259,54 +261,56 @@ class TaskInfo(View):
     @method_decorator(login_required)
     def get(self, request, task_id):
         task = TaskStorage.get_task_by_id(task_id)
-        project = ProjectController.get_project_by_id(request.user.username, request.user.password,
-                                                      task.project_id)
-        if ProjectController.check_permission(request.user.username, request.user.password, project.id):
-            category = CategoryController.get_category_by_id(task.category_id)
-            badge = None
-            status_badge = None
-            if task.priority == "max":
-                badge = "label label-danger"
-            elif task.priority == "medium":
-                badge = "label label-primary"
-            elif task.priority == "min":
-                badge = "label label-success"
-            status = None
-            archive = None
-            if task.is_archive == 0:
-                status_badge = "label label-danger"
-                status = "In progress"
-            elif task.is_archive == 1:
-                status_badge = "label label-success"
-                status = "Done"
-                archive = 1
-            task_list = TaskStorage.get_all_tasks(task.category_id)
-            new_list = []
-            for tsk in task_list:
-                if tsk.id == task_id:
-                    task_list.remove(tsk)
-            for tsk in task_list:
-                if tsk.is_archive == 1 or tsk.assosiated_task_id is not None or tsk.type == 2:
-                    pass
-                else:
-                    new_list.append(tsk)
-            a_task = None
-            parent_task = None
-            if task.assosiated_task_id is not None:
-                a_task = TaskController.get_assosiated_task(request.user.username, request.user.password, task)
-            if task.parent_task_id is not None:
-                parent_task = TaskController.get_parent_task(request.user.username, request.user.password, task)
-            subtasks = None
-            if task.is_parent == 1:
-                subtasks = TaskController.get_all_subtask(task)
-            return render(request, 'tasks/info.html',
-                          {'project': project, 'category': category, 'task': task, 'badge': badge,
-                           'status': status,
-                           'status_badge': status_badge, 'archive': archive, 'task_list': new_list,
-                           'a_task': a_task,
-                           'parent': parent_task, 'subtasks': subtasks})
+        if task.project_id is not None:
+            project = ProjectController.get_project_by_id(request.user.username, request.user.password,
+                                                          task.project_id)
+            if ProjectController.check_permission(request.user.username, request.user.password, project.id):
+                category = CategoryController.get_category_by_id(task.category_id)
         else:
-            return render(request, '501.html')
+            project = None
+            category = None
+        badge = None
+        status_badge = None
+        if task.priority == "max":
+            badge = "label label-danger"
+        elif task.priority == "medium":
+            badge = "label label-primary"
+        elif task.priority == "min":
+            badge = "label label-success"
+        status = None
+        archive = None
+        if task.is_archive == 0:
+            status_badge = "label label-danger"
+            status = "In progress"
+        elif task.is_archive == 1:
+            status_badge = "label label-success"
+            status = "Done"
+            archive = 1
+        task_list = TaskStorage.get_all_tasks(task.category_id)
+        new_list = []
+        for tsk in task_list:
+            if tsk.id == task_id:
+                task_list.remove(tsk)
+        for tsk in task_list:
+            if tsk.is_archive == 1 or tsk.assosiated_task_id is not None or tsk.type == 2:
+                pass
+            else:
+                new_list.append(tsk)
+        a_task = None
+        parent_task = None
+        if task.assosiated_task_id is not None:
+            a_task = TaskController.get_assosiated_task(request.user.username, request.user.password, task)
+        if task.parent_task_id is not None:
+            parent_task = TaskController.get_parent_task(request.user.username, request.user.password, task)
+        subtasks = None
+        if task.is_parent == 1:
+            subtasks = TaskController.get_all_subtask(task)
+        return render(request, 'tasks/info.html',
+                      {'project': project, 'category': category, 'task': task, 'badge': badge,
+                       'status': status,
+                       'status_badge': status_badge, 'archive': archive, 'task_list': new_list,
+                       'a_task': a_task,
+                       'parent': parent_task, 'subtasks': subtasks})
 
     def post(self, request, task_id):
         if 'cancel_task' in request.POST:
@@ -334,10 +338,17 @@ class TaskDelete(View):
     @method_decorator(login_required)
     def get(self, request, task_id):
         task = TaskStorage.get_task_by_id(task_id)
-        project = ProjectController.get_project_by_id(request.user.username, request.user.password,
-                                                      task.project_id)
-        category = CategoryController.get_category_by_id(task.category_id)
-        if ProjectController.check_permission(request.user.username, request.user.password, project.id):
+        user = UserController.get_user_by_name(request.user.username)
+        if task.project_id is not None:
+            project = ProjectController.get_project_by_id(request.user.username, request.user.password,
+                                                          task.project_id)
+            category = CategoryController.get_category_by_id(task.category_id)
+            if ProjectController.check_permission(request.user.username, request.user.password, project.id):
+                return render(request, 'tasks/delete.html',
+                              {'project': project, 'category': category, 'task': task})
+        elif task.user_id == user.id:
+            project = None
+            category = None
             return render(request, 'tasks/delete.html',
                           {'project': project, 'category': category, 'task': task})
         else:
@@ -346,7 +357,7 @@ class TaskDelete(View):
     def post(self, request, task_id):
         if request.user.is_authenticated:
             task = TaskStorage.get_task_by_id(task_id)
-            TaskController.delete_task(task.id)
+            TaskController.delete_task(request.user.username, request.user.password, task.id)
             return redirect('tracker:task_list')
         else:
             return render(request, '501.html')

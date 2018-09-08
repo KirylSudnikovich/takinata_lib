@@ -1,17 +1,22 @@
 def success_create():
     print("Project is successfully created")
 
+
 def success_delete():
     print("Project is successfully deleted")
+
 
 def success_added():
     print("User was successfully added to the project")
 
+
 def success_removed():
     print("User was successfully removed from the project")
 
+
 def success_edit():
     print("Pproject was successfully edited")
+
 
 def project_info(projectdict):
     project = projectdict['project']
@@ -19,7 +24,7 @@ def project_info(projectdict):
     tasks = projectdict['tasks']
     creator = projectdict['creator']
     guys = projectdict['guys']
-    print('project name - {}\nproject description - {}\n'.format(project.name, project.description))
+    print('project id - {}\nproject name - {}\nproject description - {}\n'.format(project.id, project.name, project.description))
     cat_str = ""
     for category in categories:
         cat_str += category.name

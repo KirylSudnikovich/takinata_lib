@@ -137,6 +137,13 @@ def init_project_parser(root):
     project_show_parser.add_argument('-pid', dest='project id', type=int, help="ID of project to show info",
                                      required=True)
 
+    project_show_all_parser = project_root_subparser.add_parser("show_all",
+                                                                help="Show info about all projects for user")
+    project_show_all_parser.add_argument('-u', dest='username', type=str, help='Username of project executor',
+                                         required=True)
+    project_show_all_parser.add_argument('-p', dest='password', type=str, help='Password of project executor',
+                                         required=True)
+
 
 def proccess_project(parsed):
     if parsed.project == 'create':
@@ -153,6 +160,8 @@ def proccess_project(parsed):
         proccess_edit_description_project(parsed)
     elif parsed.project == 'show':
         proccess_show_project(parsed)
+    elif parsed.project == 'show_all':
+        process_show_all_projects(parsed)
 
 
 def proccess_create_project(parsed):
@@ -217,6 +226,18 @@ def proccess_show_project(parsed):
     pid = getattr(parsed, 'project id', None)
     projectdict = ProjectController.show(username, password, pid)
     pr_pres.project_info(projectdict)
+
+
+def process_show_all_projects(parsed):
+    username = getattr(parsed, 'username', None)
+    password = getattr(parsed, 'password', None)
+    projects = ProjectController.show_all(username, password)
+    prs = []
+    for project in projects:
+        pr = ProjectController.show(username, password, project.id)
+        prs.append(pr)
+    for pr in prs:
+        pr_pres.project_info(pr)
 
 
 def init_category_parser(root):
