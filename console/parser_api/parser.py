@@ -21,8 +21,8 @@ class MyParser(argparse.ArgumentParser):
 
 def parse():
     parser = MyParser()
-    parser.add_argument('-l', dest='login', help='login of user')
-    parser.add_argument('-p', dest='password', help='password of user')
+    # parser.add_argument('-l', dest='login', help='login of user')
+    # parser.add_argument('-p', dest='password', help='password of user')
     subparsers = parser.add_subparsers(dest='action')
 
     user_parser = subparsers.add_parser('user', help='Menu to work with users')
@@ -40,9 +40,6 @@ def parse():
     init_project_parser(subparsers)
     init_category_parser(subparsers)
     init_task_parser(subparsers)
-    # init_plan_parser(subparsers)
-    #  init_show_parser(subparsers)
-    # test_parser = subparsers.add_parser('tests', help='Start tests')
 
     parsed = parser.parse_args()
     print(parsed)
@@ -407,19 +404,6 @@ def proccess_task(parsed):
         start_again_task(parsed)
     elif parsed.task == 'show':
         proccess_show_task(parsed)
-
-
-def proccess_category(parsed):
-    if parsed.category == 'create':
-        proccess_create_category(parsed)
-    elif parsed.category == 'delete':
-        proccess_delete_category(parsed)
-    elif parsed.category == 'edit_name':
-        proccess_edit_name_category(parsed)
-    elif parsed.category == 'edit_desc':
-        proccess_edit_desc_category(parsed)
-    elif parsed.category == 'show_all':
-        proccess_show_all_category(parsed)
 
 
 def proccess_create_task(parsed):
