@@ -1,4 +1,6 @@
 import argparse
+import sys
+
 import lib.conf as config
 from lib.controllers.user import UserController
 from lib.controllers.project import ProjectController
@@ -10,13 +12,15 @@ from console.presentations import category as ct_pres
 from console.presentations import task as ts_pres
 
 
-def parse():
-    # check_db_exists(get_path_to_db())
-    # path = get_path_to_db()
-    # path = os.path.join(path, 'storage.sqlite3')
+class MyParser(argparse.ArgumentParser):
+    def error(self, message):
+        sys.stderr.write('error: %s\n' % message)
+        self.print_help()
+        sys.exit(2)
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-q', dest="silence", action="store_true", help='silence mode.')
+
+def parse():
+    parser = MyParser()
     parser.add_argument('-l', dest='login', help='login of user')
     parser.add_argument('-p', dest='password', help='password of user')
     subparsers = parser.add_subparsers(dest='action')
@@ -389,17 +393,18 @@ def init_task_parser(root):
     show_task_parser.add_argument('-p', dest='password', type=str, help='Password of project executor')
     show_task_parser.add_argument('-tid', dest='task id', type=int, help='Task ID')
 
+
 def proccess_task(parsed):
     if parsed.task == 'create':
         proccess_create_task(parsed)
     elif parsed.task == 'delete':
         proccess_delete_task(parsed)
     elif parsed.task == 'set_assosiated_task':
-        pass
+        set_assosiated_task(parsed)
     elif parsed.task == 'set_parent_task':
-        pass
+        set_parent_task(parsed)
     elif parsed.task == 'start_again':
-        pass
+        start_again_task(parsed)
     elif parsed.task == 'show':
         proccess_show_task(parsed)
 
@@ -444,6 +449,7 @@ def proccess_delete_task(parsed):
     TaskController.delete_task(username, password, task_id)
     ts_pres.success_delete()
 
+
 def set_assosiated_task(parsed):
     username = getattr(parsed, 'username', None)
     password = getattr(parsed, 'password', None)
@@ -453,6 +459,7 @@ def set_assosiated_task(parsed):
     TaskController.set_assosiated_task(username, password, task_id, atask_id)
     ts_pres.success_assosiate()
 
+
 def set_parent_task(parsed):
     username = getattr(parsed, 'username', None)
     password = getattr(parsed, 'password', None)
@@ -461,12 +468,14 @@ def set_parent_task(parsed):
 
     TaskController.new_set_subtask(username, password, task_id, ptask_id)
 
+
 def start_again_task(parsed):
     username = getattr(parsed, 'username', None)
     password = getattr(parsed, 'password', None)
     task_id = getattr(parsed, 'subtask id', None)
 
     TaskController.start_again(username, password, task_id)
+
 
 def proccess_show_task(parsed):
     username = getattr(parsed, 'username', None)
