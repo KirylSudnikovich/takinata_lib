@@ -4,7 +4,7 @@ certifi==2018.8.24
 chardet==3.0.4
 CommonMark==0.5.4
 dj-config-url==0.1.1
-Django==2.2.18
+Django==2.2.20
 django-adminlte==1.2
 django-adminlte2==0.4.1
 django-bootstrap-datepicker-plus==3.0.4
